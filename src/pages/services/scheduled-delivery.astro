@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import B2BCTA from '../../components/B2BCTA.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Scheduled Delivery Routes | Business Courier Service Nanaimo';
+const description = 'Daily or weekly scheduled delivery routes. Flat rates, dedicated driver, recurring revenue for businesses. Print shops, auto parts, manufacturing.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Scheduled Route Delivery', description }} />
+
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Scheduled Route Delivery</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Daily or weekly business routes. Flat rates, dedicated driver, recurring credit. Perfect for shops, factories, and distribution that need predictable, repeatable service.
+      </p>
+      <PhoneCTA text={`Set Up Account: ${config.phone}`} />
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>What Are Scheduled Routes?</h2>
+
+    <p class="text-lg text-gray-700 max-w-3xl mb-8">
+      Instead of calling for one-off pickups, you set up a standing delivery route: same time, same stops, same rate every day or week. Perfect for predictable business operations.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Lower Cost</h3>
+        <p>Volume discounts. Same 3 PM run every day is cheaper than 5 one-off pickups.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Predictable</h3>
+        <p>Driver and vehicle stay consistent. You know exactly when pickup happens. No surprises.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Invoice Once</h3>
+        <p>Monthly billing, recurring credit. No daily invoices. One predictable cost line item.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Scheduled Route Examples</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Print Shop Daily Run</h3>
+        <p class="text-gray-700 text-sm">
+          Every business day at 4 PM: pickup finished jobs, deliver to customers. Same route, same stops. By month's end, you've saved hundreds on a-la-carte courier rates.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Auto Parts Supplier</h3>
+        <p class="text-gray-700 text-sm">
+          Monday, Wednesday, Friday 2 PM: pickup parts from warehouse, deliver to 5 auto shops across Nanaimo. One driver, one route, 30 minutes. Flat rate for all three days.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Manufacturing Assembly</h3>
+        <p class="text-gray-700 text-sm">
+          Daily 5 PM: pickup finished assemblies from factory, deliver to distribution center or customer. Weekly invoice covers the whole month. No daily phone tag.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Multi-Stop Circuit</h3>
+        <p class="text-gray-700 text-sm">
+          Thursday evening: pickup from your office, deliver invoices and samples to 8 different locations across Nanaimo. One rate. One route. Every week.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>How Scheduled Routes Work</h2>
+
+    <div class="grid md:grid-cols-4 gap-4 mb-8">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-accent mb-2">1</div>
+        <h3 class="font-semibold mb-2">Consultation</h3>
+        <p class="text-sm text-gray-600">You describe your route, stops, timing. We map it out.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-accent mb-2">2</div>
+        <h3 class="font-semibold mb-2">Fixed Quote</h3>
+        <p class="text-sm text-gray-600">One price. Same every week. No per-km fluctuation.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-accent mb-2">3</div>
+        <h3 class="font-semibold mb-2">Dedicated Driver</h3>
+        <p class="text-sm text-gray-600">Your driver learns stops, knows your customers, builds routine.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-3xl font-bold text-brand-accent mb-2">4</div>
+        <h3 class="font-semibold mb-2">Monthly Invoice</h3>
+        <p class="text-sm text-gray-600">One line item per route. Predictable. Credit terms available.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Scheduled Route Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Scheduled routes are 30–50% cheaper than one-off same-day delivery because volume justifies dedication:
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6 space-y-3">
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Daily Route (5 days/week)</h3>
+          <p class="text-lg text-brand-accent font-semibold">$80–$120/day (flat)</p>
+          <p class="text-sm text-gray-600">Typical Nanaimo route with 3–5 stops. Includes driver, vehicle, insurance.</p>
+        </div>
+
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Weekly Route (1–2x/week)</h3>
+          <p class="text-lg text-brand-accent font-semibold">$150–$250/run (flat)</p>
+          <p class="text-sm text-gray-600">Single run, dedicated time slot. Examples: Thursday evening circuit.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-1">Multi-Stop Discount</h3>
+          <p class="text-gray-700">5+ stops on a single run = additional 10% discount on flat rate</p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-4">
+        Example: 5-stop daily route = ~$100/day × 20 business days/month = $2,000. Same route via one-off same-day delivery would cost $150–$200/day = $3,500+. You save $1,500+/month.
+      </p>
+
+      <p class="text-sm text-gray-600">
+        First month is usually a one-time setup fee ($100) to plan route, confirm stops, and schedule driver. After that: recurring flat monthly rate.
+      </p>
+    </div>
+  </section>
+
+  <B2BCTA />
+
+  <section class="section-container">
+    <h2>Industries That Use Scheduled Routes</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3>Print & Design Shops</h3>
+        <p class="text-gray-600">Daily 4 PM pickup of finished jobs. Delivery to customers saves the shop driver hours.</p>
+      </div>
+
+      <div class="card">
+        <h3>Auto Parts & Warehouses</h3>
+        <p class="text-gray-600">Morning or afternoon parts delivery circuit. Shops depend on you staying on schedule.</p>
+      </div>
+
+      <div class="card">
+        <h3>Manufacturing & Assembly</h3>
+        <p class="text-gray-600">End-of-day pickup of finished goods. Distribution or customer delivery.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pharmacy & Medical</h3>
+        <p class="text-gray-600">Daily pickup of prescriptions or lab samples. Temperature control as needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Scheduled Route FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">What if my route needs to change one week?</h3>
+        <p class="text-gray-700">
+          One-time adjustments are fine. Tell us 24 hours ahead if possible. If the change is permanent, we adjust your rate accordingly and reset for the next month.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do I pay if the driver can't run one day?</h3>
+        <p class="text-gray-700">
+          Not if it's our issue (vehicle down, driver sick). If it's your request (you have no shipments), you pay a 25% cancellation fee if cancelled less than 4 hours ahead.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can I do extra one-off runs on top of my route?</h3>
+        <p class="text-gray-700">
+          Yes. Standard same-day rates apply for anything outside your scheduled route. Your dedicated driver might even do them, but if they're unavailable, we dispatch someone else.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What's the contract length?</h3>
+        <p class="text-gray-700">
+          Month-to-month. 30-day notice to cancel. We want your business to stick around because it works, not because you're locked in.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import { config } from '../config';
+
+const title = 'Courier FAQ | Nanaimo Delivery Questions';
+const description = 'Frequently asked questions about same-day courier service in Nanaimo. How we work, pricing, delivery times, rush service.';
+
+const faqs = [
+  {
+    question: 'How quickly can you pick up my shipment?',
+    answer: `During business hours (7 AM–6 PM weekdays, 8 AM–4 PM weekends), we typically pick up within 30 minutes. If we have a driver nearby, pickup can be as fast as 15 minutes. Call ${config.phone} for real-time pickup estimate.`,
+  },
+  {
+    question: 'Do you offer same-day delivery?',
+    answer: 'Yes. Order by 3 PM weekdays (2 PM Friday, 10 AM weekends), and we guarantee same-day Nanaimo delivery. Island routes have earlier cutoffs—Victoria by 10 AM, Comox by noon, etc.',
+  },
+  {
+    question: 'What if I need it delivered after hours?',
+    answer: 'We offer after-hours emergency service. Call us—surcharges apply (+$25 evenings, +$50 nights/weekends), but we can usually accommodate urgent evening or overnight rushes.',
+  },
+  {
+    question: 'Can I track my delivery in real time?',
+    answer: 'Yes. You get a tracking link. See driver location, ETA, and proof of delivery (photo + signature + timestamp) all in real-time on your phone.',
+  },
+  {
+    question: 'What if the driver can\'t find my address?',
+    answer: 'We check addresses before dispatch. If there\'s any ambiguity, our driver calls ahead. Building access issues, gate codes, dock procedures—we coordinate before arrival.',
+  },
+  {
+    question: 'Do you handle oversized or fragile items?',
+    answer: 'Yes. Furniture, artwork, equipment—we wrapping and handle with care. Fragile items need special padding; let us know and we\'ll quote accordingly.',
+  },
+  {
+    question: 'Can I modify my delivery address after I book?',
+    answer: 'Call us immediately if you need to change the address. If the driver hasn\'t picked up yet, no problem—we divert them. Changes within 15 minutes are usually free.',
+  },
+  {
+    question: 'What if I need to reschedule?',
+    answer: 'Call to reschedule. Reschedule within 1 hour of pickup? Usually no charge. After 1 hour? 25% cancellation fee. We hold the driver slot; we need notice to release them.',
+  },
+  {
+    question: 'Do you do multi-stop deliveries?',
+    answer: 'Yes. Pickup multiple items, drop them off at different locations. We charge $5 per additional stop after the first pickup/dropoff. Route-optimized for efficiency.',
+  },
+  {
+    question: 'What\'s your service area?',
+    answer: 'Nanaimo as the hub. Same-day delivery anywhere in Nanaimo. Island routes include Victoria, Duncan, Parksville, Comox, Campbell River, and Port Alberni. We also serve Vancouver Island beyond the central Island.',
+  },
+  {
+    question: 'Do you deliver on weekends?',
+    answer: 'Yes, weekends are available. Saturday–Sunday hours 8 AM–4 PM. Same-day cutoff 10 AM. Limited drivers on weekends, so confirm availability for 10 AM+ orders.',
+  },
+  {
+    question: 'Do you deliver holidays?',
+    answer: 'We\'re usually open on most holidays. Easter, Christmas, and stat holidays have limited staff. Call ahead if you need a holiday delivery.',
+  },
+  {
+    question: 'How much does delivery cost?',
+    answer: 'Base $18 + $1.50 per kilometer. Rush delivery +50%. Freight $35 base + $2.00/km. See our pricing page for full rate card and examples.',
+  },
+  {
+    question: 'Do you offer monthly accounts for regular deliveries?',
+    answer: 'Yes. Businesses with recurring routes get flat monthly rates, 30–50% cheaper than one-off same-day. Daily or weekly options available. Call for volume quote.',
+  },
+  {
+    question: 'What payment methods do you accept?',
+    answer: 'Invoice (net 30 for accounts), credit card (Visa/Mastercard), or phone payment. Monthly accounts get consolidated invoicing. Ask about payment terms.',
+  },
+  {
+    question: 'Can you handle temperature-controlled shipments?',
+    answer: 'Yes. Refrigerated (+$10), frozen/dry ice (+$15), or insulated room-temp (+$5). Medical, pharmacy, and lab specimens handled daily.',
+  },
+  {
+    question: 'Do you provide proof of delivery?',
+    answer: 'Always. Signature + timestamp + photo + driver details. Delivered to your email automatically. Legal and accountability built-in.',
+  },
+  {
+    question: 'What if the package is late?',
+    answer: 'Late delivery is rare. If we miss a cutoff time we promised, call us immediately. We track every dispatch and take accountability seriously. Discuss compensation on a case-by-case basis.',
+  },
+];
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="FAQPage" data={{ faqs }} />
+
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Frequently Asked Questions</h1>
+      <p class="text-lg md:text-xl opacity-95">
+        Everything you need to know about same-day courier service in Nanaimo.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="max-w-3xl">
+      {faqs.map((faq, i) => (
+        <details key={i} class="mb-6 group border border-gray-300 rounded p-6 hover:border-brand-blue transition cursor-pointer">
+          <summary class="font-bold text-lg text-gray-900 group-open:text-brand-blue list-none">
+            <span class="flex justify-between items-center">
+              <span>{faq.question}</span>
+              <span class="text-brand-accent text-xl">+</span>
+            </span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            {faq.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2 class="text-center mb-8">Didn't Find Your Answer?</h2>
+    <div class="text-center">
+      <p class="text-gray-700 mb-6">
+        Call us or submit a quote request. Our team answers courier questions all day.
+      </p>
+      <a
+        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+        class="cta-button inline-block"
+      >
+        Call {config.phone}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  details summary span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  details[open] summary span:last-child {
+    transform: rotate(45deg);
+  }
+
+  details[open] summary span:last-child {
+    transition: transform 200ms;
+  }
+</style>

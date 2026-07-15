@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import B2BCTA from '../components/B2BCTA.astro';
+import PhoneCTA from '../components/PhoneCTA.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import { config } from '../config';
+
+const title = 'Same-Day Courier Service in Nanaimo';
+const description = `Reliable same-day courier and delivery service in Nanaimo, BC. Rush delivery, legal documents, medical specimens, and local routes. Call ${config.phone} for instant quotes.`;
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="LocalBusiness" />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-16 md:py-24">
+    <div class="section-container">
+      <div class="max-w-3xl">
+        <h1 class="text-white mb-4">Same-Day Courier Service in Nanaimo</h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-95">
+          Nanaimo's fastest courier. Legal documents, medical specimens, rush shipments, or regular routes—we deliver same-day across the Island.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <PhoneCTA text={`Call Now: ${config.phone}`} />
+          <a href="#quote" class="cta-button-secondary inline-block">Get Quick Quote</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+          <div>
+            <div class="text-3xl font-bold text-brand-accent">30 min</div>
+            <p class="text-xs opacity-75">Average pickup time</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-brand-accent">100%</div>
+            <p class="text-xs opacity-75">On-time delivery</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-brand-accent">24/7</div>
+            <p class="text-xs opacity-75">Emergency service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section-container">
+    <h2 class="text-center mb-12">Our Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="card">
+        <h3 class="mb-3 text-brand-blue">Same-Day Delivery</h3>
+        <p class="text-gray-600 mb-4">
+          Local Nanaimo deliveries within 3 hours. Cutoff 3 PM weekdays, 2 PM Friday, 10 AM weekends.
+        </p>
+        <a href="/services/same-day-delivery" class="text-brand-blue font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <div class="card">
+        <h3 class="mb-3 text-brand-blue">Rush & Hot-Shot</h3>
+        <p class="text-gray-600 mb-4">
+          Emergency courier for time-critical shipments. Priority dispatch, dedicated driver if needed.
+        </p>
+        <a href="/services/rush-delivery" class="text-brand-blue font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <div class="card">
+        <h3 class="mb-3 text-brand-blue">Medical & Lab</h3>
+        <p class="text-gray-600 mb-4">
+          Specialized courier for specimen transport, pharmacy delivery. Chain-of-custody available.
+        </p>
+        <a href="/services/medical-courier" class="text-brand-blue font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <div class="card">
+        <h3 class="mb-3 text-brand-blue">Legal Courier</h3>
+        <p class="text-gray-600 mb-4">
+          Court filings, legal document delivery. Certified drivers, proof of delivery included.
+        </p>
+        <a href="/services/legal-courier" class="text-brand-blue font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <div class="card">
+        <h3 class="mb-3 text-brand-blue">Scheduled Routes</h3>
+        <p class="text-gray-600 mb-4">
+          Daily or weekly business routes. Flat rates, recurring credit, dedicated scheduling.
+        </p>
+        <a href="/services/scheduled-delivery" class="text-brand-blue font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <div class="card">
+        <h3 class="mb-3 text-brand-blue">Island Routes</h3>
+        <p class="text-gray-600 mb-4">
+          Nanaimo to Victoria, Comox Valley, Campbell River, Port Alberni. Ferry scheduling included.
+        </p>
+        <a href="/routes/nanaimo-victoria" class="text-brand-blue font-semibold hover:underline">View Routes →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Focus -->
+  <section class="bg-gray-50 section-container">
+    <h2 class="text-center mb-8">Built for Business</h2>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div>
+        <h3>For Law Firms & Courts</h3>
+        <p class="text-gray-700 mb-4">
+          Same-day courthouse delivery in Nanaimo. Our drivers know the filing windows, security procedures, and deadlines.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore legal services →</a>
+      </div>
+
+      <div>
+        <h3>For Medical & Labs</h3>
+        <p class="text-gray-700 mb-4">
+          Specimen transport, pharmacy delivery, temperature-controlled options. HIPAA-conscious handling.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore medical services →</a>
+      </div>
+
+      <div>
+        <h3>For Manufacturing & Parts</h3>
+        <p class="text-gray-700 mb-4">
+          Same-day parts delivery across the Island. Print shops, auto parts, equipment—we've got the volume rates.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore B2B services →</a>
+      </div>
+
+      <div>
+        <h3>For Print & Design</h3>
+        <p class="text-gray-700 mb-4">
+          Rush proofs, final files, collateral. Local delivery within hours—perfect for fast turnarounds.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore print services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm />
+
+  <!-- Why Choose Us -->
+  <section class="section-container">
+    <h2 class="text-center mb-12">Why Choose {config.businessName}?</h2>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-brand-blue mb-3">Local Knowledge</h3>
+        <p class="text-gray-700">Every driver knows the Malahat, ferry schedules, courthouse procedures, and hospital access points. We move faster because we know every road on Vancouver Island.</p>
+      </div>
+
+      <div>
+        <h3 class="text-brand-blue mb-3">Real-Time Updates</h3>
+        <p class="text-gray-700">Track your shipment live. Proof of delivery in minutes. No "it's on the truck somewhere" nonsense—you know exactly when it arrives.</p>
+      </div>
+
+      <div>
+        <h3 class="text-brand-blue mb-3">Flat B2B Rates</h3>
+        <p class="text-gray-700">No surprise surcharges. Recurring business gets volume discounts. Monthly invoicing, credit terms, and a dedicated contact for your account.</p>
+      </div>
+
+      <div>
+        <h3 class="text-brand-blue mb-3">24/7 Emergency</h3>
+        <p class="text-gray-700">After hours? Weekend emergency? We're here. Call us for late-night rush jobs—you talk to dispatch, not an answering service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CTA -->
+  <B2BCTA />
+
+  <!-- Coverage Map / Service Area -->
+  <section class="section-container">
+    <h2 class="text-center mb-8">Service Area: Central Vancouver Island</h2>
+
+    <div class="bg-gray-100 rounded-lg p-8 text-center">
+      <p class="text-gray-600 mb-4">
+        Nanaimo as hub. Same-day service to Victoria, Duncan, Parksville, Qualicum, Port Alberni, Comox Valley, Campbell River, and everywhere in between.
+      </p>
+      <p class="text-sm text-gray-500 mb-4">
+        [TODO: Static SVG map showing Nanaimo, major routes, ferry corridors, and service radius]
+      </p>
+      <a href="/routes/nanaimo-victoria" class="text-brand-blue font-semibold hover:underline">View all routes and transit times →</a>
+    </div>
+  </section>
+
+  <!-- Hours / Contact Section -->
+  <section class="bg-brand-dark text-white section-container" id="contact">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="mb-4">Hours</h3>
+        <p class="mb-2"><strong>Monday–Friday:</strong> {config.hours.weekday}</p>
+        <p class="mb-4"><strong>Saturday–Sunday:</strong> {config.hours.weekend}</p>
+        <p class="text-sm opacity-75">Emergency after-hours service available. Call for details.</p>
+      </div>
+
+      <div>
+        <h3 class="mb-4">Get in Touch</h3>
+        <a href={`tel:${config.phone.replace(/[^\d+]/g, '')}`} class="block text-2xl font-bold text-brand-accent mb-2 hover:underline">
+          {config.phone}
+        </a>
+        <a href={`mailto:${config.email}`} class="block text-brand-accent hover:underline mb-4">
+          {config.email}
+        </a>
+        <p class="text-sm opacity-75">Available for quotes, emergency dispatch, and account setup.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

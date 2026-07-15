@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import B2BCTA from '../components/B2BCTA.astro';
+import PhoneCTA from '../components/PhoneCTA.astro';
+import { config } from '../config';
+
+const title = 'Courier Services for Business | Law Firms, Medical, Manufacturing';
+const description = 'B2B courier services. Legal firms, medical clinics, auto parts, print shops, manufacturing. Nanaimo and Vancouver Island.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Courier Services Built for Business</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        We specialize in time-critical, high-value deliveries for businesses that can't afford delays. Law firms, medical facilities, manufacturing, auto parts, print shops. Nanaimo and central Vancouver Island.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Industries We Serve</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <!-- Legal -->
+      <div class="card">
+        <h3 class="text-brand-blue mb-4">Law Firms & Legal Services</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>The challenge:</strong> Court filing deadlines are absolute. A missed deadline = malpractice risk.
+        </p>
+        <ul class="space-y-2 text-gray-700 text-sm mb-4">
+          <li>✓ Same-day courthouse filing (Nanaimo courts)</li>
+          <li>✓ Deposition material transport</li>
+          <li>✓ Inter-office courier (Nanaimo law district)</li>
+          <li>✓ Service of documents on opposing counsel</li>
+          <li>✓ Proof of filing with timestamps</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          Our drivers know courthouse procedures, filing windows, and security protocols. We track deadlines, not schedules.
+        </p>
+      </div>
+
+      <!-- Medical -->
+      <div class="card">
+        <h3 class="text-brand-blue mb-4">Medical & Lab Services</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>The challenge:</strong> Specimen integrity and speed are both non-negotiable.
+        </p>
+        <ul class="space-y-2 text-gray-700 text-sm mb-4">
+          <li>✓ Lab specimen pickup and delivery</li>
+          <li>✓ Pharmacy prescription transfer</li>
+          <li>✓ Temperature-controlled transport</li>
+          <li>✓ Chain-of-custody documentation</li>
+          <li>✓ HIPAA-conscious handling</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          Medical facilities and labs across Nanaimo use us daily. Temperature control, careful handling, and discreet service included.
+        </p>
+      </div>
+
+      <!-- Auto Parts -->
+      <div class="card">
+        <h3 class="text-brand-blue mb-4">Auto Parts & Shops</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>The challenge:</strong> Shop downtime costs hundreds per hour. Rush parts delivery is critical.
+        </p>
+        <ul class="space-y-2 text-gray-700 text-sm mb-4">
+          <li>✓ Same-day parts delivery across Nanaimo</li>
+          <li>✓ Scheduled daily or weekly routes</li>
+          <li>✓ Multi-shop circuits (5+ stops)</li>
+          <li>✓ Flat monthly rates for recurring volume</li>
+          <li>✓ Rush availability for emergency parts</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          We know the auto shops, suppliers, and parts houses across the island. Fast turnaround keeps your shop moving.
+        </p>
+      </div>
+
+      <!-- Print & Design -->
+      <div class="card">
+        <h3 class="text-brand-blue mb-4">Print & Design Shops</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>The challenge:</strong> Tight client deadlines mean daily proof runs and rush deliveries.
+        </p>
+        <ul class="space-y-2 text-gray-700 text-sm mb-4">
+          <li>✓ Daily proof pickup and client delivery</li>
+          <li>✓ Rush file delivery (final artwork, specs)</li>
+          <li>✓ Collateral distribution to multiple clients</li>
+          <li>✓ Scheduled 4 PM daily route option</li>
+          <li>✓ Same-day turnaround for urgent jobs</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          Print shops know: your clients' deadlines are your deadlines. We make that possible with fast, reliable pickup and delivery.
+        </p>
+      </div>
+
+      <!-- Manufacturing -->
+      <div class="card">
+        <h3 class="text-brand-blue mb-4">Manufacturing & Assembly</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>The challenge:</strong> Production continuity depends on parts supply. Late delivery = line stoppage.
+        </p>
+        <ul class="space-y-2 text-gray-700 text-sm mb-4">
+          <li>✓ End-of-day pickup of finished goods</li>
+          <li>✓ Part distribution to assembly lines</li>
+          <li>✓ Oversized and freight capability</li>
+          <li>✓ Pallet and material handling</li>
+          <li>✓ Scheduled daily or multi-drop routes</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          We handle the logistics so your production team stays focused on building.
+        </p>
+      </div>
+
+      <!-- Pharmacies & Medical Retail -->
+      <div class="card">
+        <h3 class="text-brand-blue mb-4">Pharmacies & Medical Retail</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>The challenge:</strong> Patient care depends on inventory and prescription fulfillment on-time, every time.
+        </p>
+        <ul class="space-y-2 text-gray-700 text-sm mb-4">
+          <li>✓ Prescription transfer between pharmacies</li>
+          <li>✓ Stock delivery (medication, supplies)</li>
+          <li>✓ Temperature-controlled transport for biologics</li>
+          <li>✓ Scheduled recurring routes</li>
+          <li>✓ Emergency/rush availability</li>
+        </ul>
+        <p class="text-sm text-gray-600">
+          Pharmacies rely on us for same-day delivery that keeps their shelves stocked and prescriptions moving.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CTA -->
+  <B2BCTA />
+
+  <section class="section-container">
+    <h2>Why Businesses Choose Us</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="font-bold text-brand-blue mb-3">Flat Volume Rates</h3>
+        <p class="text-gray-700">
+          High-volume businesses don't pay per-km surcharge shock. We quote a flat monthly rate for your recurring route. Budget predictably.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-3">Dedicated Driver</h3>
+        <p class="text-gray-700">
+          Your scheduled route gets the same driver. They learn your routine, your customers, your timing. Consistency matters.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-3">Monthly Invoicing</h3>
+        <p class="text-gray-700">
+          One line item on your invoice each month. No daily paperwork. No per-delivery micro-invoicing. Finance loves this.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-3">24/7 Emergency Dispatch</h3>
+        <p class="text-gray-700">
+          Something breaks at 5 PM on Friday? Call us. You reach a dispatcher, not a voicemail. We dispatch emergency rush service.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-3">Real-Time Tracking</h3>
+        <p class="text-gray-700">
+          Your team and clients see exactly where the driver is. No "it's on the truck" vagueness. Live GPS, ETA, photo proof.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-3">Local Expertise</h3>
+        <p class="text-gray-700">
+          Our drivers know every street in Nanaimo, ferry schedules for island routes, courthouse procedures, and hospital access points.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Case Study: Auto Parts Distributor</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        <strong>The Setup:</strong> A Nanaimo auto parts distributor was making 8–10 one-off deliveries per day to local shops. Each call, each invoice, each uncertainty.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-3">Before (One-Off Courier)</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>8 deliveries × $40/delivery = ~$320/day</li>
+            <li>20 business days/month = ~$6,400/month</li>
+            <li>9 separate invoice calls and confirmations</li>
+            <li>Unpredictable timing—drivers backlogged some days</li>
+            <li>Shops got frustrated with "don't know when it'll arrive"</li>
+          </ul>
+        </div>
+
+        <div class="bg-brand-blue text-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-3">After (Scheduled Route)</h3>
+          <ul class="space-y-2 text-sm">
+            <li>3 PM daily route to 8 shops = $100/day</li>
+            <li>20 business days/month = ~$2,000/month</li>
+            <li>One invoice, one line item</li>
+            <li>Same driver, same time, every day. Shops know when to expect it</li>
+            <li>Extra rush runs on top if needed (standard pricing applies)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-lg font-bold text-brand-accent">
+        Savings: ~$4,400/month. Reliability: 100%. Setup: One call to {config.phone}.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>How to Set Up Your B2B Account</h2>
+
+    <div class="max-w-2xl">
+      <ol class="space-y-4">
+        <li class="flex gap-4">
+          <span class="text-brand-accent font-bold text-lg flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold mb-1">Call for Consultation</h3>
+            <p class="text-gray-700 text-sm">
+              Describe your volume, timing, stops, and special needs. We'll outline options.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex gap-4">
+          <span class="text-brand-accent font-bold text-lg flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold mb-1">Route Planning & Quote</h3>
+            <p class="text-gray-700 text-sm">
+              We map your route, estimate time, and quote a flat monthly rate. Usually $2,000–$4,000 for typical B2B routes.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex gap-4">
+          <span class="text-brand-accent font-bold text-lg flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold mb-1">Contract & Onboarding</h3>
+            <p class="text-gray-700 text-sm">
+              Month-to-month agreement. No lock-in. 30-day cancel notice. We assign your dedicated driver.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex gap-4">
+          <span class="text-brand-accent font-bold text-lg flex-shrink-0">4</span>
+          <div>
+            <h3 class="font-bold mb-1">Launch & Optimize</h3>
+            <p class="text-gray-700 text-sm">
+              First week is learning curve. By week 2, your route runs like clockwork. Monthly invoicing starts immediately.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="mt-8">
+        <PhoneCTA text={`Start B2B Account: ${config.phone}`} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

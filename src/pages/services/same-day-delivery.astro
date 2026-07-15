@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import B2BCTA from '../../components/B2BCTA.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Same-Day Delivery Nanaimo | Local Courier Service';
+const description = 'Same-day courier delivery across Nanaimo. 3-hour delivery guarantee, low cost, no hidden fees. Call for instant quote.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Same-Day Delivery', description }} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Same-Day Delivery in Nanaimo</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Local courier service with 3-hour delivery guarantee. Nanaimo businesses trust us for urgent shipments, last-minute documents, and time-sensitive parcels.
+      </p>
+      <PhoneCTA text={`Get Quote: ${config.phone}`} />
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-container">
+    <h2>How Same-Day Delivery Works</h2>
+
+    <div class="grid md:grid-cols-4 gap-6 mb-12">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">1</div>
+        <h3 class="text-lg font-semibold mb-2">Call or Quote</h3>
+        <p class="text-gray-600 text-sm">
+          Submit pickup address, dropoff, and what time you need it there.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">2</div>
+        <h3 class="text-lg font-semibold mb-2">We Pick Up</h3>
+        <p class="text-gray-600 text-sm">
+          Driver picks up from your location within 30 minutes during business hours.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">3</div>
+        <h3 class="text-lg font-semibold mb-2">Track Live</h3>
+        <p class="text-gray-600 text-sm">
+          Get real-time updates. See driver location and ETA to destination.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">4</div>
+        <h3 class="text-lg font-semibold mb-2">Proof of Delivery</h3>
+        <p class="text-gray-600 text-sm">
+          Signature + timestamp + photo. Delivered to your inbox instantly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cutoff Times -->
+  <section class="bg-blue-50 section-container">
+    <h2>Same-Day Delivery Cutoff Times</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        Need it the same day? Here's when you need to call or submit your quote:
+      </p>
+
+      <div class="space-y-4">
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Monday–Thursday</h3>
+          <p class="text-lg font-semibold text-brand-accent">3:00 PM cutoff</p>
+          <p class="text-gray-600 text-sm mt-1">Orders placed by 3 PM guarantee same-day delivery by 6 PM.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Friday</h3>
+          <p class="text-lg font-semibold text-brand-accent">2:00 PM cutoff</p>
+          <p class="text-gray-600 text-sm mt-1">Plan ahead for Friday—weekend delivery not guaranteed until Monday.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Saturday & Sunday</h3>
+          <p class="text-lg font-semibold text-brand-accent">10:00 AM cutoff</p>
+          <p class="text-gray-600 text-sm mt-1">Weekend same-day available, but call to confirm driver availability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Use Cases -->
+  <section class="section-container">
+    <h2>Who Uses Same-Day Delivery?</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h3>Law Firms</h3>
+        <p class="text-gray-600">
+          Last-minute courthouse files, urgent legal documents, deposition materials. Our drivers know Nanaimo courthouse procedures.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Medical & Pharmacy</h3>
+        <p class="text-gray-600">
+          Urgent lab results, prescription transfers, medical records. Temperature-controlled options for sensitive shipments.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Auto Parts & Shops</h3>
+        <p class="text-gray-600">
+          Rush parts delivery to keep shops running. Nanaimo-wide coverage in 3 hours or less.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Print & Design</h3>
+        <p class="text-gray-600">
+          Final files, rush proofs, marketing collateral. Same-day turnaround for tight deadlines.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-gray-50 section-container">
+    <h2>Same-Day Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Transparent pricing. No surprise fees. Same-day delivery in Nanaimo starts at a base rate plus per-kilometer charge.
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6">
+        <h3 class="font-bold mb-4">Standard Same-Day Rate</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>Base rate:</strong> $18</li>
+          <li><strong>Per km:</strong> $1.50</li>
+          <li><strong>Oversized/Freight:</strong> $35 base + $2.00/km</li>
+          <li><strong>Multiple stops:</strong> Add $5 per additional pickup/dropoff</li>
+        </ul>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-6">
+        Rush surcharge (+50%) available for deliveries needed within 1 hour. See full pricing on our <a href="/pricing" class="text-brand-blue font-semibold">pricing page</a>.
+      </p>
+
+      <PhoneCTA text={`Get Exact Quote: ${config.phone}`} />
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm />
+
+  <!-- FAQ -->
+  <section class="section-container">
+    <h2>Same-Day Delivery FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">What's included in same-day delivery?</h3>
+        <p class="text-gray-700">
+          Pickup from your location, real-time tracking, safe transport, and proof of delivery. Signature required at dropoff.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can I modify my delivery address after I book?</h3>
+        <p class="text-gray-700">
+          Yes—call dispatch immediately if you need to change the dropoff. We'll divert the driver if possible. Changes within 15 minutes are usually free.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you do after-hours deliveries?</h3>
+        <p class="text-gray-700">
+          Yes. After-hours emergency delivery is available—call {config.phone} to arrange. Rush surcharge applies.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Is there a size limit?</h3>
+        <p class="text-gray-700">
+          No hard limit. We handle everything from letters to oversized freight. Oversized items may have different rates—call for a quote.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if my package doesn't fit in a car?</h3>
+        <p class="text-gray-700">
+          We have larger vehicles and can handle furniture, equipment, and building materials. Call for freight pricing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CTA -->
+  <B2BCTA />
+</BaseLayout>

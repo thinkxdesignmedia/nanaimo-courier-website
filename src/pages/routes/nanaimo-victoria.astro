@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Nanaimo to Victoria Courier | Same-Day Delivery';
+const description = 'Same-day courier from Nanaimo to Victoria. Ferry or highway routing. 3–4 hour delivery. Legal documents, medical samples, rush freight.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Nanaimo to Victoria Courier Route', description }} />
+
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Nanaimo to Victoria Courier</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Same-day delivery from Nanaimo to Victoria. Ferry routing optimized for schedule and time sensitivity. Legal documents, medical specimens, rush freight.
+      </p>
+      <PhoneCTA text={`Get Quote: ${config.phone}`} />
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Nanaimo ↔ Victoria: Route Details</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-gray-50 p-6 rounded">
+        <h3 class="font-bold mb-4 text-brand-blue">Ferry Route (Most Common)</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li><strong>Distance:</strong> ~60 km via Departure Bay to Swartz Bay</li>
+          <li><strong>Ferry time:</strong> 90 minutes sailing + 30 min wait/load</li>
+          <li><strong>Drive time:</strong> 45 min Nanaimo to ferry + 30 min Swartz to Victoria</li>
+          <li><strong>Total typical:</strong> 3–4 hours door-to-door</li>
+          <li><strong>Cost:</strong> Ferry surcharge ~$25 added to base rate</li>
+          <li><strong>Frequency:</strong> Ferries every 1–2 hours, peak schedules checked automatically</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded">
+        <h3 class="font-bold mb-4 text-brand-blue">Highway Route (Alternate)</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li><strong>Distance:</strong> ~260 km via Highway 1 (Malahat), Highway 19</li>
+          <li><strong>Drive time:</strong> 3–3.5 hours one-way (Vancouver traffic if metro area)</li>
+          <li><strong>Total typical:</strong> 4–5 hours (but avoids ferry wait)</li>
+          <li><strong>Cost:</strong> Higher mileage charge, no ferry surcharge</li>
+          <li><strong>Best for:</strong> Non-urgent, predictable timing (no ferry variability)</li>
+          <li><strong>Note:</strong> Malahat can close in winter—ferry is safer in bad weather</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Same-Day Cutoff Times: Nanaimo to Victoria</h2>
+
+    <p class="text-gray-700 mb-6">
+      Order your courier before these times for guaranteed same-day delivery:
+    </p>
+
+    <div class="space-y-4 max-w-3xl">
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Monday–Thursday</h3>
+        <p class="text-lg text-brand-accent font-semibold">10:00 AM cutoff</p>
+        <p class="text-gray-700 text-sm mt-1">Ferry routing recommended. Pickup by 10 AM gets your delivery to Victoria by 2–3 PM.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Friday</h3>
+        <p class="text-lg text-brand-accent font-semibold">9:00 AM cutoff</p>
+        <p class="text-gray-700 text-sm mt-1">Earlier cutoff due to afternoon ferry congestion. Plan ahead for Friday Victoria deliveries.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">After 10 AM?</h3>
+        <p class="text-gray-700 text-sm">
+          Call us. We may still get it to Victoria same-day if ferry schedules align or highway routing works. Not guaranteed, but we'll try.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Common Nanaimo ↔ Victoria Scenarios</h2>
+
+    <div class="space-y-4">
+      <div class="border-l-4 border-brand-accent bg-gray-50 p-6 rounded">
+        <h3 class="font-bold mb-2">Law Firm Document Filing (Victoria Courts)</h3>
+        <p class="text-gray-700">
+          Order by 9 AM from Nanaimo law firm. We pick up, ferry to Victoria, file at courts by 1 PM. Proof of filing back to you by 3 PM.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-brand-accent bg-gray-50 p-6 rounded">
+        <h3 class="font-bold mb-2">Medical Specimen Transport</h3>
+        <p class="text-gray-700">
+          Nanaimo clinic takes blood draw at 9 AM. We pick up, maintain temperature control during ferry, deliver to Victoria lab by noon. Results by end of business day.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-brand-accent bg-gray-50 p-6 rounded">
+        <h3 class="font-bold mb-2">Manufacturing Parts Delivery</h3>
+        <p class="text-gray-700">
+          Nanaimo warehouse completes order by 10 AM. Same-day delivery to Victoria customer by 2 PM. Goods arrive in good condition, ready for production next day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Nanaimo ↔ Victoria Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Ferry-route pricing includes ferry surcharge. Highway routing available if ferry is delayed or non-viable.
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6 space-y-3">
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Ferry Route (Standard)</h3>
+          <p class="text-gray-700">$35 base + $2.00/km + $25 ferry surcharge = ~$135–$150 typical</p>
+        </div>
+
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Highway Route (Alternate)</h3>
+          <p class="text-gray-700">$45 base + $2.50/km (260 km) = ~$700–$750</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-1">Rush Surcharge (Urgent)</h3>
+          <p class="text-gray-700">+50% on ferry route if ordered after 10 AM cutoff, space available</p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600">
+        High-volume Nanaimo–Victoria account? Weekly or monthly rates available. Call to discuss volume discounts.
+      </p>
+    </div>
+  </section>
+
+  <QuoteForm />
+
+  <section class="section-container">
+    <h2>Nanaimo ↔ Victoria FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">Does the ferry delay push my delivery to next day?</h3>
+        <p class="text-gray-700">
+          Not usually. We monitor ferry schedules and may switch to highway routing if ferry is significantly delayed. We'll update you if timeline changes. Always order by 10 AM to stay same-day.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if the Malahat closes (snow/weather)?</h3>
+        <p class="text-gray-700">
+          Ferry route is safer in winter. We'll re-route to ferry if highway is closed. Ferry surcharge applies, but your shipment still gets to Victoria same-day when possible.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can I request the ferry route specifically?</h3>
+        <p class="text-gray-700">
+          Yes. Tell us "ferry preferred" and we'll route that way. Best for time-sensitive or weather-dependent shipments. Highway is cost-effective but less predictable in winter.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you track in real time across the ferry?</h3>
+        <p class="text-gray-700">
+          Yes. You'll see the driver progress to Departure Bay, then pick up again after ferry crossing at Swartz Bay. Full delivery tracking to Victoria destination.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can you handle a return pickup from Victoria?</h3>
+        <p class="text-gray-700">
+          Yes. Tell us if you need pickup in Victoria too (e.g., pick up files, deliver to Nanaimo). We'll dispatch accordingly and quote a round-trip.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneCTA from '../components/PhoneCTA.astro';
+import { config } from '../config';
+
+const title = 'Contact Us | Nanaimo Courier';
+const description = 'Call, email, or request a callback. Direct access to dispatch. Questions about same-day delivery, rates, or services.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Get in Touch</h1>
+      <p class="text-lg md:text-xl opacity-95 max-w-2xl">
+        Questions about same-day delivery, rates, or setting up a business account? Contact dispatch directly.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="grid md:grid-cols-2 gap-12 max-w-4xl">
+      <div>
+        <h2>Quick Contact</h2>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-bold text-brand-blue mb-2">Call Dispatch</h3>
+            <a href={`tel:${config.phone.replace(/[^\d+]/g, '')}`} class="text-3xl font-bold text-brand-accent hover:underline">
+              {config.phone}
+            </a>
+            <p class="text-sm text-gray-600 mt-2">
+              Direct line to dispatch. No voicemail, no queue. Monday–Friday 7 AM–6 PM, Saturday–Sunday 8 AM–4 PM.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-blue mb-2">Email</h3>
+            <a href={`mailto:${config.email}`} class="text-lg text-brand-accent hover:underline">
+              {config.email}
+            </a>
+            <p class="text-sm text-gray-600 mt-2">
+              Send details. Response within 2 hours during business hours.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-blue mb-2">Hours</h3>
+            <p class="text-gray-700">
+              <strong>Weekdays:</strong> {config.hours.weekday}
+            </p>
+            <p class="text-gray-700">
+              <strong>Weekends:</strong> {config.hours.weekend}
+            </p>
+            <p class="text-sm text-gray-600 mt-2">
+              After-hours emergency service available. Call for details.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Request a Callback</h2>
+
+        <form id="contact-form" class="space-y-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="form-input"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="form-input"
+            required
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone"
+            class="form-input"
+            required
+          />
+
+          <select name="inquiry" class="form-input" required>
+            <option value="">Select Inquiry Type</option>
+            <option value="quote">Get a Quote</option>
+            <option value="business-account">Business Account Setup</option>
+            <option value="urgent-delivery">Urgent Delivery Request</option>
+            <option value="question">Question</option>
+            <option value="feedback">Feedback</option>
+          </select>
+
+          <textarea
+            name="message"
+            placeholder="Tell us about your delivery needs..."
+            class="form-input h-24"
+            required
+          ></textarea>
+
+          <button type="submit" class="cta-button w-full">
+            Request Callback
+          </button>
+
+          <p class="text-xs text-gray-500">
+            We'll call you back within 1 hour during business hours, or first thing next business day.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Map -->
+  <section class="bg-gray-50 section-container">
+    <h2 class="text-center mb-8">Our Service Area</h2>
+
+    <div class="max-w-4xl mx-auto bg-gray-200 rounded h-96 flex items-center justify-center">
+      <p class="text-gray-600 text-center p-4">
+        [TODO: Interactive map showing Nanaimo as hub, with service radius to Victoria, Duncan, Parksville, Qualicum, Port Alberni, Comox Valley, Campbell River. Show ferry routes and highway corridors.]
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto mt-8 text-center">
+      <p class="text-gray-700 mb-4">
+        <strong>Primary Service Area:</strong> Nanaimo and central Vancouver Island
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>Same-Day Routes:</strong> Victoria, Duncan, Parksville, Comox Valley, Campbell River, Port Alberni
+      </p>
+      <p class="text-sm text-gray-600">
+        Service beyond our main area? Call for availability and pricing.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2 class="text-center mb-12">FAQ Before You Call</h2>
+
+    <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="font-bold text-brand-blue mb-2">Do I need an appointment?</h3>
+        <p class="text-gray-700 text-sm">
+          No. Call or request a quote anytime. For urgent same-day delivery, the sooner you call, the better.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-2">Can I email a quote request?</h3>
+        <p class="text-gray-700 text-sm">
+          Yes, but calling is faster. Email response is 1–2 hours; phone dispatch is immediate.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-2">Do you deliver after hours?</h3>
+        <p class="text-gray-700 text-sm">
+          Yes. Emergency after-hours dispatch available. Surcharges apply. Call to arrange.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-brand-blue mb-2">Are rates negotiable?</h3>
+        <p class="text-gray-700 text-sm">
+          Yes. Recurring business with volume gets flat monthly rates. Call to discuss your needs.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          alert('Request submitted! We\'ll call you shortly.');
+          form.reset();
+        } else {
+          alert('Error submitting request. Please call us instead.');
+        }
+      } catch (error) {
+        console.error('Contact form error:', error);
+        alert('Error submitting request. Please call us instead.');
+      }
+    });
+  }
+</script>

@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Rush & Hot-Shot Delivery | Emergency Courier Nanaimo';
+const description = 'Emergency rush delivery for time-critical shipments. Hot-shot courier, priority dispatch, dedicated driver. Same-day or next-day across Vancouver Island.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Rush & Hot-Shot Delivery', description }} />
+
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Rush & Hot-Shot Delivery</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Emergency courier for time-critical shipments. Nanaimo to Vancouver Island. Priority dispatch, dedicated driver if needed. Under 1 hour? We can do it.
+      </p>
+      <PhoneCTA text={`Call Now: ${config.phone}`} />
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>What Is Hot-Shot Delivery?</h2>
+
+    <p class="text-lg text-gray-700 max-w-3xl mb-8">
+      Hot-shot courier means your shipment is <strong>the priority</strong>. We don't batch it with other deliveries. One driver, one vehicle, your cargo gets full attention from pickup to dropoff.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Guaranteed Pickup</h3>
+        <p>We pick you up within 15 minutes. No waiting for the next route—your shipment goes now.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Direct Route</h3>
+        <p>No other stops. Straight from your location to the destination via the fastest route.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Real-Time Tracking</h3>
+        <p>Live GPS. You see exactly where your driver is and when they'll arrive—to the minute.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Hot-Shot Delivery Times</h2>
+
+    <div class="max-w-3xl space-y-4">
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Under 1 Hour (Nanaimo Local)</h3>
+        <p class="text-gray-700">Call dispatch. We'll confirm with a dedicated driver in minutes. Premium rush rate applies.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Same Day (Nanaimo to Comox/Parksville)</h3>
+        <p class="text-gray-700">Order by noon for same-day delivery. Ferry scheduling built in. 2–3 hours typical.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Same Day (Nanaimo to Victoria)</h3>
+        <p class="text-gray-700">Order by 10 AM for same-day delivery via ferry or highway. 3–4 hours typical.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Next Day (Vancouver Island to BC Interior)</h3>
+        <p class="text-gray-700">Beyond the Island? We partner with regional couriers for guaranteed next-day service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Real Hot-Shot Scenarios</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="font-bold mb-3">Legal Emergency</h3>
+        <p class="text-gray-700">
+          Court filing deadline in 2 hours. Judge's chambers need a document signed by your client across town. We pick up, deliver, and get your proof of delivery back to you before the cutoff.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-3">Medical Specimen</h3>
+        <p class="text-gray-700">
+          Lab result needed ASAP. Specimen requires temperature control. We've got insulated containers and drivers trained in chain-of-custody. Delivery in 45 minutes.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-3">Manufacturing Part</h3>
+        <p class="text-gray-700">
+          Production line down. You need a replacement bearing from a supplier across the island. 1-hour rush pickup and delivery gets your shop back online.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-3">Client Event</h3>
+        <p class="text-gray-700">
+          Event starts in 3 hours. Vendor hasn't delivered signage. We rush-pick from the print shop and deliver to your venue on time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Hot-Shot Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Rush delivery costs more because we're dedicating a vehicle and driver to your shipment. Here's what to expect:
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6 space-y-3">
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Rush Multiplier</h3>
+          <p class="text-lg text-brand-accent font-semibold">+50% to +100% of standard rate</p>
+          <p class="text-sm text-gray-600">Depends on timing urgency and distance.</p>
+        </div>
+
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Minimum Rush Charge</h3>
+          <p class="text-lg text-brand-accent font-semibold">$50</p>
+          <p class="text-sm text-gray-600">Any hot-shot dispatch, no matter how close.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-1">After-Hours Surcharge</h3>
+          <p class="text-lg text-brand-accent font-semibold">+$25 evenings, +$50 nights/weekends</p>
+          <p class="text-sm text-gray-600">On top of rush rate for late-night emergency.</p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-6">
+        Example: 5 km same-day rush = base $18 + (5 km × $1.50) + 50% rush = ~$32. One-hour emergency adds another $50+ depending on driver availability.
+      </p>
+    </div>
+  </section>
+
+  <QuoteForm />
+
+  <section class="section-container">
+    <h2>FAQ: Hot-Shot & Rush Delivery</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">How fast can you really pick up?</h3>
+        <p class="text-gray-700">
+          If we have a driver available in your area, 15 minutes. If it's a slower period, 30 minutes is typical. Call {config.phone} for real-time pickup estimate.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can I track my hot-shot in real time?</h3>
+        <p class="text-gray-700">
+          Yes. We send you a link—see driver location, ETA, and completion status live on your phone.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if I book a rush and change my mind?</h3>
+        <p class="text-gray-700">
+          Cancellation within 5 minutes: no charge. After 5 minutes: 50% of quoted rush rate (because we're holding a driver). After pickup: full charge.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you do hot-shot across ferry routes?</h3>
+        <p class="text-gray-700">
+          Yes. We factor ferry wait times and sailing schedules. Nanaimo to Victoria hot-shot is common. Call for ferry-route rush details.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

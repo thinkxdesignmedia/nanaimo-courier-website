@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import { config } from '../../config';
+
+const title = 'Same-Day Delivery on Vancouver Island: How Cutoff Times Work';
+const description = 'Why ferry schedules and geography set real deadlines for same-day courier service. Nanaimo to Victoria, Comox, and beyond.';
+const date = '2026-01-15';
+---
+
+<BaseLayout {title} {description}>
+  <article class="section-container prose prose-lg max-w-3xl">
+    <h1>{title}</h1>
+
+    <p class="text-gray-500 text-sm mb-8">
+      Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
+    </p>
+
+    <p>
+      "Can you deliver to Victoria same-day?" If you've ever asked a courier that question at 2 PM on a weekday, you've hit the timing wall. The answer isn't just "maybe"—it's determined by geography, ferry schedules, and whether you understand how Vancouver Island logistics actually works.
+    </p>
+
+    <h2>Why Cutoff Times Aren't Arbitrary</h2>
+
+    <p>
+      Most businesses think cutoff times are just the courier being picky. They're not. Every cutoff time maps to a real constraint:
+    </p>
+
+    <ul>
+      <li><strong>Ferry schedule:</strong> Nanaimo to Victoria requires a ferry crossing. Sailings run every 1–2 hours. A 10 AM pickup + 1 hour to Departure Bay + ferry wait + sailing time + drive to Victoria = 3–4 hour total. Order after 10 AM? You miss the 11 AM or noon ferry and your delivery slips to evening or next day.</li>
+      <li><strong>Driver availability:</strong> A single driver can only cover so much distance before the workday ends. If they're already committed to a 3:30 PM Parksville run, a 4 PM Victoria pickup isn't happening same-day.</li>
+      <li><strong>Malahat conditions:</strong> The mountain highway between Nanaimo and Victoria closes 5–10 days per year in winter. Ferry becomes the only option, and winter sailing schedules differ. Earlier cutoffs apply in winter.</li>
+    </ul>
+
+    <h2>Nanaimo Same-Day Cutoff Times (Actual)</h2>
+
+    <div class="bg-gray-50 p-6 rounded my-6">
+      <p><strong>Nanaimo Local (Parksville/Qualicum):</strong> 3 PM weekdays</p>
+      <p class="text-sm text-gray-600 mt-2">Shortest route. 30–45 minutes. Even a 3:30 PM order might make it if driver is close.</p>
+
+      <p class="mt-4"><strong>Nanaimo to Comox Valley:</strong> 12 PM (noon) weekdays</p>
+      <p class="text-sm text-gray-600 mt-2">Highway 19 north, 1.5–2 hours. Afternoon pickups push to evening delivery or next-day.</p>
+
+      <p class="mt-4"><strong>Nanaimo to Victoria (Ferry):</strong> 10 AM weekdays, 9 AM Friday</p>
+      <p class="text-sm text-gray-600 mt-2">Ferry crossings after noon get congested. A 10 AM order gets the 11 AM ferry; anything after 10 AM risks the 1 PM sailing (arrives Victoria 4–5 PM) or next-day.</p>
+
+      <p class="mt-4"><strong>Nanaimo to Port Alberni:</strong> 1 PM weekdays</p>
+      <p class="text-sm text-gray-600 mt-2">Mountain route, 1.5 hours. Early cutoff due to afternoon mountain traffic.</p>
+    </div>
+
+    <h2>Why Friday Cutoffs Are Earlier</h2>
+
+    <p>
+      Fridays have the hardest cutoffs. Victoria ferry traffic peaks 11 AM–1 PM. A driver who makes the 11 AM ferry from Nanaimo will clear Victoria by 3 PM. After 10 AM pickup? Next ferry might be 1 PM (arrives 4 PM, close to evening), and return to Nanaimo is delayed. Drivers switch to evening pickups or Friday is done.
+    </p>
+
+    <p>
+      Same applies to weekend ordering: Saturday 10 AM cutoff for Parksville, 11 AM for Comox, 9 AM for Victoria. Sunday mornings? Expect next-day delivery.
+    </p>
+
+    <h2>What Happens if You Miss Cutoff?</h2>
+
+    <p>
+      Call and ask. Sometimes a driver is positioned well and can rush-pick late. Rush surcharge applies (+50%), but it might still be same-day. Depends on:
+    </p>
+
+    <ul>
+      <li>Whether a driver is free in your area</li>
+      <li>Ferry schedules (if island route)</li>
+      <li>Destination (local is more flexible than remote)</li>
+    </ul>
+
+    <p>
+      But don't count on it. Plan ahead. Order by published cutoff and know your delivery will arrive same-day.
+    </p>
+
+    <h2>Ferry Schedules: The Hidden Variable</h2>
+
+    <p>
+      If you're ordering Nanaimo–Victoria and the ferry has a sailing in the next 30 minutes, your driver can make it. If the next sailing is 90 minutes away, you've just lost 90 minutes of your delivery window. Winter sailing schedules are sparser; cutoffs shift earlier.
+    </p>
+
+    <p>
+      This is why professional couriers monitor ferry status in real-time. A weather delay on the 11 AM crossing might cascade your entire 3 PM delivery to evening.
+    </p>
+
+    <h2>TL;DR: When to Order for Same-Day</h2>
+
+    <ul>
+      <li><strong>Nanaimo local:</strong> Order by 3 PM any weekday</li>
+      <li><strong>To Comox:</strong> Order by noon</li>
+      <li><strong>To Victoria:</strong> Order by 10 AM (9 AM Friday)</li>
+      <li><strong>To Port Alberni:</strong> Order by 1 PM</li>
+      <li><strong>Weekends:</strong> Plan for next-day. Sunday is worst.</li>
+      <li><strong>Winter:</strong> Order earlier. Mountain and ferry delays are real.</li>
+    </ul>
+
+    <p>
+      Order outside these windows? Call {config.phone} and ask. Rush service might make it work. But understand: cutoff times aren't bureaucracy—they're physics and geography.
+    </p>
+  </article>
+
+  <QuoteForm />
+</BaseLayout>

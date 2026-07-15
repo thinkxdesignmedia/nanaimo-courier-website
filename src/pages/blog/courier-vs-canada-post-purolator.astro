@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+
+const title = 'Courier vs Canada Post vs Purolator: When to Use Each in Nanaimo';
+const description = 'Each delivery method has a role. Same-day courier for urgent. Canada Post for bulk non-urgent. Purolator for regional networks. Here\'s the breakdown.';
+const date = '2026-01-10';
+---
+
+<BaseLayout {title} {description}>
+  <article class="section-container prose prose-lg max-w-3xl">
+    <h1>{title}</h1>
+
+    <p class="text-gray-500 text-sm mb-8">
+      Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
+    </p>
+
+    <p>
+      You have a package that needs to leave Nanaimo. Courier? Canada Post? Purolator? The answer depends on what you're shipping, when it needs to arrive, and how much you're willing to spend.
+    </p>
+
+    <h2>Same-Day Courier: When Speed Is Non-Negotiable</h2>
+
+    <p>
+      <strong>Use this if:</strong> You need it there today. Legal documents, urgent parts, medical specimens, rush proofs.
+    </p>
+
+    <ul>
+      <li><strong>Timeline:</strong> Same-day delivery (30 minutes to 4 hours depending on destination)</li>
+      <li><strong>Cost:</strong> $25–$150+ depending on distance and rush</li>
+      <li><strong>Tracking:</strong> Real-time GPS. You know exactly where it is.</li>
+      <li><strong>Proof:</strong> Photo + signature + timestamp for your records</li>
+      <li><strong>Best for:</strong> Local Nanaimo, island routes to Victoria/Comox</li>
+      <li><strong>Not ideal for:</strong> Bulk shipments, non-urgent parcels</li>
+    </ul>
+
+    <p>
+      Same-day courier is fast and reliable, but it's also expensive if you're shipping frequently. Use it when the cost of delay (missed court filing, production line stoppage, patient care) exceeds the courier fee.
+    </p>
+
+    <h2>Canada Post: The Bulk & Non-Urgent Option</h2>
+
+    <p>
+      <strong>Use this if:</strong> You're shipping multiple parcels and timing isn't critical. Bulk postal rates, cross-country coverage.
+    </p>
+
+    <ul>
+      <li><strong>Timeline:</strong> 1–5 business days depending on service level</li>
+      <li><strong>Cost:</strong> Cheap per item if you're shipping in bulk ($5–$25 per parcel)</li>
+      <li><strong>Tracking:</strong> Basic tracking available</li>
+      <li><strong>Coverage:</strong> National network, even remote areas</li>
+      <li><strong>Best for:</strong> Direct mail, bulk newsletters, non-urgent parcels to customers</li>
+      <li><strong>Not ideal for:</strong> Time-critical deliveries, local same-day</li>
+    </ul>
+
+    <p>
+      Post Office rates crush courier pricing on volume. If you're mailing 50 packages? Canada Post wins. If you're mailing one urgent legal document? Courier wins.
+    </p>
+
+    <h2>Purolator: The Network Player</h2>
+
+    <p>
+      <strong>Use this if:</strong> You're shipping regionally (BC, Western Canada) on a predictable schedule and need next-day or 2-day guaranteed.
+    </p>
+
+    <ul>
+      <li><strong>Timeline:</strong> Next-day or 2-day service across Canada</li>
+      <li><strong>Cost:</strong> $15–$50 depending on zone and service level</li>
+      <li><strong>Tracking:</strong> Full tracking, proof of delivery</li>
+      <li><strong>Coverage:</strong> Network of regional hubs and destinations</li>
+      <li><strong>Best for:</strong> B2B regional shipments, scheduled recurring deliveries</li>
+      <li><strong>Not ideal for:</strong> Same-day (not their model), local Nanaimo-only</li>
+    </ul>
+
+    <p>
+      Purolator is the middle ground. Not as fast as dedicated courier, not as cheap as postal bulk, but reliable and predictable for next-day BC or Western Canada delivery.
+    </p>
+
+    <h2>Cost Comparison</h2>
+
+    <div class="bg-gray-50 p-6 rounded my-6">
+      <p><strong>Scenario: Nanaimo to Victoria, urgent legal document, today</strong></p>
+      <ul class="mt-4 space-y-2">
+        <li>Same-day courier: ~$150 (3–4 hours)</li>
+        <li>Purolator: ~$30–$50 (next-day, won't arrive today)</li>
+        <li>Canada Post: ~$15 (1–3 business days, too slow)</li>
+      </ul>
+      <p class="mt-4 text-sm text-gray-600">Courier is pricier, but it's the only option for same-day.</p>
+
+      <p class="mt-6"><strong>Scenario: Nanaimo business shipping 20 promotional boxes to customers across BC</strong></p>
+      <ul class="mt-4 space-y-2">
+        <li>Same-day courier: ~$2,500+ (one per delivery)</li>
+        <li>Purolator: ~$600–$800 (next-day guarantee, bulk discount)</li>
+        <li>Canada Post: ~$300–$400 (1–3 business days)</li>
+      </ul>
+      <p class="mt-4 text-sm text-gray-600">Purolator or Post Office win here. Courier would be overkill.</p>
+    </div>
+
+    <h2>Decision Tree</h2>
+
+    <p>Ask yourself:</p>
+
+    <ol>
+      <li><strong>Does it need to arrive today?</strong> → Same-day courier</li>
+      <li><strong>Will next-day work?</strong> → Purolator</li>
+      <li><strong>Is it non-urgent, or shipping in bulk?</strong> → Canada Post</li>
+      <li><strong>Recurring business shipment?</strong> → Purolator account or courier scheduled route</li>
+    </ol>
+
+    <h2>The Nanaimo Advantage</h2>
+
+    <p>
+      Nanaimo is geographically central to Vancouver Island. For island-bound deliveries (Victoria, Comox, Port Alberni), same-day courier is usually faster and more reliable than shipping south through Victoria hub or north through other networks. Local knowledge, no facility delays, direct driver routing.
+    </p>
+
+    <p>
+      For mainland BC or national shipping, Purolator's network can't be beaten. Post Office is cheapest for non-urgent bulk.
+    </p>
+
+    <p>
+      Use the right tool for the job. Your fastest option? Pick up a phone and call a local same-day courier.
+    </p>
+  </article>
+
+  <QuoteForm />
+</BaseLayout>

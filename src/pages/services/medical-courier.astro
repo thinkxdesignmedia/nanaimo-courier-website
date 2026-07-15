@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Medical & Lab Courier | Healthcare Specimen Transport Nanaimo';
+const description = 'Specialized medical courier for lab specimens, pharmacy delivery, temperature-controlled transport. Chain-of-custody available. HIPAA-conscious service.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Medical & Lab Courier', description }} />
+
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Medical & Lab Courier Service</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Specialized transport for lab specimens, pathology samples, pharmacy delivery. Temperature control, chain-of-custody, and healthcare-trained drivers.
+      </p>
+      <PhoneCTA text={`Get Quote: ${config.phone}`} />
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Medical & Lab Courier Services</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Specimen Transport</h3>
+        <p class="text-gray-700">
+          Lab samples, blood draws, pathology specimens. Temperature-controlled insulated containers. Same-day delivery across Nanaimo and Vancouver Island.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Pharmacy Delivery</h3>
+        <p class="text-gray-700">
+          Prescription transfers, medication delivery to clinics and pharmacies. Confidential handling, signature required, proof of delivery.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Chain-of-Custody</h3>
+        <p class="text-gray-700">
+          Legal specimens, forensic samples, regulated transport. Full documentation, sealed containers, driver certification available.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue mb-3">Medical Records</h3>
+        <p class="text-gray-700">
+          Patient files, diagnostic reports, imaging records. Confidential delivery, secure containers, HIPAA-conscious protocols.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Temperature Control & Handling</h2>
+
+    <p class="text-gray-700 mb-8">
+      Not all medical cargo is the same. We provide appropriate transport based on specimen type:
+    </p>
+
+    <div class="space-y-4 max-w-3xl">
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Room Temperature (15–25°C)</h3>
+        <p class="text-gray-700 text-sm">Standard insulated container. Most routine labs, pharmacy picks, medical records.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Refrigerated (2–8°C)</h3>
+        <p class="text-gray-700 text-sm">Ice packs or gel packs. Blood cultures, some bacterial samples, vaccine transport.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Frozen (–20°C or lower)</h3>
+        <p class="text-gray-700 text-sm">Dry ice or ultra-cold containers. Plasma, tissue samples, specialized research specimens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Who We Serve</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="card">
+        <h3>Diagnostic Labs</h3>
+        <p class="text-gray-600">
+          Specimen pickup from clinics. Same-day turnaround. Nanaimo Island Health and private labs rely on us.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Pharmacies</h3>
+        <p class="text-gray-600">
+          Prescription delivery, medication transfer, emergency stock runs across Vancouver Island.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Medical Clinics</h3>
+        <p class="text-gray-600">
+          Patient sample transport, urgent results delivery, inter-clinic transfers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Veterinary Clinics</h3>
+        <p class="text-gray-600">
+          Animal specimen transport to centralized labs. Temperature control, rapid turnaround.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Medical Courier Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Medical transport starts at our standard rates, with surcharges for specialized handling:
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6 space-y-3">
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Base Rate + Delivery</h3>
+          <p class="text-gray-700">Standard $18 base + $1.50/km (same as regular courier)</p>
+        </div>
+
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Temperature Control</h3>
+          <p class="text-gray-700">+$5–$15 depending on cooling method (ice packs to dry ice)</p>
+        </div>
+
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Chain-of-Custody</h3>
+          <p class="text-gray-700">+$20 for full documentation and certified handling</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-1">Multiple Pickups</h3>
+          <p class="text-gray-700">+$5 per additional clinic/location (volume discounts available)</p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600">
+        Medical practices with regular volume? Ask about our monthly account rates and dedicated pickup schedules.
+      </p>
+    </div>
+  </section>
+
+  <QuoteForm />
+
+  <section class="section-container">
+    <h2>Medical Courier FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">Are your drivers trained in medical handling?</h3>
+        <p class="text-gray-700">
+          Yes. Our team is trained in specimen handling, chain-of-custody protocols, and confidentiality. We understand healthcare operations.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can you do routine daily pickups?</h3>
+        <p class="text-gray-700">
+          Absolutely. Many clinics use us for daily 3 PM specimen runs. Standing orders, flat rates, and volume discounts available.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What's your turnaround for specimen delivery?</h3>
+        <p class="text-gray-700">
+          Local Nanaimo: 1–2 hours. Parksville/Comox: 2–3 hours. Victoria: 3–4 hours. Same-day guarantee on most routes.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you handle hazardous/biohazard specimens?</h3>
+        <p class="text-gray-700">
+          Yes, with proper containment. We follow all regulations for biohazard transport. Specialized containers and training included.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Is delivery confidential?</h3>
+        <p class="text-gray-700">
+          Yes. We treat all medical cargo as confidential. No unnecessary handling, sealed containers, and driver discretion guaranteed.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

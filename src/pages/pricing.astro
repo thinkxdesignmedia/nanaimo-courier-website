@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneCTA from '../components/PhoneCTA.astro';
+import { config } from '../config';
+
+const title = 'Courier Rates in Nanaimo: What Delivery Costs in 2026';
+const description = 'Transparent courier pricing. Same-day delivery, rush service, freight rates. No hidden fees. Call for instant quote.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Courier Pricing in Nanaimo</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Transparent, honest pricing. No surprise fees. Same-day delivery, rush multipliers, freight rates all listed below.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Standard Same-Day Rate</h2>
+
+    <div class="max-w-3xl bg-gray-50 p-8 rounded mb-12">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-brand-accent mb-2">$18</div>
+          <p class="text-gray-700">Base Rate</p>
+          <p class="text-xs text-gray-500 mt-1">per pickup/delivery</p>
+        </div>
+
+        <div>
+          <div class="text-3xl font-bold text-brand-accent mb-2">$1.50</div>
+          <p class="text-gray-700">Per Kilometer</p>
+          <p class="text-xs text-gray-500 mt-1">standard delivery</p>
+        </div>
+
+        <div>
+          <div class="text-3xl font-bold text-brand-accent mb-2">$5</div>
+          <p class="text-gray-700">Per Extra Stop</p>
+          <p class="text-xs text-gray-500 mt-1">multi-pickup/dropoff</p>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t pt-6">
+        <h3 class="font-bold mb-3">Example Calculations</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li><strong>5 km delivery:</strong> $18 + (5 × $1.50) = <span class="font-bold">$25.50</span></li>
+          <li><strong>15 km delivery:</strong> $18 + (15 × $1.50) = <span class="font-bold">$40.50</span></li>
+          <li><strong>25 km delivery:</strong> $18 + (25 × $1.50) = <span class="font-bold">$55.50</span></li>
+          <li><strong>3-stop pickup circuit:</strong> $18 × 3 + (20 km × $1.50) = <span class="font-bold">$84</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Service Add-Ons & Multipliers</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Rush / Hot-Shot</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>+50% of standard rate (urgent same-day)</li>
+          <li>+100% for under-1-hour emergency</li>
+          <li>Minimum rush charge: $50</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Temperature Control</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>+$5 (ice packs)</li>
+          <li>+$10 (refrigerated)</li>
+          <li>+$15 (frozen/dry ice)</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">After-Hours Service</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>+$25 (evenings 6–10 PM)</li>
+          <li>+$50 (night/overnight 10 PM–7 AM)</li>
+          <li>+$75 (weekends/holidays)</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Specialty Services</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>Chain-of-custody: +$20</li>
+          <li>Court filing: flat $35</li>
+          <li>Proof of filing: +$10</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Freight & Oversized Rates</h2>
+
+    <div class="max-w-3xl space-y-4">
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-blue">
+        <h3 class="font-bold mb-2">Standard Van (up to 1 pallet)</h3>
+        <p class="text-lg font-semibold text-brand-accent">$35 base + $2.00/km</p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-blue">
+        <h3 class="font-bold mb-2">Box Truck (1–2 pallets)</h3>
+        <p class="text-lg font-semibold text-brand-accent">$50 base + $2.50/km</p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-blue">
+        <h3 class="font-bold mb-2">Half-Ton or Larger</h3>
+        <p class="text-lg font-semibold text-brand-accent">$75 base + $3.00/km + weight surcharge</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Route-Specific Surcharges</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        Longer routes and ferry crossings add predictable surcharges:
+      </p>
+
+      <div class="space-y-4">
+        <div class="bg-white p-6 rounded">
+          <h3 class="font-bold mb-2">Ferry Crossing</h3>
+          <p class="text-gray-700">+$25 (Nanaimo ↔ Victoria)</p>
+        </div>
+
+        <div class="bg-white p-6 rounded">
+          <h3 class="font-bold mb-2">Island Routes (Comox/Campbell River)</h3>
+          <p class="text-gray-700">+50% mileage rate (fuel/distance factor)</p>
+        </div>
+
+        <div class="bg-white p-6 rounded">
+          <h3 class="font-bold mb-2">Port Alberni (Forestry Deliveries)</h3>
+          <p class="text-gray-700">Base $35 + $2.00/km (mountain route premium)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Scheduled Route Pricing (Volume Discount)</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        Daily or weekly recurring routes get flat monthly rates, 30–50% cheaper than one-off same-day:
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-blue-50 p-6 rounded">
+          <h3 class="font-bold mb-3">Daily Route (5 days/week)</h3>
+          <p class="text-lg font-bold text-brand-accent">$80–$120/day</p>
+          <p class="text-sm text-gray-600 mt-2">Typical Nanaimo route with 3–5 stops. Includes dedicated driver.</p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded">
+          <h3 class="font-bold mb-3">Weekly Route (1–2x/week)</h3>
+          <p class="text-lg font-bold text-brand-accent">$150–$250/run</p>
+          <p class="text-sm text-gray-600 mt-2">Single run, multi-stop circuit. Fixed monthly invoice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>What's NOT Included (No Hidden Fees)</h2>
+
+    <ul class="max-w-3xl space-y-2 text-gray-700">
+      <li class="flex gap-3">
+        <span class="text-brand-accent font-bold">✓</span>
+        <span><strong>No fuel surcharge.</strong> Price is all-in—we absorb gas volatility.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-brand-accent font-bold">✓</span>
+        <span><strong>No administrative fee.</strong> Quote includes dispatch and tracking.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-brand-accent font-bold">✓</span>
+        <span><strong>No minimum charge.</strong> $18 base is our floor—no fake "order minimum."</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-brand-accent font-bold">✓</span>
+        <span><strong>No rush fee for on-time delivery.</strong> We hit your deadline—that's expected.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section-container">
+    <h2>How to Get Your Exact Quote</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Use the calculator below or call us for a real-time quote:
+      </p>
+
+      <div class="bg-gray-50 p-8 rounded border border-gray-300">
+        <p class="text-sm text-gray-600 mb-4">
+          Quick estimate: Base ($18) + Distance (km × rate) + Add-ons = Your Price
+        </p>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1">Approximate Distance (km)</label>
+            <input type="number" id="distance" placeholder="10" class="form-input" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1">Service Type</label>
+            <select id="service" class="form-input">
+              <option value="standard">Standard Same-Day</option>
+              <option value="rush">Rush/Hot-Shot (+50%)</option>
+              <option value="freight">Freight</option>
+            </select>
+          </div>
+
+          <div id="result" class="bg-white p-4 rounded border border-gray-300 text-lg font-bold text-brand-accent hidden">
+            Estimated Cost: <span id="cost">$0</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-6">
+          This is an estimate. Call {config.phone} for exact pricing based on your exact addresses and service needs.
+        </p>
+      </div>
+
+      <div class="mt-8">
+        <PhoneCTA text={`Call for Exact Quote: ${config.phone}`} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const distanceInput = document.getElementById('distance');
+  const serviceSelect = document.getElementById('service');
+  const resultDiv = document.getElementById('result');
+  const costSpan = document.getElementById('cost');
+
+  function calculatePrice() {
+    const distance = parseFloat(distanceInput.value) || 0;
+    const service = serviceSelect.value;
+
+    let base = 18;
+    let rate = 1.50;
+
+    if (service === 'freight') {
+      base = 35;
+      rate = 2.00;
+    }
+
+    let total = base + distance * rate;
+
+    if (service === 'rush') {
+      total *= 1.5;
+    }
+
+    costSpan.textContent = `$${total.toFixed(2)}`;
+    resultDiv.classList.remove('hidden');
+  }
+
+  distanceInput.addEventListener('input', calculatePrice);
+  serviceSelect.addEventListener('change', calculatePrice);
+</script>

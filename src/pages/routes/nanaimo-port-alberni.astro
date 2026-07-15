@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Nanaimo to Port Alberni Courier | West Coast Delivery';
+const description = 'Same-day courier from Nanaimo to Port Alberni. 1.5 hour delivery. Lumber, forestry, industrial parts.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Nanaimo to Port Alberni Route', description }} />
+
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Nanaimo to Port Alberni Courier</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Same-day delivery to Port Alberni and West Coast. Forest products, industrial parts, lumber, forestry equipment. 1.5-hour turn-around.
+      </p>
+      <PhoneCTA text={`Get Quote: ${config.phone}`} />
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Nanaimo ↔ Port Alberni Route</h2>
+
+    <div class="bg-gray-50 p-6 rounded mb-8">
+      <h3 class="font-bold mb-4 text-brand-blue">Route Overview</h3>
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li><strong>Distance:</strong> ~80 km via Highway 4 West (Nanaimo Lakes Road)</li>
+        <li><strong>Drive time:</strong> 1 hour 15 minutes direct</li>
+        <li><strong>Total typical:</strong> 1.5–2 hours door-to-door</li>
+        <li><strong>Road condition:</strong> Highway 4 is well-maintained year-round. Mountain passes, winter caution advised.</li>
+        <li><strong>Cost:</strong> $35 base + $2.00/km = ~$195 typical</li>
+        <li><strong>Best for:</strong> Industrial parts, forestry products, lumber</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Same-Day Cutoff: Port Alberni</h2>
+
+    <div class="space-y-4 max-w-3xl">
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Port Alberni</h3>
+        <p class="text-lg text-brand-accent font-semibold">1:00 PM cutoff (weekdays)</p>
+        <p class="text-gray-700 text-sm mt-1">Order by 1 PM, delivery by 2:30–3 PM. Mountain route adds 15 minutes vs highway.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-2">Winter Conditions</h3>
+        <p class="text-gray-700 text-sm">
+          Highway 4 mountain passes can be slow in snow. We monitor road reports. Winter same-day is still possible, but order earlier (by 11 AM) to be safe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2>Port Alberni Industries We Serve</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="card">
+        <h3>Forestry & Lumber Mills</h3>
+        <p class="text-gray-600">Equipment parts, urgent forestry supplies, mill-to-market documentation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pulp & Paper Industry</h3>
+        <p class="text-gray-600">Same-day parts delivery for production continuity. Rush service available.</p>
+      </div>
+
+      <div class="card">
+        <h3>Manufacturing & Fabrication</h3>
+        <p class="text-gray-600">Industrial parts, equipment, finished goods delivery to Port Alberni customers.</p>
+      </div>
+
+      <div class="card">
+        <h3>Marine Services</h3>
+        <p class="text-gray-600">Port-related document delivery, maritime equipment, urgent cargo handling.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2>Port Alberni Pricing</h2>
+
+    <div class="max-w-2xl">
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6 space-y-3">
+        <div class="pb-3 border-b">
+          <h3 class="font-bold mb-1">Standard Delivery</h3>
+          <p class="text-gray-700">$35 base + (80 km × $2.00) = ~$195</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-1">Oversized/Freight</h3>
+          <p class="text-gray-700">$50 base + $2.50/km (larger vehicles for forest products)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <QuoteForm />
+</BaseLayout>

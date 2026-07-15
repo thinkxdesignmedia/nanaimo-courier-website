@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Blog | Courier & Delivery Tips';
+const description = 'Read about courier services, same-day delivery tips, and logistical insights for Vancouver Island businesses.';
+
+const posts = [
+  {
+    title: 'Same-Day Delivery on Vancouver Island: How Cutoff Times Actually Work',
+    slug: 'same-day-delivery-cutoff-times',
+    date: '2026-01-15',
+    excerpt: 'Why does 3 PM matter? Understanding how ferry schedules, driver availability, and geography determine when your delivery must arrive.',
+  },
+  {
+    title: 'Courier vs Canada Post vs Purolator: When to Use Each in Nanaimo',
+    slug: 'courier-vs-canada-post-purolator',
+    date: '2026-01-10',
+    excerpt: 'Each has a role. Same-day courier for urgent rush. Canada Post for bulk non-urgent. Purolator for parcel networks. Here\'s how to choose.',
+  },
+  {
+    title: 'How Legal Document Delivery and Court Filing Works in BC',
+    slug: 'legal-document-delivery-bc',
+    date: '2026-01-05',
+    excerpt: 'Court filing deadlines don\'t negotiate. Learn how same-day legal courier protects law firms from missed deadlines and sanctions.',
+  },
+  {
+    title: 'What Is Hot-Shot Delivery? Rush Freight Explained',
+    slug: 'hot-shot-delivery-explained',
+    date: '2025-12-28',
+    excerpt: 'Hot-shot means priority. One driver, one vehicle, your shipment only. When speed and reliability matter more than cost.',
+  },
+];
+---
+
+<BaseLayout {title} {description}>
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Blog</h1>
+      <p class="text-lg md:text-xl opacity-95">
+        Courier tips, delivery insights, and logistics stories for Vancouver Island businesses.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="max-w-3xl">
+      {posts.map((post) => (
+        <article key={post.slug} class="mb-12 pb-8 border-b border-gray-200 last:border-b-0">
+          <h2 class="mb-2">
+            <a href={`/blog/${post.slug}`} class="text-brand-blue hover:underline">
+              {post.title}
+            </a>
+          </h2>
+          <p class="text-sm text-gray-500 mb-4">
+            {new Date(post.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </p>
+          <p class="text-gray-700 mb-4">
+            {post.excerpt}
+          </p>
+          <a href={`/blog/${post.slug}`} class="text-brand-blue font-semibold hover:underline">
+            Read →
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
