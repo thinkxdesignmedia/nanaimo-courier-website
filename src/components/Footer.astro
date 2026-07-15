@@ -1,0 +1,61 @@
+---
+import { config } from '../config';
+---
+
+<footer class="bg-gray-900 text-gray-300 mt-16">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-4">{config.businessName}</h3>
+        <p class="text-sm mb-4">Same-day courier and delivery service for Nanaimo and central Vancouver Island.</p>
+        <div class="flex gap-2">
+          <a href={`tel:${config.phone.replace(/[^\d+]/g, '')}`} class="text-brand-accent hover:underline font-bold">
+            {config.phone}
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-4">Services</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="/services/same-day-delivery" class="hover:text-brand-accent">Same-Day Delivery</a></li>
+          <li><a href="/services/rush-delivery" class="hover:text-brand-accent">Rush / Hot-Shot</a></li>
+          <li><a href="/services/medical-courier" class="hover:text-brand-accent">Medical & Lab</a></li>
+          <li><a href="/services/legal-courier" class="hover:text-brand-accent">Legal Courier</a></li>
+          <li><a href="/services/scheduled-delivery" class="hover:text-brand-accent">Scheduled Routes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-4">Routes</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="/routes/nanaimo-victoria" class="hover:text-brand-accent">Nanaimo to Victoria</a></li>
+          <li><a href="/routes/nanaimo-comox" class="hover:text-brand-accent">Nanaimo to Comox Valley</a></li>
+          <li><a href="/routes/nanaimo-parksville" class="hover:text-brand-accent">Nanaimo to Parksville</a></li>
+          <li><a href="/routes/nanaimo-port-alberni" class="hover:text-brand-accent">Nanaimo to Port Alberni</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="/" class="hover:text-brand-accent">Home</a></li>
+          <li><a href="/about" class="hover:text-brand-accent">About</a></li>
+          <li><a href="/pricing" class="hover:text-brand-accent">Pricing</a></li>
+          <li><a href="/industries" class="hover:text-brand-accent">Industries</a></li>
+          <li><a href="/faq" class="hover:text-brand-accent">FAQ</a></li>
+          <li><a href="/blog" class="hover:text-brand-accent">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-brand-accent">Privacy Policy</a>
+        <a href="#" class="hover:text-brand-accent">Terms of Service</a>
+        <a href="#" class="hover:text-brand-accent">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>

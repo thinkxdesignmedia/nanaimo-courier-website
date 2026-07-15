@@ -1,0 +1,52 @@
+---
+import { config, siteConfig } from '../config';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobilePhoneCTA from '../components/MobilePhoneCTA.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const { title, description, canonical, ogImage } = Astro.props;
+const fullTitle = `${title} | ${config.businessName}`;
+const canonicalUrl = canonical || Astro.url.href;
+---
+
+<!doctype html>
+<html lang={siteConfig.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- OG Tags -->
+    <meta property="og:site_name" content={config.businessName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    <title>{fullTitle}</title>
+  </head>
+  <body class="bg-white text-gray-900">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <MobilePhoneCTA />
+    <Footer />
+  </body>
+</html>

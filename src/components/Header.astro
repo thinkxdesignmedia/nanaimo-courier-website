@@ -1,0 +1,94 @@
+---
+import { config } from '../config';
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <a href="/" class="text-2xl font-bold text-brand-blue">
+        {config.businessName}
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="/services/same-day-delivery" class="text-gray-700 hover:text-brand-blue">
+        Services
+      </a>
+      <a href="/pricing" class="text-gray-700 hover:text-brand-blue">
+        Pricing
+      </a>
+      <a href="/industries" class="text-gray-700 hover:text-brand-blue">
+        Industries
+      </a>
+      <a href="/blog" class="text-gray-700 hover:text-brand-blue">
+        Blog
+      </a>
+      <a href="#contact" class="text-gray-700 hover:text-brand-blue">
+        Contact
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+        class="hidden sm:flex items-center gap-2 bg-brand-accent text-white px-4 py-2 rounded font-bold hover:bg-red-700 transition"
+      >
+        <span class="text-xs opacity-75">CALL NOW</span>
+        <span>{config.phone}</span>
+      </a>
+
+      <button
+        class="md:hidden text-gray-700 hover:text-brand-blue"
+        id="menu-toggle"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4">
+      <a href="/services/same-day-delivery" class="text-gray-700 font-medium hover:text-brand-blue">
+        Services
+      </a>
+      <a href="/pricing" class="text-gray-700 font-medium hover:text-brand-blue">
+        Pricing
+      </a>
+      <a href="/industries" class="text-gray-700 font-medium hover:text-brand-blue">
+        Industries
+      </a>
+      <a href="/blog" class="text-gray-700 font-medium hover:text-brand-blue">
+        Blog
+      </a>
+      <a href="#contact" class="text-gray-700 font-medium hover:text-brand-blue">
+        Contact
+      </a>
+      <a
+        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+        class="block bg-brand-accent text-white px-4 py-3 rounded font-bold hover:bg-red-700 transition text-center"
+      >
+        Call Now: {config.phone}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

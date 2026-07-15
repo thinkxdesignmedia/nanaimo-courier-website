@@ -1,0 +1,45 @@
+---
+import { config } from '../config';
+---
+
+<section class="bg-brand-blue text-white py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-2xl">
+      <h2>Set Up a Business Account</h2>
+      <p class="text-lg mb-6 opacity-95">
+        Flat rates, dedicated dispatch, and recurring credit for regular deliveries. Perfect for law firms, medical facilities, print shops, and manufacturing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+          class="inline-block cta-button bg-brand-accent hover:bg-red-700"
+        >
+          Call to Set Up Account
+        </a>
+        <a href="#contact" class="inline-block cta-button-secondary bg-white text-brand-blue hover:bg-gray-100">
+          Request a Callback
+        </a>
+      </div>
+
+      <ul class="mt-8 space-y-2 text-sm">
+        <li class="flex gap-2">
+          <span class="text-brand-accent font-bold">✓</span>
+          <span>Discounted fleet rates for repeat shipments</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-brand-accent font-bold">✓</span>
+          <span>Dedicated driver or multiple drivers for high volume</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-brand-accent font-bold">✓</span>
+          <span>Monthly invoicing and credit terms</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="text-brand-accent font-bold">✓</span>
+          <span>API integration available for enterprise</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

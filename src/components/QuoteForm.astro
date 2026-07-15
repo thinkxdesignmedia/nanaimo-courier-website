@@ -1,0 +1,104 @@
+---
+import { config } from '../config';
+---
+
+<section id="quote" class="bg-gray-50 py-12 md:py-16">
+  <div class="max-w-2xl mx-auto px-4">
+    <h2 class="text-center mb-8">Get an Instant Quote</h2>
+
+    <form id="quote-form" class="space-y-4">
+      <div class="grid md:grid-cols-2 gap-4">
+        <input
+          type="text"
+          name="pickup_location"
+          placeholder="Pickup Address"
+          class="form-input"
+          required
+        />
+        <input
+          type="text"
+          name="dropoff_location"
+          placeholder="Drop-off Address"
+          class="form-input"
+          required
+        />
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <select name="package_size" class="form-input" required>
+          <option value="">Select Package Size</option>
+          <option value="letter">Letter/Small</option>
+          <option value="medium">Medium Box</option>
+          <option value="large">Large Box</option>
+          <option value="oversized">Oversized/Freight</option>
+        </select>
+
+        <input type="datetime-local" name="needed_by" class="form-input" required />
+      </div>
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        class="form-input"
+        required
+      />
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Your Phone"
+        class="form-input"
+        required
+      />
+
+      <textarea
+        name="notes"
+        placeholder="Any special instructions? (optional)"
+        class="form-input h-24"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="w-full cta-button"
+      >
+        Get Quote Now — {config.phone}
+      </button>
+
+      <p class="text-center text-sm text-gray-600">
+        We'll respond within 15 minutes during business hours.
+      </p>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('quote-form');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch('/api/quote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          alert('Quote request submitted! We\'ll contact you shortly.');
+          form.reset();
+        } else {
+          alert('Error submitting quote. Please call us instead.');
+        }
+      } catch (error) {
+        console.error('Quote submission error:', error);
+        alert('Error submitting quote. Please call us instead.');
+      }
+    });
+  }
+</script>

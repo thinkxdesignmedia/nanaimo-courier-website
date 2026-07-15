@@ -1,0 +1,23 @@
+---
+import { config } from '../config';
+
+interface Props {
+  text?: string;
+  variant?: 'primary' | 'secondary' | 'outline';
+}
+
+const { text = `Need it there today? Call ${config.phone}`, variant = 'primary' } = Astro.props;
+
+const styles = {
+  primary: 'cta-button',
+  secondary: 'cta-button-secondary',
+  outline: 'border-2 border-brand-blue text-brand-blue font-bold px-6 py-3 rounded hover:bg-blue-50 transition',
+};
+---
+
+<a
+  href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+  class={styles[variant]}
+>
+  {text}
+</a>

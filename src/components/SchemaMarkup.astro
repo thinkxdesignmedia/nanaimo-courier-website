@@ -1,0 +1,95 @@
+---
+import { config, siteConfig } from '../config';
+
+interface Props {
+  type: 'LocalBusiness' | 'Service' | 'FAQPage' | 'BreadcrumbList';
+  data?: Record<string, any>;
+}
+
+const { type, data = {} } = Astro.props;
+
+let schema: Record<string, any> = {
+  '@context': 'https://schema.org',
+};
+
+if (type === 'LocalBusiness') {
+  schema = {
+    ...schema,
+    '@type': 'LocalBusiness',
+    name: config.businessName,
+    url: siteConfig.siteUrl,
+    telephone: config.phone,
+    email: config.email,
+    areaServed: 'CA-BC',
+    serviceType: 'Courier Service',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Nanaimo',
+      addressRegion: 'BC',
+      postalCode: 'V9R',
+      addressCountry: 'CA',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '07:00',
+        closes: '18:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Saturday', 'Sunday'],
+        opens: '08:00',
+        closes: '16:00',
+      },
+    ],
+  };
+}
+
+if (type === 'Service') {
+  schema = {
+    ...schema,
+    '@type': 'Service',
+    name: data.serviceName || 'Courier Service',
+    description: data.description || '',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: config.businessName,
+      url: siteConfig.siteUrl,
+      telephone: config.phone,
+    },
+    areaServed: 'CA-BC',
+    ...(data.price && { price: data.price }),
+  };
+}
+
+if (type === 'FAQPage') {
+  schema = {
+    ...schema,
+    '@type': 'FAQPage',
+    mainEntity: (data.faqs || []).map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+if (type === 'BreadcrumbList') {
+  schema = {
+    ...schema,
+    '@type': 'BreadcrumbList',
+    itemListElement: (data.items || []).map((item: any, index: number) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${siteConfig.siteUrl}${item.url}`,
+    })),
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
