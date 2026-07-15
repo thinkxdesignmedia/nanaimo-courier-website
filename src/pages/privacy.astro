@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { config } from '../config';
+
+const title = 'Privacy Policy | Nanaimo Courier';
+const description = 'How we collect, use, and protect your personal information.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="section-container max-w-3xl prose prose-lg">
+    <h1>Privacy Policy</h1>
+
+    <p class="text-gray-500 text-sm">Last updated: July 2026</p>
+
+    <h2>1. Introduction</h2>
+
+    <p>
+      {config.businessName} ("we," "us," "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+    </p>
+
+    <p>
+      We comply with <strong>PIPEDA</strong> (Personal Information Protection and Electronic Documents Act) and <strong>BC PIPA</strong> (British Columbia's Personal Information Protection Act) for all personal information collected and processed in Canada.
+    </p>
+
+    <h2>2. Information We Collect</h2>
+
+    <h3>2.1 Information You Provide</h3>
+
+    <p>We collect information you voluntarily provide through:</p>
+
+    <ul>
+      <li><strong>Quote Request Form:</strong> Name, email, phone number, pickup/dropoff addresses, package details, desired delivery time</li>
+      <li><strong>Contact Form:</strong> Name, email, phone number, inquiry type, message</li>
+      <li><strong>Account Signup:</strong> Business name, contact details, service preferences</li>
+      <li><strong>Email Communications:</strong> Any information you include when you email us</li>
+    </ul>
+
+    <h3>2.2 Information Collected Automatically</h3>
+
+    <ul>
+      <li><strong>Usage Data:</strong> Pages visited, time spent, referral source (via Google Analytics 4 with IP anonymization)</li>
+      <li><strong>Device Information:</strong> Browser type, device type, operating system</li>
+      <li><strong>Cookies & Tracking:</strong> Session and analytics cookies (non-identifying)</li>
+    </ul>
+
+    <h3>2.3 Form Security</h3>
+
+    <p>
+      Quote and contact forms include anti-spam protection (Cloudflare Turnstile). We do not use your form data for marketing without explicit consent.
+    </p>
+
+    <h2>3. How We Use Your Information</h2>
+
+    <p>We use the information we collect for:</p>
+
+    <ul>
+      <li><strong>Providing Services:</strong> Responding to quotes, processing orders, providing customer support</li>
+      <li><strong>Operational Purposes:</strong> Improving our website, testing features, conducting research</li>
+      <li><strong>Communications:</strong> Sending service-related updates and inquiry responses</li>
+      <li><strong>Legal Compliance:</strong> Complying with applicable laws and regulations</li>
+      <li><strong>Lead Routing:</strong> Sharing quote and contact form submissions with the local service provider operating this branded service</li>
+    </ul>
+
+    <p class="text-sm bg-blue-50 p-4 rounded">
+      <strong>Important:</strong> If you submit a quote or contact form, your information will be shared with {config.businessName} for the purpose of fulfilling your request. This is necessary to deliver the service you requested.
+    </p>
+
+    <h2>4. Sharing Your Information</h2>
+
+    <p>We may share your information with:</p>
+
+    <ul>
+      <li><strong>Service Providers:</strong> {config.businessName} (the operating courier service) to fulfill quote requests and service inquiries</li>
+      <li><strong>Email Service Providers:</strong> Resend (for transactional emails)</li>
+      <li><strong>Security Partners:</strong> Cloudflare (for anti-spam and DDoS protection)</li>
+      <li><strong>Analytics:</strong> Google (anonymized usage data via Google Analytics 4)</li>
+      <li><strong>Legal Authorities:</strong> Only if required by law or to protect our rights</li>
+    </ul>
+
+    <p>
+      We do <strong>not</strong> sell your personal information to third parties.
+    </p>
+
+    <h2>5. Data Retention</h2>
+
+    <ul>
+      <li><strong>Form Submissions:</strong> Retained for 12 months or until request is fulfilled, whichever is longer</li>
+      <li><strong>Analytics Data:</strong> Retained for 14 months (Google Analytics default)</li>
+      <li><strong>Cookies:</strong> Session cookies expire after browser close; analytics cookies expire after 13 months</li>
+    </ul>
+
+    <p>
+      You may request deletion of your information at any time by emailing {config.email} with the subject "Data Deletion Request."
+    </p>
+
+    <h2>6. Your Rights</h2>
+
+    <p>Under PIPEDA and BC PIPA, you have the right to:</p>
+
+    <ul>
+      <li><strong>Access:</strong> Request a copy of personal information we hold about you</li>
+      <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+      <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal retention requirements)</li>
+      <li><strong>Withdraw Consent:</strong> Opt out of non-essential communications at any time</li>
+    </ul>
+
+    <p>
+      To exercise any of these rights, contact us at {config.email} with your request. We will respond within 30 days.
+    </p>
+
+    <h2>7. Security</h2>
+
+    <p>
+      We implement industry-standard security measures (HTTPS, firewalls, secure form submission) to protect your information. However, no transmission over the internet is 100% secure. We encourage you to use strong passwords and keep your account secure.
+    </p>
+
+    <h2>8. Cookies & Analytics</h2>
+
+    <p>
+      Our site uses Google Analytics 4 with IP anonymization enabled. This means Google cannot identify individual users. You can opt out of Analytics tracking by:
+    </p>
+
+    <ul>
+      <li>Installing the Google Analytics Opt-Out Browser Extension</li>
+      <li>Disabling JavaScript in your browser</li>
+    </ul>
+
+    <h2>9. Third-Party Links</h2>
+
+    <p>
+      Our website may contain links to external websites. We are not responsible for their privacy practices. We encourage you to review their privacy policies before providing personal information.
+    </p>
+
+    <h2>10. Jurisdiction & Compliance</h2>
+
+    <p>
+      This Privacy Policy is governed by the laws of British Columbia, Canada. If you have concerns about our privacy practices, you may contact the Privacy Commissioner of Canada at https://www.priv.gc.ca.
+    </p>
+
+    <h2>11. Changes to This Policy</h2>
+
+    <p>
+      We may update this Privacy Policy from time to time. We will notify you of material changes by posting the updated policy on this page and updating the "Last updated" date. Your continued use of the site after changes indicates acceptance of the updated policy.
+    </p>
+
+    <h2>12. Contact Us</h2>
+
+    <p>
+      If you have questions about this Privacy Policy, please contact us:
+    </p>
+
+    <p>
+      <strong>Email:</strong> {config.email}<br />
+      <strong>Phone:</strong> {config.phone}<br />
+      <strong>Business:</strong> {config.businessName}
+    </p>
+  </section>
+</BaseLayout>

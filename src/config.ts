@@ -18,4 +18,5 @@ export const siteConfig = {
   siteName: 'Nanaimo Courier',
   siteUrl: 'https://nanaimocourier.com',
   locale: 'en-CA',
+  ga4MeasurementId: process.env.GA_MEASUREMENT_ID || 'G-XXXXXXXXXX', // Placeholder
 };

@@ -1,0 +1,60 @@
+/*
+  # Security Headers
+
+  # Strict Transport Security (HSTS)
+  # Enforce HTTPS for one year including subdomains
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Content Security Policy (CSP)
+  # Allow only necessary external scripts (Google Analytics, Cloudflare Turnstile)
+  # Inline styles via 'unsafe-inline' for Tailwind
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://challenges.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://api.resend.com; frame-src https://challenges.cloudflare.com; object-src 'none';
+
+  # Prevent MIME type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Prevent clickjacking / UI Redressing attacks
+  X-Frame-Options: SAMEORIGIN
+
+  # Enable XSS protection in older browsers
+  X-XSS-Protection: 1; mode=block
+
+  # Referrer Policy: only send referrer to same origin
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Permissions Policy (formerly Feature Policy)
+  # Restrict access to sensitive APIs
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), usb=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+
+  # Prevent Google from indexing staging/preview URLs
+  # (Only apply to non-production domains if needed)
+  # X-Robots-Tag: noindex, nofollow
+
+# API endpoints: stricter CSP, no framing
+/api/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self' https://api.resend.com https://challenges.cloudflare.com;
+  X-Frame-Options: DENY
+
+# Static assets: allow caching
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/android-chrome-*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/site.webmanifest
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages: validate often, don't cache
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Index (homepage): short cache
+/index.html
+  Cache-Control: public, max-age=300, must-revalidate

@@ -49,12 +49,15 @@ import { config } from '../config';
       </div>
     </div>
 
-    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-      <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
-      <div class="flex gap-4 mt-4 md:mt-0">
-        <a href="#" class="hover:text-brand-accent">Privacy Policy</a>
-        <a href="#" class="hover:text-brand-accent">Terms of Service</a>
-        <a href="#" class="hover:text-brand-accent">Sitemap</a>
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+      <div>
+        <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
+        <p class="text-xs text-gray-500 mt-2">Website by <a href="https://thinkxdesign.com" class="hover:text-brand-accent" target="_blank" rel="noopener noreferrer">Think X Design Media</a></p>
+      </div>
+      <div class="flex gap-4">
+        <a href="/privacy" class="hover:text-brand-accent">Privacy Policy</a>
+        <a href="/terms" class="hover:text-brand-accent">Terms of Service</a>
+        <a href="/sitemap.xml" class="hover:text-brand-accent">Sitemap</a>
       </div>
     </div>
   </div>

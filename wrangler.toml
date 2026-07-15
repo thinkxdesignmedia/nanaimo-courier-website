@@ -1,0 +1,28 @@
+name = "nanaimo-courier-website"
+type = "javascript"
+compatibility_date = "2024-01-01"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
+
+[env.development]
+vars = { ENVIRONMENT = "development" }
+
+# Plaintext environment variables
+[env.production.vars]
+BUSINESS_NAME = "Nanaimo Courier"
+PHONE = "(250) 753-0000"
+EMAIL = "dispatch@nanaimocourier.com"
+
+[env.staging.vars]
+BUSINESS_NAME = "Nanaimo Courier (Staging)"
+PHONE = "(250) 753-0000"
+EMAIL = "test@example.com"
+
+[env.development.vars]
+BUSINESS_NAME = "Nanaimo Courier (Dev)"
+PHONE = "(250) 753-0000"
+EMAIL = "dev@example.com"

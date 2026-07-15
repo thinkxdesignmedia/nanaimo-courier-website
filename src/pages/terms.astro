@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { config } from '../config';
+
+const title = 'Terms of Service | Nanaimo Courier';
+const description = 'Terms and conditions for using Nanaimo Courier services and website.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="section-container max-w-3xl prose prose-lg">
+    <h1>Terms of Service</h1>
+
+    <p class="text-gray-500 text-sm">Last updated: July 2026</p>
+
+    <h2>1. Agreement to Terms</h2>
+
+    <p>
+      By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+    </p>
+
+    <h2>2. Use License</h2>
+
+    <p>
+      Permission is granted to temporarily download one copy of the materials (information or software) on {config.businessName}'s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+    </p>
+
+    <ul>
+      <li>Modify or copy the materials</li>
+      <li>Use the materials for any commercial purpose or for any public display</li>
+      <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+      <li>Remove any copyright or other proprietary notations from the materials</li>
+      <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+      <li>Violate any applicable laws or regulations</li>
+    </ul>
+
+    <h2>3. Disclaimer</h2>
+
+    <p>
+      The materials on {config.businessName}'s website are provided on an 'as is' basis. {config.businessName} makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+    </p>
+
+    <h2>4. Limitations</h2>
+
+    <p>
+      In no event shall {config.businessName} or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on {config.businessName}'s website.
+    </p>
+
+    <h2>5. Accuracy of Materials</h2>
+
+    <p>
+      The materials appearing on {config.businessName}'s website could include technical, typographical, or photographic errors. {config.businessName} does not warrant that any of the materials on its website are accurate, complete, or current. {config.businessName} may make changes to the materials contained on its website at any time without notice.
+    </p>
+
+    <h2>6. Links</h2>
+
+    <p>
+      {config.businessName} has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by {config.businessName} of the site. Use of any such linked website is at the user's own risk.
+    </p>
+
+    <h2>7. Modifications</h2>
+
+    <p>
+      {config.businessName} may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+    </p>
+
+    <h2>8. Governing Law</h2>
+
+    <p>
+      These terms and conditions are governed by and construed in accordance with the laws of British Columbia, Canada, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+    </p>
+
+    <h2>9. Service Inquiries & Quote Requests</h2>
+
+    <p>
+      When you submit a quote request or service inquiry through this website:
+    </p>
+
+    <ul>
+      <li>You authorize us to share your information with {config.businessName} (the operating courier service) to fulfill your request</li>
+      <li>You acknowledge that {config.businessName} may contact you at the phone number or email you provide</li>
+      <li>All pricing quotes are estimates and subject to confirmation and final terms</li>
+      <li>Service terms and conditions will be provided by {config.businessName} upon quote confirmation</li>
+    </ul>
+
+    <h2>10. Limitation of Liability</h2>
+
+    <p>
+      In no case shall {config.businessName}, its owners, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages. This limitation applies to all claims, whether based on warranty, contract, tort, or any other legal theory.
+    </p>
+
+    <h2>11. Intellectual Property</h2>
+
+    <p>
+      All content on this website, including text, graphics, logos, and images, is the property of {config.businessName} or its content suppliers and is protected by international copyright laws. Unauthorized reproduction is prohibited.
+    </p>
+
+    <h2>12. User Conduct</h2>
+
+    <p>
+      You agree not to:
+    </p>
+
+    <ul>
+      <li>Use this website for any unlawful purpose or in violation of any applicable laws</li>
+      <li>Harass, threaten, or intimidate our staff</li>
+      <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the website</li>
+      <li>Attempt to gain unauthorized access to our systems</li>
+      <li>Provide false or misleading information</li>
+    </ul>
+
+    <h2>13. Termination</h2>
+
+    <p>
+      We reserve the right to terminate your access to this website at any time, without cause or notice, if you violate these Terms of Service.
+    </p>
+
+    <h2>14. Entire Agreement</h2>
+
+    <p>
+      These Terms of Service constitute the entire agreement between you and {config.businessName} regarding your use of this website and supersede all prior and contemporaneous agreements, understandings, and communications.
+    </p>
+
+    <h2>15. Contact Us</h2>
+
+    <p>
+      If you have questions about these Terms of Service, please contact us:
+    </p>
+
+    <p>
+      <strong>Email:</strong> {config.email}<br />
+      <strong>Phone:</strong> {config.phone}<br />
+      <strong>Business:</strong> {config.businessName}
+    </p>
+  </section>
+</BaseLayout>

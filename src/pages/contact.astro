@@ -61,6 +61,8 @@ const description = 'Call, email, or request a callback. Direct access to dispat
       <div>
         <h2>Request a Callback</h2>
 
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
         <form id="contact-form" class="space-y-4">
           <input
             type="text"
@@ -102,9 +104,17 @@ const description = 'Call, email, or request a callback. Direct access to dispat
             required
           ></textarea>
 
-          <button type="submit" class="cta-button w-full">
+          <!-- Honeypot field -->
+          <input type="hidden" name="website_check" value="" />
+
+          <!-- Cloudflare Turnstile -->
+          <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="light"></div>
+
+          <button type="submit" class="cta-button w-full" id="contact-submit">
             Request Callback
           </button>
+
+          <div id="contact-status" class="text-center text-sm"></div>
 
           <p class="text-xs text-gray-500">
             We'll call you back within 1 hour during business hours, or first thing next business day.
@@ -174,10 +184,24 @@ const description = 'Call, email, or request a callback. Direct access to dispat
 
 <script>
   const form = document.getElementById('contact-form');
+  const statusDiv = document.getElementById('contact-status');
+  const submitBtn = document.getElementById('contact-submit');
 
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Get Turnstile response
+      const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+      if (!turnstileResponse || !turnstileResponse.value) {
+        statusDiv.textContent = '❌ Please complete the verification';
+        statusDiv.className = 'text-center text-sm text-red-600 mt-2';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      statusDiv.textContent = '⏳ Submitting...';
+      statusDiv.className = 'text-center text-sm text-gray-600 mt-2';
 
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
@@ -189,15 +213,29 @@ const description = 'Call, email, or request a callback. Direct access to dispat
           body: JSON.stringify(data),
         });
 
-        if (response.ok) {
-          alert('Request submitted! We\'ll call you shortly.');
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          statusDiv.textContent = '✅ Request submitted! We\'ll call you shortly.';
+          statusDiv.className = 'text-center text-sm text-green-600 mt-2';
           form.reset();
+          // Reset Turnstile
+          if (window.turnstile) {
+            window.turnstile.reset();
+          }
+          setTimeout(() => {
+            statusDiv.textContent = '';
+          }, 5000);
         } else {
-          alert('Error submitting request. Please call us instead.');
+          statusDiv.textContent = `❌ ${result.error || 'Error submitting request. Please call us instead.'}`;
+          statusDiv.className = 'text-center text-sm text-red-600 mt-2';
         }
       } catch (error) {
         console.error('Contact form error:', error);
-        alert('Error submitting request. Please call us instead.');
+        statusDiv.textContent = '❌ Error submitting request. Please call us instead.';
+        statusDiv.className = 'text-center text-sm text-red-600 mt-2';
+      } finally {
+        submitBtn.disabled = false;
       }
     });
   }

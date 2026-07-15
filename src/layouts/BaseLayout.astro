@@ -5,6 +5,9 @@ import Footer from '../components/Footer.astro';
 import MobilePhoneCTA from '../components/MobilePhoneCTA.astro';
 import '../styles/global.css';
 
+// Only load GA4 if measurement ID is configured (not placeholder)
+const hasGA4 = siteConfig.ga4MeasurementId && !siteConfig.ga4MeasurementId.includes('XXXXXXXXXX');
+
 interface Props {
   title: string;
   description: string;
@@ -25,19 +28,47 @@ const canonicalUrl = canonical || Astro.url.href;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
 
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#1e40af" />
+
+    <!-- Google Analytics 4 (Privacy-conscious: IP anonymization enabled) -->
+    {hasGA4 && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.ga4MeasurementId}`}></script>
+        <script set:html={`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${siteConfig.ga4MeasurementId}', {
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+          });
+        `}></script>
+      </>
+    )}
+
     <!-- OG Tags -->
     <meta property="og:site_name" content={config.businessName} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:image" content={ogImage || `${Astro.url.origin}/og-default.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    <meta name="twitter:image" content={ogImage || `${Astro.url.origin}/og-default.png`} />
+    <meta name="twitter:creator" content="@nanaimocourier" />
 
     <title>{fullTitle}</title>
   </head>

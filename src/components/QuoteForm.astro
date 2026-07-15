@@ -3,6 +3,8 @@ import { config } from '../config';
 ---
 
 <section id="quote" class="bg-gray-50 py-12 md:py-16">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
   <div class="max-w-2xl mx-auto px-4">
     <h2 class="text-center mb-8">Get an Instant Quote</h2>
 
@@ -58,12 +60,21 @@ import { config } from '../config';
         class="form-input h-24"
       ></textarea>
 
+      <!-- Honeypot field (hidden from users) -->
+      <input type="hidden" name="website_check" value="" />
+
+      <!-- Cloudflare Turnstile -->
+      <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="light"></div>
+
       <button
         type="submit"
         class="w-full cta-button"
+        id="quote-submit"
       >
         Get Quote Now — {config.phone}
       </button>
+
+      <div id="quote-status" class="text-center text-sm"></div>
 
       <p class="text-center text-sm text-gray-600">
         We'll respond within 15 minutes during business hours.
@@ -74,10 +85,24 @@ import { config } from '../config';
 
 <script>
   const form = document.getElementById('quote-form');
+  const statusDiv = document.getElementById('quote-status');
+  const submitBtn = document.getElementById('quote-submit');
 
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Get Turnstile response
+      const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+      if (!turnstileResponse || !turnstileResponse.value) {
+        statusDiv.textContent = '❌ Please complete the verification';
+        statusDiv.className = 'text-center text-sm text-red-600 mt-2';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      statusDiv.textContent = '⏳ Submitting...';
+      statusDiv.className = 'text-center text-sm text-gray-600 mt-2';
 
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
@@ -89,15 +114,29 @@ import { config } from '../config';
           body: JSON.stringify(data),
         });
 
-        if (response.ok) {
-          alert('Quote request submitted! We\'ll contact you shortly.');
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          statusDiv.textContent = '✅ Quote request submitted! We\'ll contact you shortly.';
+          statusDiv.className = 'text-center text-sm text-green-600 mt-2';
           form.reset();
+          // Reset Turnstile
+          if (window.turnstile) {
+            window.turnstile.reset();
+          }
+          setTimeout(() => {
+            statusDiv.textContent = '';
+          }, 5000);
         } else {
-          alert('Error submitting quote. Please call us instead.');
+          statusDiv.textContent = `❌ ${result.error || 'Error submitting quote. Please call us instead.'}`;
+          statusDiv.className = 'text-center text-sm text-red-600 mt-2';
         }
       } catch (error) {
         console.error('Quote submission error:', error);
-        alert('Error submitting quote. Please call us instead.');
+        statusDiv.textContent = '❌ Error submitting quote. Please call us instead.';
+        statusDiv.className = 'text-center text-sm text-red-600 mt-2';
+      } finally {
+        submitBtn.disabled = false;
       }
     });
   }
