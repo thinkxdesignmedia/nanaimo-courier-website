@@ -154,41 +154,129 @@ const description = 'Specialized medical courier for lab specimens, pharmacy del
   <QuoteForm />
 
   <section class="section-container">
+    <h2>Medical Courier Workflow: Step-by-Step</h2>
+
+    <p class="text-gray-700 mb-8">
+      Here's exactly how we handle medical specimen delivery from your clinic to the lab:
+    </p>
+
+    <div class="space-y-6 max-w-3xl">
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Step 1: Specimen Preparation (Your Clinic)</h3>
+        <p class="text-gray-700 text-sm">
+          Your clinic prepares specimen according to lab requirements: blood draws labeled with patient ID, urine samples in sterile containers, tissue samples in formalin, etc. You place in our provided sealed container with temperature-appropriate packing (ice packs for refrigerated, room temp for standard).
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Step 2: We Pickup On Schedule</h3>
+        <p class="text-gray-700 text-sm">
+          Our driver arrives at your clinic at the agreed time (typically 3 PM daily, or custom timing). Driver scans container, photographs label, logs pickup time, and records chain-of-custody. You sign manifest; we email you a PDF receipt immediately.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Step 3: Temperature-Controlled Transit</h3>
+        <p class="text-gray-700 text-sm">
+          Specimen is placed in insulated vehicle with maintained temperature (ice packs refresh if long route). Driver tracks temperature with digital log (optional high-security biohazard runs include thermometer records). For Nanaimo local: 15–30 min transit. Victoria route: 3.5 hours (ferry-maintained).
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Step 4: Lab Delivery & Chain-of-Custody Handoff</h3>
+        <p class="text-gray-700 text-sm">
+          Driver delivers to lab receiving desk, obtains signature + timestamp from lab technician, and photographs proof of delivery (container in lab's possession). Chain-of-custody form is completed with lab receipt time, condition notes ("Specimen arrived intact, temperature maintained"), and responsible person's name.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-accent">
+        <h3 class="font-bold mb-3">Step 5: Confirmation & Documentation</h3>
+        <p class="text-gray-700 text-sm">
+          Within 30 minutes of delivery, you receive email with: proof-of-delivery photo, chain-of-custody summary, delivery timestamp, lab receipt confirmation. Your clinic records are complete for regulatory/audit purposes. Lab begins processing immediately.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2>Specimen Types We Handle Regularly</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded">
+        <h3 class="font-bold mb-2">Routine Labs</h3>
+        <p class="text-gray-700 text-sm">Blood draws, urine samples, culture swabs. Room temperature (15–25°C). Most common; 30-min Nanaimo delivery.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded">
+        <h3 class="font-bold mb-2">Refrigerated Specimens</h3>
+        <p class="text-gray-700 text-sm">Blood cultures, specific bacterial tests. Must stay 2–8°C. Ice packs + insulation. +$10 surcharge.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded">
+        <h3 class="font-bold mb-2">Pathology Slides</h3>
+        <p class="text-gray-700 text-sm">Tissue biopsies, histology slides in formalin. Room temp, sealed containers. Fragile; careful handling required.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded">
+        <h3 class="font-bold mb-2">Frozen/Dry Ice Specimens</h3>
+        <p class="text-gray-700 text-sm">Research samples, special stains, genetic testing. Must stay –20°C or colder. Dry ice containers. +$15 surcharge.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded">
+        <h3 class="font-bold mb-2">Pharmacy Delivery</h3>
+        <p class="text-gray-700 text-sm">Prescription transfers, controlled substances (with appropriate documentation). Secure, signature-required delivery.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded">
+        <h3 class="font-bold mb-2">Medical Records & Imaging</h3>
+        <p class="text-gray-700 text-sm">Patient files, X-rays, diagnostic imaging. Confidential, sealed envelopes. PIPEDA compliant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
     <h2>Medical Courier FAQ</h2>
 
     <div class="space-y-6 max-w-3xl">
       <div>
         <h3 class="font-bold mb-2">Are your drivers trained in medical handling?</h3>
         <p class="text-gray-700">
-          Yes. Our team is trained in specimen handling, chain-of-custody protocols, and confidentiality. We understand healthcare operations.
+          Yes. Our team is trained in specimen handling, chain-of-custody protocols, and confidentiality. We understand healthcare operations and regulatory requirements (PIPEDA, biohazard containment).
         </p>
       </div>
 
       <div>
         <h3 class="font-bold mb-2">Can you do routine daily pickups?</h3>
         <p class="text-gray-700">
-          Absolutely. Many clinics use us for daily 3 PM specimen runs. Standing orders, flat rates, and volume discounts available.
+          Absolutely. Many clinics use us for daily 3 PM specimen runs. Standing orders, flat monthly rates ($80–$120/run), and volume discounts available. Fixed pickup time, no surprises.
         </p>
       </div>
 
       <div>
         <h3 class="font-bold mb-2">What's your turnaround for specimen delivery?</h3>
         <p class="text-gray-700">
-          Local Nanaimo: 1–2 hours. Parksville/Comox: 2–3 hours. Victoria: 3–4 hours. Same-day guarantee on most routes.
+          Local Nanaimo: 30 min–1 hour. Parksville/Comox: 2 hours. Victoria: 3.5–4 hours (ferry). Same-day guarantee on all routes if ordered by cutoff time.
         </p>
       </div>
 
       <div>
         <h3 class="font-bold mb-2">Do you handle hazardous/biohazard specimens?</h3>
         <p class="text-gray-700">
-          Yes, with proper containment. We follow all regulations for biohazard transport. Specialized containers and training included.
+          Yes, with proper containment and training. We follow all Transport Canada and BC health regulations for biohazard transport. Specialized leak-proof containers included.
         </p>
       </div>
 
       <div>
         <h3 class="font-bold mb-2">Is delivery confidential?</h3>
         <p class="text-gray-700">
-          Yes. We treat all medical cargo as confidential. No unnecessary handling, sealed containers, and driver discretion guaranteed.
+          Yes. All medical cargo is treated as confidential. No peeking, sealed containers, and driver discretion guaranteed. Your patient data stays secure with us.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if a specimen arrives damaged?</h3>
+        <p class="text-gray-700">
+          Our chain-of-custody documentation captures condition at handoff. If damage occurs in transit, we photograph and notify you immediately. Temperature logs prove we maintained proper conditions. Work with your lab and clinic on next steps.
         </p>
       </div>
     </div>
