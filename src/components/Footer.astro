@@ -4,17 +4,37 @@ import { config } from '../config';
 
 <footer class="bg-gray-900 text-gray-300 mt-16">
   <div class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid md:grid-cols-4 gap-8 mb-8">
+    <div class="grid md:grid-cols-5 gap-8 mb-12">
+      <!-- Company Info -->
       <div>
         <h3 class="text-white font-bold mb-4">{config.businessName}</h3>
         <p class="text-sm mb-4">Same-day courier and delivery service for Nanaimo and central Vancouver Island.</p>
-        <div class="flex gap-2">
-          <a href="/contact" class="text-brand-accent hover:underline font-bold">
-            Get in Touch
+
+        <div class="space-y-2 text-sm mb-4">
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wide">Email</p>
+            <a href={`mailto:${config.email}`} class="text-brand-accent hover:underline font-semibold">
+              {config.email}
+            </a>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wide">Hours</p>
+            <p class="text-sm"><strong>Weekdays:</strong> {config.hours.weekday}</p>
+            <p class="text-sm"><strong>Weekends:</strong> {config.hours.weekend}</p>
+          </div>
+        </div>
+
+        <div class="flex gap-3 mt-4">
+          <a href="#quote" class="inline-block px-3 py-1 bg-brand-accent text-white text-xs font-bold rounded hover:bg-red-700 transition">
+            Get Quote
+          </a>
+          <a href="/contact" class="inline-block px-3 py-1 bg-brand-blue text-white text-xs font-bold rounded hover:bg-blue-800 transition">
+            Contact
           </a>
         </div>
       </div>
 
+      <!-- Services -->
       <div>
         <h4 class="text-white font-semibold mb-4">Services</h4>
         <ul class="text-sm space-y-2">
@@ -23,42 +43,78 @@ import { config } from '../config';
           <li><a href="/services/medical-courier" class="hover:text-brand-accent">Medical & Lab</a></li>
           <li><a href="/services/legal-courier" class="hover:text-brand-accent">Legal Courier</a></li>
           <li><a href="/services/scheduled-delivery" class="hover:text-brand-accent">Scheduled Routes</a></li>
+          <li><a href="/services/freight-delivery" class="hover:text-brand-accent">Freight & Oversized</a></li>
         </ul>
       </div>
 
+      <!-- Routes & Industries -->
       <div>
         <h4 class="text-white font-semibold mb-4">Routes</h4>
         <ul class="text-sm space-y-2">
-          <li><a href="/routes/nanaimo-victoria" class="hover:text-brand-accent">Nanaimo to Victoria</a></li>
-          <li><a href="/routes/nanaimo-comox" class="hover:text-brand-accent">Nanaimo to Comox Valley</a></li>
-          <li><a href="/routes/nanaimo-parksville" class="hover:text-brand-accent">Nanaimo to Parksville</a></li>
-          <li><a href="/routes/nanaimo-port-alberni" class="hover:text-brand-accent">Nanaimo to Port Alberni</a></li>
+          <li><a href="/routes/nanaimo-victoria" class="hover:text-brand-accent">Nanaimo → Victoria</a></li>
+          <li><a href="/routes/nanaimo-comox" class="hover:text-brand-accent">Nanaimo → Comox</a></li>
+          <li><a href="/routes/nanaimo-parksville" class="hover:text-brand-accent">Nanaimo → Parksville</a></li>
+          <li><a href="/routes/nanaimo-port-alberni" class="hover:text-brand-accent">Nanaimo → Port Alberni</a></li>
+          <li><a href="/industries" class="hover:text-brand-accent">For B2B / Industries</a></li>
         </ul>
       </div>
 
+      <!-- Resources & Trust -->
       <div>
-        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <h4 class="text-white font-semibold mb-4">Resources</h4>
         <ul class="text-sm space-y-2">
-          <li><a href="/" class="hover:text-brand-accent">Home</a></li>
-          <li><a href="/about" class="hover:text-brand-accent">About</a></li>
-          <li><a href="/pricing" class="hover:text-brand-accent">Pricing</a></li>
-          <li><a href="/testimonials" class="hover:text-brand-accent">Reviews</a></li>
-          <li><a href="/industries" class="hover:text-brand-accent">Industries</a></li>
+          <li><a href="/pricing" class="hover:text-brand-accent">Pricing & Calculator</a></li>
+          <li><a href="/testimonials" class="hover:text-brand-accent">Customer Reviews</a></li>
           <li><a href="/faq" class="hover:text-brand-accent">FAQ</a></li>
-          <li><a href="/blog" class="hover:text-brand-accent">Blog</a></li>
+          <li><a href="/blog" class="hover:text-brand-accent">Blog & Guides</a></li>
+          <li><a href="/about" class="hover:text-brand-accent">About Us</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
-      <div>
-        <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
-        <p class="text-xs text-gray-500 mt-2">Website by <a href="https://thinkxdesign.com" class="hover:text-brand-accent" target="_blank" rel="noopener noreferrer">Think X Design Media</a></p>
+    <!-- Trust Signals & Stats -->
+    <div class="border-t border-gray-800 pt-8 mb-8">
+      <div class="grid md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-2xl font-bold text-brand-accent mb-1">30 min</div>
+          <p class="text-xs text-gray-500">Average pickup</p>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-brand-accent mb-1">100%</div>
+          <p class="text-xs text-gray-500">On-time delivery</p>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-brand-accent mb-1">24/7</div>
+          <p class="text-xs text-gray-500">Emergency service</p>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-brand-accent mb-1">4 Islands</div>
+          <p class="text-xs text-gray-500">Full coverage</p>
+        </div>
       </div>
-      <div class="flex gap-4">
-        <a href="/privacy" class="hover:text-brand-accent">Privacy Policy</a>
-        <a href="/terms" class="hover:text-brand-accent">Terms of Service</a>
-        <a href="/sitemap.xml" class="hover:text-brand-accent">Sitemap</a>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-start text-sm space-y-6 md:space-y-0">
+      <div>
+        <p class="font-semibold text-white mb-2">Serving:</p>
+        <p class="text-xs text-gray-400 mb-4">Nanaimo • Victoria • Comox Valley • Campbell River • Parksville • Port Alberni • Duncan</p>
+        <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
+        <p class="text-xs text-gray-500 mt-3">
+          Website by <a href="https://thinkxdesign.com" class="hover:text-brand-accent" target="_blank" rel="noopener noreferrer">Think X Design Media</a>
+        </p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+        <div class="flex flex-col gap-2">
+          <p class="font-semibold text-white text-xs uppercase tracking-wide">Legal</p>
+          <a href="/privacy" class="hover:text-brand-accent">Privacy Policy</a>
+          <a href="/terms" class="hover:text-brand-accent">Terms of Service</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-semibold text-white text-xs uppercase tracking-wide">Sitemap & SEO</p>
+          <a href="/sitemap.xml" class="hover:text-brand-accent">XML Sitemap</a>
+          <a href="#quote" class="hover:text-brand-accent">Get a Quote</a>
+        </div>
       </div>
     </div>
   </div>
