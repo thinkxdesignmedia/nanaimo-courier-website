@@ -7,7 +7,7 @@ import SchemaMarkup from '../components/SchemaMarkup.astro';
 import { config } from '../config';
 
 const title = 'Same-Day Courier Service in Nanaimo';
-const description = `Reliable same-day courier and delivery service in Nanaimo, BC. Rush delivery, legal documents, medical specimens, and local routes. Call ${config.phone} for instant quotes.`;
+const description = `Reliable same-day courier and delivery service in Nanaimo, BC. Rush delivery, legal documents, medical specimens, and local routes. Get an instant quote online.`;
 ---
 
 <BaseLayout {title} {description}>
@@ -23,8 +23,8 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <PhoneCTA text={`Call Now: ${config.phone}`} />
-          <a href="#quote" class="cta-button-secondary inline-block">Get Quick Quote</a>
+          <PhoneCTA text="Get Instant Quote" />
+          <a href="/contact" class="cta-button-secondary inline-block">Get in Touch</a>
         </div>
 
         <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
@@ -199,13 +199,14 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
 
       <div>
         <h3 class="mb-4">Get in Touch</h3>
-        <a href={`tel:${config.phone.replace(/[^\d+]/g, '')}`} class="block text-2xl font-bold text-brand-accent mb-2 hover:underline">
-          {config.phone}
-        </a>
         <a href={`mailto:${config.email}`} class="block text-brand-accent hover:underline mb-4">
           {config.email}
         </a>
-        <p class="text-sm opacity-75">Available for quotes, emergency dispatch, and account setup.</p>
+        <div class="space-y-2">
+          <a href="#quote" class="inline-block px-4 py-2 bg-brand-accent text-white rounded hover:bg-red-700 font-semibold text-sm">Get a Quote</a>
+          <a href="/contact" class="inline-block px-4 py-2 bg-brand-blue text-white rounded hover:bg-blue-800 font-semibold text-sm ml-2">Contact Us</a>
+        </div>
+        <p class="text-sm opacity-75 mt-4">Submit a quote or message for quotes, emergency dispatch, and account setup.</p>
       </div>
     </div>
   </section>

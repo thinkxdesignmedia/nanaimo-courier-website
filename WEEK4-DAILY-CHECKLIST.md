@@ -15,7 +15,6 @@ Total estimated effort: 8–10 hours over 7 days (roughly 1–1.5 hours/day).
 - [ ] Verify/complete:
   - [ ] Business name: "Nanaimo Courier"
   - [ ] Address: [Your physical address]
-  - [ ] Phone: (250) 753-0000
   - [ ] Website: https://nanaimocourier.com
   - [ ] Category: "Courier Service" or "Same-Day Delivery"
   - [ ] Hours: 7 AM–6 PM weekdays, 8 AM–4 PM weekends
@@ -38,6 +37,7 @@ Total estimated effort: 8–10 hours over 7 days (roughly 1–1.5 hours/day).
 
 - [ ] Log in CITATION-TRACKING.md which citations are live
 - [ ] Check emails for verification links from Yelp, YellowPages, LinkedIn
+- [ ] NOTE: Phone number removed from website - all contact via forms
 
 **End of Day 1 Goal:** 4–5 citations live or in progress.
 

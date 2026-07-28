@@ -30,11 +30,10 @@ import { config } from '../config';
 
     <div class="flex items-center gap-3">
       <a
-        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+        href="#quote"
         class="hidden sm:flex items-center gap-2 bg-brand-accent text-white px-4 py-2 rounded font-bold hover:bg-red-700 transition"
       >
-        <span class="text-xs opacity-75">CALL NOW</span>
-        <span>{config.phone}</span>
+        Get Quote
       </a>
 
       <button
@@ -69,14 +68,8 @@ import { config } from '../config';
       <a href="/blog" class="text-gray-700 font-medium hover:text-brand-blue">
         Blog
       </a>
-      <a href="#contact" class="text-gray-700 font-medium hover:text-brand-blue">
-        Contact
-      </a>
-      <a
-        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
-        class="block bg-brand-accent text-white px-4 py-3 rounded font-bold hover:bg-red-700 transition text-center"
-      >
-        Call Now: {config.phone}
+      <a href="#quote" class="text-gray-700 font-medium hover:text-brand-blue">
+        Get Quote
       </a>
     </nav>
   </div>

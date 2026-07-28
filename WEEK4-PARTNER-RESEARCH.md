@@ -43,10 +43,9 @@ Our service:
 - Same-day delivery across Vancouver Island
 - Nanaimo Courthouse filing expertise (deadline-critical, always on time)
 - Real-time tracking + proof of delivery
-- 15-minute response time to your calls
+- Fast email response during business hours
 
 If interested, please let me know:
-Phone: (250) 753-0000
 Email: dispatch@nanaimocourier.com
 Website: https://nanaimocourier.com
 

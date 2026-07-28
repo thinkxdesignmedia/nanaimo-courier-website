@@ -5,7 +5,7 @@ import SchemaMarkup from '../components/SchemaMarkup.astro';
 import { config } from '../config';
 
 const title = 'Courier Rates in Nanaimo: What Delivery Costs in 2026';
-const description = 'Transparent courier pricing. Same-day delivery, rush service, freight rates. No hidden fees. Call for instant quote.';
+const description = 'Transparent courier pricing. Same-day delivery, rush service, freight rates. No hidden fees. Get an instant quote online.';
 ---
 
 <BaseLayout {title} {description}>
@@ -226,12 +226,12 @@ const description = 'Transparent courier pricing. Same-day delivery, rush servic
         </div>
 
         <p class="text-xs text-gray-500 mt-6">
-          This is an estimate. Call {config.phone} for exact pricing based on your exact addresses and service needs.
+          This is an estimate. Submit a quote for exact pricing based on your exact addresses and service needs.
         </p>
       </div>
 
       <div class="mt-8">
-        <PhoneCTA text={`Call for Exact Quote: ${config.phone}`} />
+        <PhoneCTA text="Get Exact Quote" />
       </div>
     </div>
   </section>

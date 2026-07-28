@@ -4,7 +4,7 @@ import PhoneCTA from '../components/PhoneCTA.astro';
 import { config } from '../config';
 
 const title = 'Contact Us | Nanaimo Courier';
-const description = 'Call, email, or request a callback. Direct access to dispatch. Questions about same-day delivery, rates, or services.';
+const description = 'Contact us via email or request a callback. Questions about same-day delivery, rates, or services.';
 ---
 
 <BaseLayout {title} {description}>
@@ -23,16 +23,6 @@ const description = 'Call, email, or request a callback. Direct access to dispat
         <h2>Quick Contact</h2>
 
         <div class="space-y-6">
-          <div>
-            <h3 class="font-bold text-brand-blue mb-2">Call Dispatch</h3>
-            <a href={`tel:${config.phone.replace(/[^\d+]/g, '')}`} class="text-3xl font-bold text-brand-accent hover:underline">
-              {config.phone}
-            </a>
-            <p class="text-sm text-gray-600 mt-2">
-              Direct line to dispatch. No voicemail, no queue. Monday–Friday 7 AM–6 PM, Saturday–Sunday 8 AM–4 PM.
-            </p>
-          </div>
-
           <div>
             <h3 class="font-bold text-brand-blue mb-2">Email</h3>
             <a href={`mailto:${config.email}`} class="text-lg text-brand-accent hover:underline">

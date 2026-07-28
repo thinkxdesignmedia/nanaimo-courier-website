@@ -27,7 +27,6 @@ Thanks!
 
 [Your Name]
 Nanaimo Courier
-(250) 753-0000
 dispatch@nanaimocourier.com
 ```
 
@@ -64,7 +63,6 @@ Thanks for your support!
 
 [Your Name]
 Nanaimo Courier
-(250) 753-0000
 dispatch@nanaimocourier.com
 https://nanaimocourier.com
 ```
@@ -94,7 +92,6 @@ Looking forward to serving you again!
 
 [Your Name]
 Nanaimo Courier
-(250) 753-0000
 dispatch@nanaimocourier.com
 ```
 
@@ -124,7 +121,6 @@ Best regards,
 
 [Your Name]
 Nanaimo Courier
-(250) 753-0000
 dispatch@nanaimocourier.com
 ```
 

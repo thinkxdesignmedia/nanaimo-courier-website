@@ -1,17 +1,1 @@
----
-import { config } from '../config';
----
-
-<div class="fixed bottom-0 left-0 right-0 bg-brand-accent text-white p-3 md:hidden shadow-lg">
-  <a
-    href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
-    class="flex items-center justify-center gap-2 font-bold text-lg hover:bg-red-700 transition py-2"
-  >
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.068.145.143.29.214.433.468.901 1.159 2.108 2.301 3.25 1.142 1.142 2.35 1.833 3.25 2.301.143.07.288.146.433.214l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 4 14.18 4 9.5V5a1 1 0 01-1-1H2z"></path>
-    </svg>
-    <span>Call {config.phone}</span>
-  </a>
-</div>
-
-<div class="h-16 md:h-0"></div>
+<!-- Mobile phone CTA removed - use form instead -->

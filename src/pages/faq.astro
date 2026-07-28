@@ -9,7 +9,7 @@ const description = 'Frequently asked questions about same-day courier service i
 const faqs = [
   {
     question: 'How quickly can you pick up my shipment?',
-    answer: `During business hours (7 AM–6 PM weekdays, 8 AM–4 PM weekends), we typically pick up within 30 minutes. If we have a driver nearby, pickup can be as fast as 15 minutes. Call ${config.phone} for real-time pickup estimate.`,
+    answer: `During business hours (7 AM–6 PM weekdays, 8 AM–4 PM weekends), we typically pick up within 30 minutes. If we have a driver nearby, pickup can be as fast as 15 minutes. Submit a quote for real-time pickup estimate.`,
   },
   {
     question: 'Do you offer same-day delivery?',
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: 'What if I need it delivered after hours?',
-    answer: 'We offer after-hours emergency service. Call us—surcharges apply (+$25 evenings, +$50 nights/weekends), but we can usually accommodate urgent evening or overnight rushes.',
+    answer: 'We offer after-hours emergency service. Submit an emergency request—surcharges apply (+$25 evenings, +$50 nights/weekends), but we can usually accommodate urgent evening or overnight rushes.',
   },
   {
     question: 'Can I track my delivery in real time?',
@@ -33,11 +33,11 @@ const faqs = [
   },
   {
     question: 'Can I modify my delivery address after I book?',
-    answer: 'Call us immediately if you need to change the address. If the driver hasn\'t picked up yet, no problem—we divert them. Changes within 15 minutes are usually free.',
+    answer: 'Contact us immediately if you need to change the address. If the driver hasn\'t picked up yet, no problem—we divert them. Changes within 15 minutes are usually free.',
   },
   {
     question: 'What if I need to reschedule?',
-    answer: 'Call to reschedule. Reschedule within 1 hour of pickup? Usually no charge. After 1 hour? 25% cancellation fee. We hold the driver slot; we need notice to release them.',
+    answer: 'Contact us to reschedule. Reschedule within 1 hour of pickup? Usually no charge. After 1 hour? 25% cancellation fee. We hold the driver slot; we need notice to release them.',
   },
   {
     question: 'Do you do multi-stop deliveries?',
@@ -144,13 +144,13 @@ const faqs = [
     <h2 class="text-center mb-8">Didn't Find Your Answer?</h2>
     <div class="text-center">
       <p class="text-gray-700 mb-6">
-        Call us or submit a quote request. Our team answers courier questions all day.
+        Submit a quote request or contact us. Our team answers courier questions all day.
       </p>
       <a
-        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+        href="#quote"
         class="cta-button inline-block"
       >
-        Call {config.phone}
+        Get a Quote
       </a>
     </div>
   </section>

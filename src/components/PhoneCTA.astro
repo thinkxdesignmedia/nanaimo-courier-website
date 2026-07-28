@@ -1,12 +1,10 @@
 ---
-import { config } from '../config';
-
 interface Props {
   text?: string;
   variant?: 'primary' | 'secondary' | 'outline';
 }
 
-const { text = `Need it there today? Call ${config.phone}`, variant = 'primary' } = Astro.props;
+const { text = 'Need it there today? Get a quote', variant = 'primary' } = Astro.props;
 
 const styles = {
   primary: 'cta-button',
@@ -16,7 +14,7 @@ const styles = {
 ---
 
 <a
-  href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+  href="#quote"
   class={styles[variant]}
 >
   {text}
