@@ -2,7 +2,7 @@
 import { config, siteConfig } from '../config';
 
 interface Props {
-  type: 'LocalBusiness' | 'Service' | 'FAQPage' | 'BreadcrumbList';
+  type: 'LocalBusiness' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'PricingTable';
   data?: Record<string, any>;
 }
 
@@ -88,6 +88,18 @@ if (type === 'BreadcrumbList') {
       name: item.name,
       item: `${siteConfig.siteUrl}${item.url}`,
     })),
+  };
+}
+
+if (type === 'PricingTable') {
+  schema = {
+    ...schema,
+    '@type': 'PriceSpecification',
+    priceCurrency: data.currency || 'CAD',
+    price: data.price || '0',
+    ...(data.basePrice && { basePrice: data.basePrice }),
+    ...(data.perKmPrice && { perKmPrice: data.perKmPrice }),
+    priceValidUntil: data.priceValidUntil || new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
   };
 }
 ---

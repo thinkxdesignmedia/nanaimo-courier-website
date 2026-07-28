@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { config } from '../config';
+
+const title = 'Customer Reviews & Testimonials | Nanaimo Courier';
+const description = 'Real reviews from law firms, medical clinics, and businesses using Nanaimo Courier. See why customers trust our same-day delivery service.';
+
+// Testimonials structure: add real reviews here with names, roles, and ratings
+const testimonials = [
+  {
+    name: '[Your Customer Name]',
+    role: '[Their Role/Title]',
+    company: '[Their Business/Organization]',
+    rating: 5,
+    text: '[Add testimonial text here. Focus on: speed, reliability, professionalism, or specific scenario where we saved the day.]',
+  },
+  {
+    name: '[Another Customer]',
+    role: '[Their Role]',
+    company: '[Their Business]',
+    rating: 5,
+    text: '[Add another real testimonial. Aim for 2–3 sentences, specific details beat generic praise.]',
+  },
+];
+---
+
+<BaseLayout {title} {description}>
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Customer Reviews & Testimonials</h1>
+      <p class="text-lg md:text-xl opacity-95">
+        Hear from law firms, medical clinics, and businesses across Vancouver Island who trust us for same-day delivery.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="max-w-4xl">
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="text-4xl font-bold text-brand-accent">4.8</div>
+          <div>
+            <div class="text-lg font-semibold text-gray-900">out of 5 stars</div>
+            <div class="text-sm text-gray-600">[X] verified reviews</div>
+          </div>
+        </div>
+        <div class="flex gap-1">
+          {[1, 2, 3, 4, 5].map(() => (
+            <span class="text-2xl text-brand-accent">★</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        {testimonials.map((testimonial, i) => (
+          <div key={i} class="bg-gray-50 p-8 rounded border-l-4 border-brand-accent">
+            <div class="flex gap-1 mb-4">
+              {[1, 2, 3, 4, testimonial.rating >= 5 ? 5 : 0].filter(Boolean).map(() => (
+                <span class="text-lg text-brand-accent">★</span>
+              ))}
+            </div>
+
+            <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+              "{testimonial.text}"
+            </p>
+
+            <div>
+              <p class="font-bold text-gray-900">{testimonial.name}</p>
+              <p class="text-sm text-gray-600">{testimonial.role}</p>
+              <p class="text-sm text-gray-600">{testimonial.company}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-blue-50 p-8 rounded border border-blue-200">
+        <h2 class="text-xl font-bold mb-4">Your review matters</h2>
+        <p class="text-gray-700 mb-6">
+          Had a great experience with Nanaimo Courier? Leave a review on Google or send us your testimonial.
+        </p>
+        <a
+          href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+          class="cta-button inline-block"
+        >
+          Call to Share Your Experience
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 section-container">
+    <h2 class="text-center mb-8">Why Customers Choose Us</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">3–4 hrs</div>
+        <p class="text-gray-700">Nanaimo to Victoria ferry delivery. Reliable timing, every time.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">45 min</div>
+        <p class="text-gray-700">Parksville delivery. Fastest same-day on the island.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">$18+</div>
+        <p class="text-gray-700">Base rate. Transparent pricing, no surprise fees.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">24/7</div>
+        <p class="text-gray-700">Real-time tracking. See your delivery happen live.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">100%</div>
+        <p class="text-gray-700">Proof of delivery. Photo, signature, timestamp on every run.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">15 min</div>
+        <p class="text-gray-700">Response time. Call, get a quote, we're on it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2 class="text-center mb-8">Industries We Serve</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Law Firms</h3>
+        <p class="text-gray-600 text-sm">Courthouse filings, urgent document delivery. Deadlines never missed.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Medical Clinics & Labs</h3>
+        <p class="text-gray-600 text-sm">Specimen transport, temperature control, chain-of-custody documentation.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Manufacturing</h3>
+        <p class="text-gray-600 text-sm">Equipment parts, urgent supplies. Production lines keep running.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Retail & Tourism</h3>
+        <p class="text-gray-600 text-sm">Marketing materials, event logistics, same-day inventory updates.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Forestry & Lumber</h3>
+        <p class="text-gray-600 text-sm">Mill equipment, forest products. Specialized freight handling.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Pharmacies</h3>
+        <p class="text-gray-600 text-sm">Prescription delivery, medication transfer, emergency stock runs.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Print & Publishing</h3>
+        <p class="text-gray-600 text-sm">Proofs, collateral, urgent marketing materials. Fast turnaround guaranteed.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-brand-blue font-bold mb-2">Automotive</h3>
+        <p class="text-gray-600 text-sm">Parts delivery, urgent repairs. Keep shops running smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 section-container">
+    <h2 class="text-center mb-8">Ready to experience fast, reliable delivery?</h2>
+
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-gray-700 mb-8">
+        Get your first quote today. Same-day delivery to Nanaimo, Victoria, Comox Valley, and beyond.
+      </p>
+
+      <a
+        href="/contact"
+        class="cta-button inline-block mr-4"
+      >
+        Get a Quote
+      </a>
+
+      <a
+        href={`tel:${config.phone.replace(/[^\d+]/g, '')}`}
+        class="cta-button inline-block"
+      >
+        Call {config.phone}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .card {
+    @apply bg-white p-6 rounded shadow-sm hover:shadow-md transition;
+  }
+</style>

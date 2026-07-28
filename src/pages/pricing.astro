@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PhoneCTA from '../components/PhoneCTA.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
 import { config } from '../config';
 
 const title = 'Courier Rates in Nanaimo: What Delivery Costs in 2026';
@@ -8,6 +9,7 @@ const description = 'Transparent courier pricing. Same-day delivery, rush servic
 ---
 
 <BaseLayout {title} {description}>
+  <SchemaMarkup type="PricingTable" data={{ currency: 'CAD', basePrice: '18', perKmPrice: '1.50' }} />
   <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
     <div class="section-container">
       <h1 class="text-white mb-4">Courier Pricing in Nanaimo</h1>
