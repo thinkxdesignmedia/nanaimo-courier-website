@@ -3,51 +3,99 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 font-sans antialiased;
+  }
+
   h1 {
-    @apply text-4xl md:text-5xl font-bold mb-4 text-gray-900;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-neutral-900;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl font-bold mb-3 text-gray-900;
+    @apply text-3xl md:text-4xl font-bold tracking-tight mb-8 text-neutral-900;
   }
 
   h3 {
-    @apply text-2xl font-bold mb-2 text-gray-900;
+    @apply text-2xl md:text-2xl font-bold tracking-tight mb-4 text-neutral-900;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl font-semibold mb-3 text-neutral-900;
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-neutral-700;
+  }
+
+  a {
+    @apply transition-colors duration-200;
   }
 }
 
 @layer components {
+  /* CTA Buttons - Modern, spacious */
   .cta-button {
-    @apply inline-block px-6 py-3 bg-brand-accent text-white font-bold rounded hover:bg-red-700 transition;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-accent text-white font-semibold rounded-lg hover:bg-red-700 active:bg-red-800 transition-colors duration-200 shadow-sm hover:shadow-md;
   }
 
   .cta-button-secondary {
-    @apply inline-block px-6 py-3 bg-brand-blue text-white font-bold rounded hover:bg-blue-900 transition;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-blue-900 active:bg-blue-950 transition-colors duration-200 shadow-sm hover:shadow-md;
   }
 
+  .cta-button-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200;
+  }
+
+  /* Section Container - More spacious */
   .section-container {
-    @apply max-w-6xl mx-auto px-4 py-12 md:py-16;
+    @apply max-w-6xl mx-auto px-4 py-16 md:py-24;
   }
 
+  /* Form Input - Clean, modern */
   .form-input {
-    @apply w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20;
+    @apply w-full px-4 py-3 border border-neutral-200 rounded-lg bg-white text-neutral-900 focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/10 transition-colors duration-200;
   }
 
+  /* Badge - Subtle */
   .badge {
-    @apply inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-semibold rounded;
+    @apply inline-block px-3 py-1 bg-blue-100 text-blue-900 text-xs font-semibold rounded-full uppercase tracking-wide;
   }
 
+  /* Card - Data-driven, clean */
   .card {
-    @apply bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition;
+    @apply bg-white border border-neutral-100 rounded-xl p-7 hover:shadow-md transition-all duration-200;
   }
-}
 
-body {
-  scroll-behavior: smooth;
+  /* Metric Card - Prominent for data-driven design */
+  .metric-card {
+    @apply bg-neutral-50 rounded-xl p-8 text-center border border-neutral-100;
+  }
+
+  .metric-value {
+    @apply text-4xl md:text-5xl font-bold text-brand-blue mb-2;
+  }
+
+  .metric-label {
+    @apply text-sm md:text-base font-medium text-neutral-600 uppercase tracking-wide;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    @apply grid md:grid-cols-4 gap-6 my-12;
+  }
+
+  /* Icon + Text Combination */
+  .icon-feature {
+    @apply flex flex-col items-center text-center gap-4;
+  }
+
+  .icon-feature-large {
+    @apply flex gap-6 items-start;
+  }
 }
 
 main {
