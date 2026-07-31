@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import B2BCTA from '../../components/B2BCTA.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'IKEA Delivery Service Nanaimo | Furniture & Assembly';
+const description = 'Fast IKEA pickup and delivery to Nanaimo. Same-day or next-day service for furniture, decor, and household items. Assembly available.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'IKEA Delivery', description }} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">IKEA Furniture Delivery & Assembly</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Order from IKEA online. We pick up, deliver to your home, and assemble your furniture. Same-day or next-day service across Vancouver Island.
+      </p>
+      <PhoneCTA text="Get Instant Quote" />
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-container">
+    <h2>How IKEA Delivery Works</h2>
+
+    <div class="grid md:grid-cols-4 gap-6 mb-12">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">1</div>
+        <h3 class="text-lg font-semibold mb-2">Order at IKEA</h3>
+        <p class="text-gray-600 text-sm">
+          Shop and order online at IKEA.com. Choose pickup at Nanaimo location. Let us know your delivery preference.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">2</div>
+        <h3 class="text-lg font-semibold mb-2">We Pick Up</h3>
+        <p class="text-gray-600 text-sm">
+          Our drivers collect your order from IKEA. We handle large items, flat-pack boxes, everything carefully packed.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">3</div>
+        <h3 class="text-lg font-semibold mb-2">Professional Delivery</h3>
+        <p class="text-gray-600 text-sm">
+          Delivered to your home or office. We position furniture where you want it and protect your floors and walls.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">4</div>
+        <h3 class="text-lg font-semibold mb-2">Assembly (Optional)</h3>
+        <p class="text-gray-600 text-sm">
+          Add assembly for an extra fee. We assemble beds, desks, shelving, cabinets—anything from IKEA.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Options -->
+  <section class="bg-blue-50 section-container">
+    <h2>IKEA Delivery Options</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        Choose the service that fits your needs:
+      </p>
+
+      <div class="space-y-4">
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Delivery Only</h3>
+          <p class="text-gray-600 text-sm">We pick up and deliver your IKEA order. You or a handyperson assembles at home.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Delivery + Full Assembly</h3>
+          <p class="text-gray-600 text-sm">We deliver and assemble everything. Beds, desks, wardrobes, kitchen items—all set up and ready to use.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Delivery + Partial Assembly</h3>
+          <p class="text-gray-600 text-sm">We deliver and assemble complex items (beds, large furniture). You handle simple items. Flexible pricing.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Island-Wide Service</h3>
+          <p class="text-gray-600 text-sm">Serving Nanaimo, Parksville, Duncan, Comox, and surrounding areas. Rural delivery quotes available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Use Cases -->
+  <section class="section-container">
+    <h2>Who Uses IKEA Delivery?</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h3>New Homeowners</h3>
+        <p class="text-gray-600">
+          Moving in? We pick up your IKEA order, deliver, and assemble. No stress, no confusion with instruction manuals.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Busy Professionals</h3>
+        <p class="text-gray-600">
+          No time to pick up or assemble furniture. We handle everything. Your new desk or bookshelf is ready when you get home.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Renovation Projects</h3>
+        <p class="text-gray-600">
+          Kitchen renovations, office redesigns, employee onboarding. We deliver and assemble IKEA furniture for any scale.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Corporate Offices</h3>
+        <p class="text-gray-600">
+          Furnish new office space with IKEA desks, filing cabinets, and modular furniture. We handle bulk orders and assembly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-gray-50 section-container">
+    <h2>IKEA Delivery & Assembly Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Simple, transparent pricing based on order size and assembly complexity.
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6">
+        <h3 class="font-bold mb-4">Standard Pricing</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>Delivery only (Nanaimo):</strong> $20–$35 (based on order size)</li>
+          <li><strong>North end/Parksville:</strong> $35–$50</li>
+          <li><strong>Island-wide (Duncan/Comox):</strong> $50–$75 (call for quote)</li>
+          <li><strong>Assembly per item:</strong> $30–$80 (beds, desks, wardrobes, etc.)</li>
+          <li><strong>Full assembly package:</strong> $150–$300 (typical bedroom/office set)</li>
+          <li><strong>Bulk orders (5+ items):</strong> Discount available—call for pricing</li>
+        </ul>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-6">
+        Delivery and assembly are quoted separately. Assembly time varies by furniture type and complexity. Call for exact estimate.
+      </p>
+
+      <PhoneCTA text="Get Instant Quote" />
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm />
+
+  <!-- FAQ -->
+  <section class="section-container">
+    <h2>IKEA Delivery FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">Do you deliver IKEA items ordered online or in-store?</h3>
+        <p class="text-gray-700">
+          Both. Online orders ready for pickup, or we can pick up in-store purchases on your behalf. Tell us what you need.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">How long does assembly take?</h3>
+        <p class="text-gray-700">
+          Depends on the item. A simple desk: 30 minutes. A PAX wardrobe: 1–2 hours. A full bedroom set: 3–4 hours. We provide time estimates upfront.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you provide old furniture removal?</h3>
+        <p class="text-gray-700">
+          Yes. Removing old furniture costs extra ($20–$50 per item) depending on size and haul distance. Ask when you order.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if something arrives damaged?</h3>
+        <p class="text-gray-700">
+          We inspect items before delivery. Damage is rare, but if it happens, we document it and coordinate directly with IKEA for replacement or refund.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can you deliver to offices or retail spaces?</h3>
+        <p class="text-gray-700">
+          Absolutely. We deliver to homes, offices, retail stores, and warehouses. Commercial assembly and bulk orders welcome.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">How soon can you deliver?</h3>
+        <p class="text-gray-700">
+          Same-day delivery for orders placed before 2 PM. Next-day delivery otherwise. Island-wide orders may take 2–3 business days depending on distance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CTA -->
+  <B2BCTA />
+</BaseLayout>

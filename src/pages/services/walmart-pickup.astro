@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import B2BCTA from '../../components/B2BCTA.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Walmart Pickup Delivery Service Nanaimo | Courier';
+const description = 'Fast Walmart online order pickup and delivery in Nanaimo. Same-day service to your home or office. Get your order delivered within 2 hours.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Walmart Pickup Delivery', description }} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Walmart Pickup & Delivery Service</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Order online, we pick it up from Walmart, deliver to your home or office. Same-day service in Nanaimo. Skip the checkout line.
+      </p>
+      <PhoneCTA text="Get Instant Quote" />
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-container">
+    <h2>How Walmart Pickup Works</h2>
+
+    <div class="grid md:grid-cols-4 gap-6 mb-12">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">1</div>
+        <h3 class="text-lg font-semibold mb-2">Order Online</h3>
+        <p class="text-gray-600 text-sm">
+          Place your Walmart order for pickup. Tell us which Walmart location and your desired delivery time.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">2</div>
+        <h3 class="text-lg font-semibold mb-2">We Pick Up</h3>
+        <p class="text-gray-600 text-sm">
+          Our driver arrives at Walmart, collects your order from customer service, and heads to you.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">3</div>
+        <h3 class="text-lg font-semibold mb-2">Track Live</h3>
+        <p class="text-gray-600 text-sm">
+          Real-time GPS tracking. Know exactly when your groceries or purchases will arrive.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">4</div>
+        <h3 class="text-lg font-semibold mb-2">Delivered Fresh</h3>
+        <p class="text-gray-600 text-sm">
+          Temperature-controlled vehicle. Perishables arrive fresh. Photo confirmation at delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section class="bg-blue-50 section-container">
+    <h2>Walmart Locations We Serve</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        We deliver from all Nanaimo-area Walmart locations:
+      </p>
+
+      <div class="space-y-4">
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Walmart Nanaimo Downtown</h3>
+          <p class="text-gray-600 text-sm">Industrial Ave location. Delivery to north/central Nanaimo in 45 minutes.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Walmart Nanaimo North</h3>
+          <p class="text-gray-600 text-sm">Hammond Bay Rd area. Quick service to north end and Parksville suburbs.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Island-Wide Service</h3>
+          <p class="text-gray-600 text-sm">Extended delivery to Duncan, Parksville, Comox—contact for pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Use Cases -->
+  <section class="section-container">
+    <h2>Who Uses Walmart Pickup Service?</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h3>Busy Parents</h3>
+        <p class="text-gray-600">
+          No time to shop? Order groceries online, we pick them up and deliver while you're at work. Same-day arrival.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Elderly & Mobility Issues</h3>
+        <p class="text-gray-600">
+          Easy online ordering with same-day delivery. No need to leave home. Friendly drivers help unload.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Businesses & Offices</h3>
+        <p class="text-gray-600">
+          Breakroom supplies, office essentials, bulk orders. We handle pickup and delivery during business hours.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Event Planners</h3>
+        <p class="text-gray-600">
+          Large Walmart orders for events, catering, party supplies. Same-day bulk delivery available.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-gray-50 section-container">
+    <h2>Walmart Pickup Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Simple, transparent pricing. Pay only for the pickup and delivery—no service fees on top of your Walmart order.
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6">
+        <h3 class="font-bold mb-4">Standard Walmart Pickup Rate</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>Local delivery (Nanaimo):</strong> $12 flat rate</li>
+          <li><strong>North end/Parksville:</strong> $15 flat rate</li>
+          <li><strong>Extended (Duncan/Comox):</strong> $20–$25 (call for quote)</li>
+          <li><strong>Same-day rush:</strong> Add $8</li>
+          <li><strong>Large orders (50+ items):</strong> $18 flat rate</li>
+        </ul>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-6">
+        Your Walmart groceries and purchases are delivered fresh. No subscription required. Book anytime.
+      </p>
+
+      <PhoneCTA text="Get Instant Quote" />
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm />
+
+  <!-- FAQ -->
+  <section class="section-container">
+    <h2>Walmart Pickup FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">Do you handle cold/frozen items?</h3>
+        <p class="text-gray-700">
+          Yes. We use insulated bags and temperature-controlled vehicles. Frozen items stay frozen. Perishables arrive fresh.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if Walmart is out of stock on my items?</h3>
+        <p class="text-gray-700">
+          You'll be notified before we pick up. We only deliver what Walmart has in stock. Substitutions available if requested.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">How much notice do I need to give?</h3>
+        <p class="text-gray-700">
+          Same-day service available with 2 hours' notice. Place your order online, contact us with your Walmart order number, and we'll handle the rest.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What about damaged or missing items?</h3>
+        <p class="text-gray-700">
+          Our drivers inspect all items before delivery. If anything is damaged or missing, we document it and coordinate replacement directly with Walmart.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you take cash on delivery?</h3>
+        <p class="text-gray-700">
+          The Walmart order is prepaid online by you. Our delivery fee can be paid by card or cash at delivery. No surprises.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CTA -->
+  <B2BCTA />
+</BaseLayout>

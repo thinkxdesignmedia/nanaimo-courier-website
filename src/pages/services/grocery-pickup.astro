@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import B2BCTA from '../../components/B2BCTA.astro';
+import PhoneCTA from '../../components/PhoneCTA.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import { config } from '../../config';
+
+const title = 'Grocery Delivery Service Nanaimo | Courier & Market Pickup';
+const description = 'Fast grocery delivery from Nanaimo stores. Order online, we pick up from Save-On Foods, Thrifty Foods, and deliver same-day to your door.';
+---
+
+<BaseLayout {title} {description}>
+  <SchemaMarkup type="Service" data={{ serviceName: 'Grocery Pickup Delivery', description }} />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+    <div class="section-container">
+      <h1 class="text-white mb-4">Grocery Pickup & Delivery Service</h1>
+      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
+        Order from your favorite Nanaimo grocery store online. We pick it up, deliver it fresh to your home. Same-day service, every day.
+      </p>
+      <PhoneCTA text="Get Instant Quote" />
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-container">
+    <h2>How Grocery Pickup Works</h2>
+
+    <div class="grid md:grid-cols-4 gap-6 mb-12">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">1</div>
+        <h3 class="text-lg font-semibold mb-2">Order Online</h3>
+        <p class="text-gray-600 text-sm">
+          Place your grocery order with Save-On, Thrifty, or your preferred Nanaimo grocer. Tell us the store and your preferred delivery window.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">2</div>
+        <h3 class="text-lg font-semibold mb-2">We Pick Up</h3>
+        <p class="text-gray-600 text-sm">
+          Driver collects your bagged order from customer service. Our insulated bags keep everything at the right temperature.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">3</div>
+        <h3 class="text-lg font-semibold mb-2">Track Live</h3>
+        <p class="text-gray-600 text-sm">
+          Know exactly when your groceries are arriving. Real-time GPS gives you the ETA.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="text-4xl font-bold text-brand-accent mb-2">4</div>
+        <h3 class="text-lg font-semibold mb-2">Delivered Fresh</h3>
+        <p class="text-gray-600 text-sm">
+          Temperature-controlled delivery. Frozen items stay frozen, cold stays cold, fresh produce stays fresh.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grocery Stores -->
+  <section class="bg-blue-50 section-container">
+    <h2>Grocery Stores We Deliver From</h2>
+
+    <div class="max-w-3xl">
+      <p class="text-gray-700 mb-6">
+        We pick up from all major Nanaimo grocery retailers:
+      </p>
+
+      <div class="space-y-4">
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Save-On Foods</h3>
+          <p class="text-gray-600 text-sm">Downtown and north locations. Online orders ready for pickup within 2 hours. Fast delivery guaranteed.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Thrifty Foods</h3>
+          <p class="text-gray-600 text-sm">Multiple Nanaimo locations. We handle fresh produce, deli items, and bulk orders.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border-l-4 border-brand-accent">
+          <h3 class="font-bold mb-2">Other Grocery Stores</h3>
+          <p class="text-gray-600 text-sm">Co-op, London Drugs, specialty grocers. Call for any retailer—we can arrange pickup and delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Use Cases -->
+  <section class="section-container">
+    <h2>Who Uses Grocery Delivery?</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h3>Working Parents</h3>
+        <p class="text-gray-600">
+          No time to grocery shop. Order online while at work, we deliver before dinner. Fresh ingredients, less stress.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Seniors & Accessibility</h3>
+        <p class="text-gray-600">
+          Skip the checkout line and crowds. We deliver groceries to your door same-day. No standing in long lines.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Large Families</h3>
+        <p class="text-gray-600">
+          Bulk grocery orders delivered to your home. We handle large loads, save you a trip to the store.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Corporate Offices</h3>
+        <p class="text-gray-600">
+          Stock the breakroom, lunch supplies, refreshments. Bulk grocery orders for employee wellness programs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-gray-50 section-container">
+    <h2>Grocery Pickup Pricing</h2>
+
+    <div class="max-w-2xl">
+      <p class="text-gray-700 mb-6">
+        Flat delivery rates. Your grocery order stays the same price—you just pay for the pickup and delivery service.
+      </p>
+
+      <div class="bg-white p-6 rounded border border-gray-300 mb-6">
+        <h3 class="font-bold mb-4">Standard Grocery Delivery Rate</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>Local delivery (Nanaimo):</strong> $10 flat rate</li>
+          <li><strong>North end/Parksville:</strong> $14 flat rate</li>
+          <li><strong>Extended area (Duncan/Comox):</strong> $18–$22 (call for quote)</li>
+          <li><strong>Bulk orders (50+ items):</strong> $15 flat rate</li>
+          <li><strong>Same-day rush:</strong> Add $7</li>
+        </ul>
+      </div>
+
+      <p class="text-sm text-gray-600 mb-6">
+        No subscription needed. Pay only when you order. Groceries guaranteed fresh on arrival.
+      </p>
+
+      <PhoneCTA text="Get Instant Quote" />
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm />
+
+  <!-- FAQ -->
+  <section class="section-container">
+    <h2>Grocery Delivery FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl">
+      <div>
+        <h3 class="font-bold mb-2">How long do groceries stay fresh in transit?</h3>
+        <p class="text-gray-700">
+          Our insulated delivery bags and temperature control keep groceries at the right temperature for up to 2 hours. Most Nanaimo deliveries take 45 minutes—well within the safe window.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">What if an item is out of stock?</h3>
+        <p class="text-gray-700">
+          The grocery store will substitute a similar item or refund you. You'll be notified before we deliver. Your order cost never changes—you only pay our delivery fee.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Can I request specific produce quality or cuts?</h3>
+        <p class="text-gray-700">
+          Yes. Add special instructions to your store order (ripe avocados, deli meat thickness, etc.). Our drivers communicate with customer service to ensure your preferences.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">How fast can you deliver?</h3>
+        <p class="text-gray-700">
+          Same-day delivery with 2 hours' notice for most orders. Off-peak times (9 AM–11 AM weekdays) often see 45-minute delivery. Check with us for fastest times.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-2">Do you deliver alcohol or age-restricted items?</h3>
+        <p class="text-gray-700">
+          Yes, with valid ID required at delivery. All liquor/restricted items are delivered by ID-verified drivers only.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CTA -->
+  <B2BCTA />
+</BaseLayout>
