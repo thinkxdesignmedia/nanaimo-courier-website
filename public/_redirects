@@ -1,0 +1,5 @@
+# Redirects for Cloudflare Pages
+# Removed service: freight-delivery (Nanaimo Courier is a courier service, not freight).
+# 301 the old URL to the flagship same-day service so any existing links/traffic land somewhere relevant.
+/services/freight-delivery   /services/same-day-delivery   301
+/services/freight-delivery/  /services/same-day-delivery   301
