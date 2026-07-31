@@ -35,7 +35,15 @@ const canonicalUrl = canonical || Astro.url.href;
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#1e40af" />
+    <meta name="theme-color" content="#000099" />
+
+    <!-- Fonts: Space Grotesk (display headings) + Work Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap"
+    />
 
     <!-- Google Analytics 4 (Privacy-conscious: IP anonymization enabled) -->
     {hasGA4 && (
@@ -72,7 +80,7 @@ const canonicalUrl = canonical || Astro.url.href;
 
     <title>{fullTitle}</title>
   </head>
-  <body class="bg-white text-gray-900">
+  <body class="bg-brand-cream text-gray-600">
     <Header />
     <main>
       <slot />

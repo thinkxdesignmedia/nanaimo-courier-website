@@ -4,27 +4,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Boxly-inspired palette: deep indigo accent + warm neutrals
         brand: {
-          navy: '#0a1f45',
-          blue: '#0066cc',
-          light: '#e8eef7',
-          accent: '#ff6b35',
+          indigo: '#000099',   // signature deep indigo accent
+          navy: '#0a0a3d',     // darkest — hero/footer backgrounds
+          blue: '#000099',     // alias kept for existing markup
+          dark: '#212929',     // near-black heading/body ink
+          light: '#eef0ff',    // pale indigo tint (badges, hovers)
+          cream: '#fffcfa',    // warm off-white section background
         },
+        // Warm gray ramp (Boxly body text is warm, not cool)
         gray: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
+          50: '#faf9f8',
+          100: '#f4f2f0',
+          200: '#e6e3e0',
+          300: '#d3cfcb',
+          400: '#aba9a7',
+          500: '#83817f',
+          600: '#5a5e5f',   // Boxly body text color
+          700: '#43464a',
+          800: '#2c2f31',
+          900: '#212929',   // Boxly heading ink
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        // Work Sans for body, Space Grotesk for display headings
+        sans: ['"Work Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -35,7 +41,9 @@ module.exports = {
         '2xl': ['1.5rem', { lineHeight: '2rem' }],
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
+        '5xl': ['3rem', { lineHeight: '1.05' }],
+        '6xl': ['3.75rem', { lineHeight: '1.02' }],
+        '7xl': ['4.75rem', { lineHeight: '0.98' }],
       },
       spacing: {
         xs: '0.5rem',
