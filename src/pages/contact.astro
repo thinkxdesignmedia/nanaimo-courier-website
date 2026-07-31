@@ -8,12 +8,26 @@ const description = 'Contact us via email or request a callback. Questions about
 ---
 
 <BaseLayout {title} {description}>
-  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
-    <div class="section-container">
-      <h1 class="text-white mb-4">Get in Touch</h1>
-      <p class="text-lg md:text-xl opacity-95 max-w-2xl">
-        Questions about same-day delivery, rates, or setting up a business account? Contact dispatch directly.
-      </p>
+  <section class="bg-brand-navy text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-white mb-6">Get in Touch</h1>
+          <p class="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
+            Questions about same-day delivery, rates, or setting up a business account? Contact dispatch directly — most messages get a reply within 2 hours.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/customer.jpg"
+            alt="A Nanaimo customer booking a same-day courier online"
+            width="1200"
+            height="800"
+            loading="eager"
+            class="rounded-3xl w-full h-[20rem] lg:h-[24rem] object-cover shadow-2xl shadow-black/40"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
