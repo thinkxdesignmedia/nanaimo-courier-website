@@ -13,189 +13,189 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
 <BaseLayout {title} {description}>
   <SchemaMarkup type="LocalBusiness" />
 
-  <!-- Hero Section - Minimalist, clean -->
-  <section class="bg-white section-container">
+  <!-- Hero Section - Enterprise -->
+  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white section-container">
     <div class="max-w-4xl">
-      <div class="mb-12">
-        <span class="badge bg-blue-100 text-blue-900">Nanaimo's Fastest Courier</span>
-      </div>
-      <h1 class="mb-6">Same-Day Delivery Across Vancouver Island</h1>
-      <p class="text-xl text-neutral-700 mb-8 max-w-2xl">
-        Fast, reliable courier service for legal documents, medical specimens, rush shipments, and regular routes. Pickup in 30 minutes. On-time guaranteed.
+      <span class="inline-block px-3 py-1 bg-white/20 rounded text-sm font-semibold mb-6">Courier & Delivery Solutions</span>
+      <h1 class="text-white mb-6">Fast, Reliable Delivery Across Vancouver Island</h1>
+      <p class="text-lg text-white/90 mb-8 max-w-2xl leading-relaxed">
+        Same-day courier service for legal documents, medical specimens, retail pickup, and rush shipments. 30-minute pickup guarantee. Trusted by Nanaimo businesses.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 mb-16">
+      <div class="flex flex-col sm:flex-row gap-4">
         <PhoneCTA text="Get Instant Quote" />
-        <a href="/contact" class="cta-button-outline inline-block">Contact Us</a>
-      </div>
-    </div>
-
-    <!-- Metrics Grid - Data-driven, prominent -->
-    <div class="stats-grid">
-      <div class="metric-card">
-        <div class="metric-value">30</div>
-        <div class="metric-label">Minutes to pickup</div>
-        <p class="text-xs text-neutral-600 mt-2">During business hours</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value">100%</div>
-        <div class="metric-label">On-time delivery</div>
-        <p class="text-xs text-neutral-600 mt-2">Guaranteed reliability</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value">24/7</div>
-        <div class="metric-label">Emergency service</div>
-        <p class="text-xs text-neutral-600 mt-2">After-hours rush jobs</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value">4</div>
-        <div class="metric-label">Island coverage</div>
-        <p class="text-xs text-neutral-600 mt-2">Ferry routes included</p>
+        <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-navy font-semibold rounded hover:bg-gray-100 transition-colors">
+          Contact Sales
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview - Clean, organized grid -->
-  <section class="bg-neutral-50 section-container">
+  <!-- Value Propositions - Numbered, Enterprise -->
+  <section class="bg-white section-container">
+    <div class="grid md:grid-cols-3 gap-12">
+      <!-- Proposition 01 -->
+      <div class="value-prop">
+        <div class="value-prop-number">01</div>
+        <h3 class="value-prop-title">Speed You Can Count On</h3>
+        <p class="value-prop-description">
+          Pickup within 30 minutes. Same-day delivery across Nanaimo and surrounding islands. Our network covers Victoria, Duncan, Parksville, Comox, and Port Alberni with guaranteed on-time service.
+        </p>
+        <a href="/services/same-day-delivery" class="value-prop-cta mt-4">Explore Same-Day Delivery →</a>
+      </div>
+
+      <!-- Proposition 02 -->
+      <div class="value-prop">
+        <div class="value-prop-number">02</div>
+        <h3 class="value-prop-title">Services for Every Need</h3>
+        <p class="value-prop-description">
+          Rush courier, medical specimen transport, legal document delivery, retail pickup (Walmart, grocery, IKEA), and scheduled routes. Each service tailored to your industry and timeline.
+        </p>
+        <a href="/services/rush-delivery" class="value-prop-cta mt-4">Browse All Services →</a>
+      </div>
+
+      <!-- Proposition 03 -->
+      <div class="value-prop">
+        <div class="value-prop-number">03</div>
+        <h3 class="value-prop-title">Built for Business</h3>
+        <p class="value-prop-description">
+          Volume rates for recurring deliveries. Real-time tracking. Proof of delivery with photos. 24/7 emergency service. Trusted by law firms, medical facilities, manufacturers, and retailers.
+        </p>
+        <a href="/industries" class="value-prop-cta mt-4">View Industry Solutions →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid - Enterprise -->
+  <section class="bg-gray-50 section-container">
     <div class="mb-12">
-      <h2>Core Services</h2>
-      <p class="text-lg text-neutral-600 max-w-2xl">Choose the service that fits your need. From local same-day delivery to specialized medical transport.</p>
+      <h2>Our Services</h2>
+      <p class="text-lg text-gray-600 max-w-2xl">Comprehensive delivery solutions designed for Nanaimo businesses, retailers, and professionals.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
-      <a href="/services/same-day-delivery" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">📦</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Same-Day Delivery</h3>
-        <p class="text-neutral-600 mb-4">
-          Local Nanaimo within 3 hours. 3 PM cutoff weekdays, 10 AM weekends.
+      <!-- Delivery Services -->
+      <a href="/services/same-day-delivery" class="service-card group cursor-pointer">
+        <span class="service-category">Delivery</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Same-Day Delivery</h3>
+        <p class="text-gray-600 mb-4">
+          Local Nanaimo within 3 hours. 3 PM cutoff weekdays, 10 AM weekends. Pickup guaranteed within 30 minutes.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/rush-delivery" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">⚡</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Rush & Hot-Shot</h3>
-        <p class="text-neutral-600 mb-4">
-          Emergency courier. Priority dispatch, dedicated driver if needed.
+      <a href="/services/rush-delivery" class="service-card group cursor-pointer">
+        <span class="service-category">Delivery</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Rush & Emergency</h3>
+        <p class="text-gray-600 mb-4">
+          Priority dispatch for urgent shipments. Dedicated driver available. 24/7 emergency service for time-critical deliveries.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/medical-courier" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">🏥</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Medical & Lab</h3>
-        <p class="text-neutral-600 mb-4">
-          Specimen transport. Temperature-controlled, chain-of-custody available.
+      <a href="/services/medical-courier" class="service-card group cursor-pointer">
+        <span class="service-category">Specialized</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Medical & Lab</h3>
+        <p class="text-gray-600 mb-4">
+          Temperature-controlled specimen transport. Chain-of-custody handling. HIPAA-compliant documentation.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/legal-courier" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">⚖️</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Legal Courier</h3>
-        <p class="text-neutral-600 mb-4">
-          Court filings, legal documents. Certified drivers, proof of delivery.
+      <a href="/services/legal-courier" class="service-card group cursor-pointer">
+        <span class="service-category">Specialized</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Legal Courier</h3>
+        <p class="text-gray-600 mb-4">
+          Court filings and legal document delivery. Certified drivers know courthouse procedures. Proof of delivery included.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/scheduled-delivery" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">📅</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Scheduled Routes</h3>
-        <p class="text-neutral-600 mb-4">
-          Daily or weekly routes. Flat rates, recurring credit, dedicated dispatch.
+      <a href="/services/scheduled-delivery" class="service-card group cursor-pointer">
+        <span class="service-category">B2B</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Scheduled Routes</h3>
+        <p class="text-gray-600 mb-4">
+          Daily or weekly recurring routes. Flat rates with volume discounts. Dedicated dispatch contact.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/walmart-pickup" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">🛒</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Walmart Pickup</h3>
-        <p class="text-neutral-600 mb-4">
-          Order online, we pick up and deliver. Same-day service to your door.
+      <a href="/services/walmart-pickup" class="service-card group cursor-pointer">
+        <span class="service-category">Retail</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Walmart Pickup</h3>
+        <p class="text-gray-600 mb-4">
+          Order online, we collect and deliver. Same-day service to your home or office. No checkout lines.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/grocery-pickup" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">🛍️</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Grocery Delivery</h3>
-        <p class="text-neutral-600 mb-4">
-          Fresh groceries from Save-On, Thrifty Foods. Temperature-controlled delivery.
+      <a href="/services/grocery-pickup" class="service-card group cursor-pointer">
+        <span class="service-category">Retail</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Grocery Delivery</h3>
+        <p class="text-gray-600 mb-4">
+          Fresh groceries from Save-On Foods and Thrifty Foods. Temperature-controlled delivery. Bulk orders welcome.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/services/ikea-delivery" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">🪑</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">IKEA Delivery</h3>
-        <p class="text-neutral-600 mb-4">
-          IKEA furniture delivery and assembly. Same-day pickup and installation.
+      <a href="/services/ikea-delivery" class="service-card group cursor-pointer">
+        <span class="service-category">Retail</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">IKEA Delivery & Assembly</h3>
+        <p class="text-gray-600 mb-4">
+          Furniture delivery from IKEA. Professional assembly included. Same-day pickup and installation available.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
       </a>
 
-      <a href="/routes/nanaimo-victoria" class="card group cursor-pointer">
-        <div class="text-3xl mb-3">🚢</div>
-        <h3 class="group-hover:text-brand-blue transition-colors">Island Routes</h3>
-        <p class="text-neutral-600 mb-4">
-          Victoria, Comox, Port Alberni, Parksville. Ferry routing included.
+      <a href="/routes/nanaimo-victoria" class="service-card group cursor-pointer">
+        <span class="service-category">Routes</span>
+        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Island Routes</h3>
+        <p class="text-gray-600 mb-4">
+          Nanaimo to Victoria, Duncan, Parksville, Comox, and Port Alberni. Ferry routing included. Multi-stop service.
         </p>
         <span class="text-brand-blue font-semibold group-hover:underline">View Routes →</span>
       </a>
     </div>
   </section>
 
-  <!-- B2B Focus - Structured, data-driven -->
+  <!-- Industry Solutions - Enterprise B2B -->
   <section class="section-container">
     <div class="mb-12">
-      <h2>Built for Business</h2>
-      <p class="text-lg text-neutral-600 max-w-2xl">Specialized solutions for the industries that depend on reliability.</p>
+      <h2>Industry Solutions</h2>
+      <p class="text-lg text-gray-600 max-w-2xl">Specialized courier services built for the industries that depend on reliability and speed.</p>
     </div>
 
-    <div class="max-w-5xl grid md:grid-cols-2 gap-8">
-      <div class="icon-feature-large">
-        <div class="text-4xl flex-shrink-0">⚖️</div>
-        <div>
-          <h3 class="mb-3">Law Firms & Courts</h3>
-          <p class="text-neutral-600 mb-4">
-            Same-day courthouse delivery. Our drivers know filing windows, security procedures, and Nanaimo court deadlines.
-          </p>
-          <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore legal →</a>
-        </div>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
+      <div class="p-8 border border-gray-200 rounded hover:border-brand-blue transition-colors">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Law Firms & Courts</h3>
+        <p class="text-gray-600 mb-4">
+          Same-day courthouse delivery. Our drivers know filing windows, security procedures, Nanaimo court deadlines, and courthouse-specific handling. Proof of delivery with signatures.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore legal solutions →</a>
       </div>
 
-      <div class="icon-feature-large">
-        <div class="text-4xl flex-shrink-0">🏥</div>
-        <div>
-          <h3 class="mb-3">Medical & Labs</h3>
-          <p class="text-neutral-600 mb-4">
-            Specimen transport with temperature control, chain-of-custody, and HIPAA-conscious handling.
-          </p>
-          <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore medical →</a>
-        </div>
+      <div class="p-8 border border-gray-200 rounded hover:border-brand-blue transition-colors">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Medical & Laboratory</h3>
+        <p class="text-gray-600 mb-4">
+          Specimen transport with temperature control, chain-of-custody documentation, and HIPAA-compliant handling. Certified for sensitive medical shipments.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore medical solutions →</a>
       </div>
 
-      <div class="icon-feature-large">
-        <div class="text-4xl flex-shrink-0">🏭</div>
-        <div>
-          <h3 class="mb-3">Manufacturing & Parts</h3>
-          <p class="text-neutral-600 mb-4">
-            Same-day parts delivery. Volume rates for print shops, auto suppliers, and equipment manufacturers.
-          </p>
-          <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore B2B →</a>
-        </div>
+      <div class="p-8 border border-gray-200 rounded hover:border-brand-blue transition-colors">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Manufacturing & Auto Parts</h3>
+        <p class="text-gray-600 mb-4">
+          Same-day parts delivery with volume rates. Recurring route options for auto suppliers, equipment manufacturers, and industrial facilities.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore B2B logistics →</a>
       </div>
 
-      <div class="icon-feature-large">
-        <div class="text-4xl flex-shrink-0">🖨️</div>
-        <div>
-          <h3 class="mb-3">Print & Design</h3>
-          <p class="text-neutral-600 mb-4">
-            Rush proofs, final files, collateral. Same-day delivery for fast turnarounds.
-          </p>
-          <a href="/industries" class="text-brand-blue font-semibold hover:underline">Explore print →</a>
-        </div>
+      <div class="p-8 border border-gray-200 rounded hover:border-brand-blue transition-colors">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Print, Design & Retail</h3>
+        <p class="text-gray-600 mb-4">
+          Rush proofs, final files, marketing collateral, and retail pickups. Same-day delivery for fast turnarounds and inventory management.
+        </p>
+        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore retail solutions →</a>
       </div>
     </div>
   </section>
@@ -203,36 +203,32 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
   <!-- Quote Form -->
   <QuoteForm />
 
-  <!-- Why Choose Us - Structured benefits -->
-  <section class="bg-neutral-50 section-container">
+  <!-- Why Choose Nanaimo Courier - Differentiators -->
+  <section class="bg-gray-50 section-container">
     <div class="mb-12">
-      <h2>Why {config.businessName}?</h2>
-      <p class="text-lg text-neutral-600 max-w-2xl">We're not just faster—we're more reliable, more transparent, and built for the way you work.</p>
+      <h2>Why Choose {config.businessName}</h2>
+      <p class="text-lg text-gray-600 max-w-2xl">Reliable, transparent, and built for the way Nanaimo businesses operate.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
-      <div class="icon-feature">
-        <div class="text-4xl">🗺️</div>
-        <h3 class="mb-3">Island Expertise</h3>
-        <p class="text-neutral-600">Every driver knows the Malahat, ferry schedules, courthouse procedures, and hospital access points. We move faster because we know every road.</p>
+      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Island-Wide Expertise</h3>
+        <p class="text-gray-600">Every driver knows the Malahat, ferry schedules, courthouse procedures, and hospital access points. Speed comes from knowing every road and route.</p>
       </div>
 
-      <div class="icon-feature">
-        <div class="text-4xl">📍</div>
-        <h3 class="mb-3">Real-Time Tracking</h3>
-        <p class="text-neutral-600">Track shipments live. Proof of delivery in minutes. You know exactly when it arrives—no guessing.</p>
+      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Real-Time Visibility</h3>
+        <p class="text-gray-600">Live GPS tracking on every delivery. Proof of delivery with photos and signatures. Transparency from dispatch to doorstep.</p>
       </div>
 
-      <div class="icon-feature">
-        <div class="text-4xl">💰</div>
-        <h3 class="mb-3">Transparent Pricing</h3>
-        <p class="text-neutral-600">No surprise surcharges. Flat rates for recurring business, volume discounts, monthly invoicing, and credit terms available.</p>
+      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Fixed, Predictable Pricing</h3>
+        <p class="text-gray-600">No surprise fees. Flat rates for one-off shipments. Volume discounts for recurring routes. Monthly invoicing and credit terms for established clients.</p>
       </div>
 
-      <div class="icon-feature">
-        <div class="text-4xl">🔔</div>
-        <h3 class="mb-3">24/7 Support</h3>
-        <p class="text-neutral-600">After-hours emergency? Weekend rush? You talk to dispatch directly—not an answering service, not a voicemail.</p>
+      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">Direct Dispatch Access</h3>
+        <p class="text-gray-600">24/7 support. After-hours emergency? Weekend rush? You reach dispatch directly—not an answering service. We talk to you, not a voicemail.</p>
       </div>
     </div>
   </section>
@@ -240,41 +236,78 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
   <!-- B2B CTA -->
   <B2BCTA />
 
-  <!-- Coverage Map / Service Area -->
-  <section class="section-container">
-    <h2 class="text-center mb-8">Service Area: Central Vancouver Island</h2>
+  <!-- Service Coverage -->
+  <section class="bg-gray-50 section-container">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center mb-4">Service Coverage: Central Vancouver Island</h2>
+      <p class="text-center text-gray-600 mb-8 text-lg">Nanaimo-based with same-day delivery across Vancouver Island and quick-response service to all surrounding communities.</p>
 
-    <div class="bg-gray-100 rounded-lg p-8 text-center">
-      <p class="text-gray-600 mb-4">
-        Nanaimo as hub. Same-day service to Victoria, Duncan, Parksville, Qualicum, Port Alberni, Comox Valley, Campbell River, and everywhere in between.
-      </p>
-      <p class="text-sm text-gray-500 mb-4">
-        [TODO: Static SVG map showing Nanaimo, major routes, ferry corridors, and service radius]
-      </p>
-      <a href="/routes/nanaimo-victoria" class="text-brand-blue font-semibold hover:underline">View all routes and transit times →</a>
+      <div class="bg-white border border-gray-200 rounded-lg p-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">Local Nanaimo</h4>
+            <ul class="text-gray-600 space-y-2 text-sm">
+              <li>• 30-minute pickup</li>
+              <li>• 3-hour delivery guarantee</li>
+              <li>• All neighborhoods</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">Southern VI</h4>
+            <ul class="text-gray-600 space-y-2 text-sm">
+              <li>• Victoria (ferry + route)</li>
+              <li>• Duncan</li>
+              <li>• Lake Cowichan</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-3">Northern VI</h4>
+            <ul class="text-gray-600 space-y-2 text-sm">
+              <li>• Parksville & Qualicum</li>
+              <li>• Port Alberni</li>
+              <li>• Comox Valley</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-6">
+          <a href="/routes/nanaimo-victoria" class="inline-flex items-center px-6 py-3 bg-brand-blue text-white font-semibold rounded hover:bg-brand-navy transition-colors">
+            View All Routes & Transit Times →
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Hours / Contact Section -->
-  <section class="bg-brand-dark text-white section-container" id="contact">
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+  <!-- Hours / Contact Section - Enterprise Footer CTA -->
+  <section class="bg-brand-navy text-white section-container" id="contact">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
       <div>
-        <h3 class="mb-4">Hours</h3>
-        <p class="mb-2"><strong>Monday–Friday:</strong> {config.hours.weekday}</p>
-        <p class="mb-4"><strong>Saturday–Sunday:</strong> {config.hours.weekend}</p>
-        <p class="text-sm opacity-75">Emergency after-hours service available. Call for details.</p>
+        <h3 class="text-xl font-bold mb-6">Business Hours</h3>
+        <div class="space-y-4">
+          <div>
+            <p class="font-semibold mb-1">Monday–Friday</p>
+            <p class="text-white/80">{config.hours.weekday}</p>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Saturday–Sunday</p>
+            <p class="text-white/80">{config.hours.weekend}</p>
+          </div>
+          <p class="text-sm text-white/70 mt-4">24/7 emergency dispatch available. Contact us after hours for urgent requests.</p>
+        </div>
       </div>
 
       <div>
-        <h3 class="mb-4">Get in Touch</h3>
-        <a href={`mailto:${config.email}`} class="block text-brand-accent hover:underline mb-4">
-          {config.email}
-        </a>
-        <div class="space-y-2">
-          <a href="#quote" class="inline-block px-4 py-2 bg-brand-accent text-white rounded hover:bg-red-700 font-semibold text-sm">Get a Quote</a>
-          <a href="/contact" class="inline-block px-4 py-2 bg-brand-blue text-white rounded hover:bg-blue-800 font-semibold text-sm ml-2">Contact Us</a>
+        <h3 class="text-xl font-bold mb-6">Get Started</h3>
+        <p class="text-white/80 mb-6">Ready to streamline your delivery needs?</p>
+        <div class="flex flex-col gap-3">
+          <a href="#quote" class="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white font-semibold rounded hover:bg-white hover:text-brand-navy transition-colors">
+            Request a Quote
+          </a>
+          <a href={`mailto:${config.email}`} class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded hover:bg-white hover:text-brand-navy transition-colors">
+            {config.email}
+          </a>
         </div>
-        <p class="text-sm opacity-75 mt-4">Submit a quote or message for quotes, emergency dispatch, and account setup.</p>
+        <p class="text-xs text-white/60 mt-6">Send us a message for quotes, emergency dispatch, account setup, or special requests.</p>
       </div>
     </div>
   </section>
