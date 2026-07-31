@@ -13,26 +13,46 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
 <BaseLayout {title} {description}>
   <SchemaMarkup type="LocalBusiness" />
 
-  <!-- Hero Section — Boxly editorial style -->
+  <!-- Hero Section — Boxly editorial style, image-rich -->
   <section class="bg-brand-navy text-white overflow-hidden relative">
     <!-- Soft indigo glow -->
     <div class="absolute -top-40 -right-40 w-[36rem] h-[36rem] bg-brand-indigo/30 rounded-full blur-3xl"></div>
-    <div class="max-w-6xl mx-auto px-5 py-24 md:py-32 relative">
-      <div class="max-w-4xl">
-        <span class="badge bg-white/10 text-white mb-8">
-          <span class="w-2 h-2 rounded-full bg-brand-indigo"></span>
-          Courier &amp; same-day delivery
-        </span>
-        <h1 class="text-white mb-8 max-w-3xl">
-          Moving Vancouver Island freight with speed and care.
-        </h1>
-        <p class="text-lg md:text-xl text-white/70 mb-10 max-w-xl leading-relaxed">
-          Same-day courier for legal documents, medical specimens, retail pickup, and rush shipments. Pickup in 30 minutes, tracked door to door.
-        </p>
+    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: copy -->
+        <div>
+          <span class="badge bg-white/10 text-white mb-8">
+            <span class="w-2 h-2 rounded-full bg-brand-indigo"></span>
+            Courier &amp; same-day delivery
+          </span>
+          <h1 class="text-white mb-8">
+            Same-day courier across Vancouver Island.
+          </h1>
+          <p class="text-lg md:text-xl text-white/70 mb-10 max-w-xl leading-relaxed">
+            Legal documents, medical specimens, retail pickup, and rush parcels — picked up in 30 minutes and tracked door to door.
+          </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <PhoneCTA text="Get an instant quote" />
-          <a href="/contact" class="cta-button-light">See the details</a>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <PhoneCTA text="Get an instant quote" />
+            <a href="/contact" class="cta-button-light">See the details</a>
+          </div>
+        </div>
+
+        <!-- Right: courier photo -->
+        <div class="relative">
+          <img
+            src="/images/courier-package.jpg"
+            alt="Courier parcels loaded in a delivery van, ready for same-day dispatch across Nanaimo"
+            width="1200"
+            height="800"
+            loading="eager"
+            class="rounded-3xl w-full h-[22rem] lg:h-[28rem] object-cover shadow-2xl shadow-black/40"
+          />
+          <!-- Floating stat card -->
+          <div class="absolute -bottom-6 -left-6 bg-white text-brand-navy rounded-2xl px-6 py-4 shadow-xl hidden sm:block">
+            <div class="font-display text-3xl font-medium leading-none">30 min</div>
+            <div class="text-sm text-gray-500 mt-1">Average pickup time</div>
+          </div>
         </div>
       </div>
 
