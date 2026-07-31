@@ -5,7 +5,7 @@ import SchemaMarkup from '../components/SchemaMarkup.astro';
 import { config } from '../config';
 
 const title = 'Courier Rates in Nanaimo: What Delivery Costs in 2026';
-const description = 'Transparent courier pricing. Same-day delivery, rush service, freight rates. No hidden fees. Get an instant quote online.';
+const description = 'Transparent courier pricing. Same-day delivery, rush service, and route rates. No hidden fees. Get an instant quote online.';
 ---
 
 <BaseLayout {title} {description}>
@@ -14,7 +14,7 @@ const description = 'Transparent courier pricing. Same-day delivery, rush servic
     <div class="section-container">
       <h1 class="text-white mb-4">Courier Pricing in Nanaimo</h1>
       <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
-        Transparent, honest pricing. No surprise fees. Same-day delivery, rush multipliers, freight rates all listed below.
+        Transparent, honest pricing. No surprise fees. Same-day delivery, rush multipliers, and route surcharges all listed below.
       </p>
     </div>
   </section>
@@ -93,27 +93,6 @@ const description = 'Transparent courier pricing. Same-day delivery, rush servic
           <li>Court filing: flat $35</li>
           <li>Proof of filing: +$10</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-container">
-    <h2>Freight & Oversized Rates</h2>
-
-    <div class="max-w-3xl space-y-4">
-      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-blue">
-        <h3 class="font-bold mb-2">Standard Van (up to 1 pallet)</h3>
-        <p class="text-lg font-semibold text-brand-blue">$35 base + $2.00/km</p>
-      </div>
-
-      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-blue">
-        <h3 class="font-bold mb-2">Box Truck (1–2 pallets)</h3>
-        <p class="text-lg font-semibold text-brand-blue">$50 base + $2.50/km</p>
-      </div>
-
-      <div class="bg-gray-50 p-6 rounded border-l-4 border-brand-blue">
-        <h3 class="font-bold mb-2">Half-Ton or Larger</h3>
-        <p class="text-lg font-semibold text-brand-blue">$75 base + $3.00/km + weight surcharge</p>
       </div>
     </div>
   </section>
@@ -216,7 +195,7 @@ const description = 'Transparent courier pricing. Same-day delivery, rush servic
             <select id="service" class="form-input">
               <option value="standard">Standard Same-Day</option>
               <option value="rush">Rush/Hot-Shot (+50%)</option>
-              <option value="freight">Freight</option>
+              <option value="oversized">Oversized Item (+$17 base)</option>
             </select>
           </div>
 
@@ -250,7 +229,7 @@ const description = 'Transparent courier pricing. Same-day delivery, rush servic
     let base = 18;
     let rate = 1.50;
 
-    if (service === 'freight') {
+    if (service === 'oversized') {
       base = 35;
       rate = 2.00;
     }
