@@ -2,42 +2,64 @@
 import { config } from '../config';
 ---
 
-<header class="sticky top-0 z-50 bg-white border-b border-neutral-100 shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <a href="/" class="text-2xl font-bold text-brand-blue">
-        {config.businessName}
-      </a>
-    </div>
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-bold text-brand-navy">
+      {config.businessName}
+    </a>
 
-    <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="/services/same-day-delivery" class="text-neutral-600 hover:text-brand-blue">
-        Services
-      </a>
-      <a href="/pricing" class="text-neutral-600 hover:text-brand-blue">
-        Pricing
-      </a>
-      <a href="/industries" class="text-neutral-600 hover:text-brand-blue">
-        Industries
-      </a>
-      <a href="/blog" class="text-neutral-600 hover:text-brand-blue">
-        Blog
-      </a>
-      <a href="#contact" class="text-neutral-600 hover:text-brand-blue">
-        Contact
-      </a>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex gap-8 text-sm font-medium">
+      <!-- Services Dropdown -->
+      <div class="group relative">
+        <button class="text-gray-700 hover:text-brand-blue py-2">
+          Services <span class="text-xs">▼</span>
+        </button>
+        <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-200 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <a href="/services/same-day-delivery" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Same-Day Delivery</a>
+          <a href="/services/rush-delivery" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Rush & Hot-Shot</a>
+          <a href="/services/medical-courier" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Medical & Lab</a>
+          <a href="/services/legal-courier" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Legal Courier</a>
+          <a href="/services/walmart-pickup" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Walmart Pickup</a>
+          <a href="/services/grocery-pickup" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Grocery Delivery</a>
+          <a href="/services/ikea-delivery" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">IKEA Delivery</a>
+        </div>
+      </div>
+
+      <!-- Routes -->
+      <a href="/routes/nanaimo-victoria" class="text-gray-700 hover:text-brand-blue py-2">Routes</a>
+
+      <!-- Pages Dropdown -->
+      <div class="group relative">
+        <button class="text-gray-700 hover:text-brand-blue py-2">
+          Pages <span class="text-xs">▼</span>
+        </button>
+        <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-200 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <a href="/about" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">About Us</a>
+          <a href="/industries" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Industries</a>
+          <a href="/pricing" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Pricing</a>
+          <a href="/faq" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">FAQs</a>
+          <a href="/testimonials" class="block px-4 py-3 text-gray-700 hover:bg-brand-light hover:text-brand-blue">Testimonials</a>
+        </div>
+      </div>
+
+      <a href="/blog" class="text-gray-700 hover:text-brand-blue py-2">Blog</a>
+      <a href="/contact" class="text-gray-700 hover:text-brand-blue py-2">Contact</a>
     </nav>
 
+    <!-- CTA Button -->
     <div class="flex items-center gap-3">
       <a
         href="#quote"
-        class="hidden sm:inline-flex items-center px-5 py-2 bg-brand-accent text-white rounded-lg font-semibold hover:bg-red-700 transition-colors text-sm"
+        class="hidden sm:inline-flex px-6 py-2 bg-brand-blue text-white font-semibold rounded hover:bg-brand-navy transition-colors text-sm"
       >
         Get Quote
       </a>
 
+      <!-- Mobile Menu Button -->
       <button
-        class="md:hidden text-neutral-600 hover:text-brand-blue"
+        class="lg:hidden text-gray-700 hover:text-brand-blue"
         id="menu-toggle"
         aria-label="Toggle menu"
       >
@@ -54,23 +76,27 @@ import { config } from '../config';
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-neutral-50 border-t border-neutral-100">
-    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4">
-      <a href="/services/same-day-delivery" class="text-neutral-600 font-medium hover:text-brand-blue">
-        Services
-      </a>
-      <a href="/pricing" class="text-neutral-600 font-medium hover:text-brand-blue">
-        Pricing
-      </a>
-      <a href="/industries" class="text-neutral-600 font-medium hover:text-brand-blue">
-        Industries
-      </a>
-      <a href="/blog" class="text-neutral-600 font-medium hover:text-brand-blue">
-        Blog
-      </a>
-      <a href="#quote" class="text-neutral-600 font-medium hover:text-brand-blue">
-        Get Quote
-      </a>
+  <div id="mobile-menu" class="hidden lg:hidden bg-gray-50 border-t border-gray-200">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3">
+      <div>
+        <button class="w-full text-left py-2 font-medium text-gray-700" id="services-toggle">Services ▼</button>
+        <div id="services-submenu" class="hidden pl-4 space-y-2">
+          <a href="/services/same-day-delivery" class="block py-2 text-gray-600 hover:text-brand-blue">Same-Day Delivery</a>
+          <a href="/services/rush-delivery" class="block py-2 text-gray-600 hover:text-brand-blue">Rush & Hot-Shot</a>
+          <a href="/services/medical-courier" class="block py-2 text-gray-600 hover:text-brand-blue">Medical & Lab</a>
+          <a href="/services/legal-courier" class="block py-2 text-gray-600 hover:text-brand-blue">Legal Courier</a>
+          <a href="/services/walmart-pickup" class="block py-2 text-gray-600 hover:text-brand-blue">Walmart Pickup</a>
+          <a href="/services/grocery-pickup" class="block py-2 text-gray-600 hover:text-brand-blue">Grocery Delivery</a>
+          <a href="/services/ikea-delivery" class="block py-2 text-gray-600 hover:text-brand-blue">IKEA Delivery</a>
+        </div>
+      </div>
+      <a href="/routes/nanaimo-victoria" class="py-2 text-gray-700 hover:text-brand-blue">Routes</a>
+      <a href="/about" class="py-2 text-gray-700 hover:text-brand-blue">About</a>
+      <a href="/industries" class="py-2 text-gray-700 hover:text-brand-blue">Industries</a>
+      <a href="/pricing" class="py-2 text-gray-700 hover:text-brand-blue">Pricing</a>
+      <a href="/faq" class="py-2 text-gray-700 hover:text-brand-blue">FAQs</a>
+      <a href="/blog" class="py-2 text-gray-700 hover:text-brand-blue">Blog</a>
+      <a href="#quote" class="py-2 text-brand-blue font-medium hover:text-brand-navy">Get Quote</a>
     </nav>
   </div>
 </header>
@@ -78,10 +104,18 @@ import { config } from '../config';
 <script>
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const servicesToggle = document.getElementById('services-toggle');
+  const servicesSubmenu = document.getElementById('services-submenu');
 
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  if (servicesToggle && servicesSubmenu) {
+    servicesToggle.addEventListener('click', () => {
+      servicesSubmenu.classList.toggle('hidden');
     });
   }
 </script>

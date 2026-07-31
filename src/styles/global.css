@@ -8,93 +8,96 @@
   }
 
   body {
-    @apply bg-white text-neutral-900 font-sans antialiased;
+    @apply bg-white text-gray-900 font-sans antialiased;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-neutral-900;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-gray-900;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl font-bold tracking-tight mb-8 text-neutral-900;
+    @apply text-3xl md:text-4xl font-bold tracking-tight mb-8 text-gray-900;
   }
 
   h3 {
-    @apply text-2xl md:text-2xl font-bold tracking-tight mb-4 text-neutral-900;
+    @apply text-2xl md:text-2xl font-bold tracking-tight mb-4 text-gray-900;
   }
 
   h4 {
-    @apply text-lg md:text-xl font-semibold mb-3 text-neutral-900;
+    @apply text-lg md:text-xl font-semibold mb-3 text-gray-900;
   }
 
   p {
-    @apply leading-relaxed text-neutral-700;
+    @apply leading-relaxed text-gray-600;
   }
 
   a {
-    @apply transition-colors duration-200;
+    @apply transition-colors duration-200 text-brand-blue hover:text-brand-navy;
   }
 }
 
 @layer components {
-  /* CTA Buttons - Modern, spacious */
+  /* CTA Buttons - Enterprise style */
   .cta-button {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-accent text-white font-semibold rounded-lg hover:bg-red-700 active:bg-red-800 transition-colors duration-200 shadow-sm hover:shadow-md;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white font-semibold rounded hover:bg-brand-navy active:bg-brand-navy transition-colors duration-200 shadow-sm hover:shadow-md;
   }
 
   .cta-button-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-blue-900 active:bg-blue-950 transition-colors duration-200 shadow-sm hover:shadow-md;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-gray-700 text-white font-semibold rounded hover:bg-gray-800 transition-colors duration-200 shadow-sm hover:shadow-md;
   }
 
   .cta-button-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded hover:bg-brand-light transition-colors duration-200;
   }
 
-  /* Section Container - More spacious */
+  /* Section Container */
   .section-container {
     @apply max-w-6xl mx-auto px-4 py-16 md:py-24;
   }
 
-  /* Form Input - Clean, modern */
+  /* Form Input */
   .form-input {
-    @apply w-full px-4 py-3 border border-neutral-200 rounded-lg bg-white text-neutral-900 focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/10 transition-colors duration-200;
+    @apply w-full px-4 py-3 border border-gray-300 rounded bg-white text-gray-900 focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/10 transition-colors duration-200;
   }
 
-  /* Badge - Subtle */
+  /* Badge */
   .badge {
-    @apply inline-block px-3 py-1 bg-blue-100 text-blue-900 text-xs font-semibold rounded-full uppercase tracking-wide;
+    @apply inline-block px-3 py-1 bg-brand-light text-brand-blue text-xs font-semibold rounded uppercase tracking-wide;
   }
 
-  /* Card - Data-driven, clean */
+  /* Card */
   .card {
-    @apply bg-white border border-neutral-100 rounded-xl p-7 hover:shadow-md transition-all duration-200;
+    @apply bg-white border border-gray-200 rounded p-7 hover:shadow-lg transition-all duration-200;
   }
 
-  /* Metric Card - Prominent for data-driven design */
-  .metric-card {
-    @apply bg-neutral-50 rounded-xl p-8 text-center border border-neutral-100;
+  /* Numbered Value Prop - Enterprise style */
+  .value-prop {
+    @apply flex flex-col gap-4;
   }
 
-  .metric-value {
-    @apply text-4xl md:text-5xl font-bold text-brand-blue mb-2;
+  .value-prop-number {
+    @apply text-5xl md:text-6xl font-bold text-brand-blue opacity-20;
   }
 
-  .metric-label {
-    @apply text-sm md:text-base font-medium text-neutral-600 uppercase tracking-wide;
+  .value-prop-title {
+    @apply text-xl md:text-2xl font-bold text-gray-900;
   }
 
-  /* Stats Grid */
-  .stats-grid {
-    @apply grid md:grid-cols-4 gap-6 my-12;
+  .value-prop-description {
+    @apply text-base text-gray-600 leading-relaxed;
   }
 
-  /* Icon + Text Combination */
-  .icon-feature {
-    @apply flex flex-col items-center text-center gap-4;
+  .value-prop-cta {
+    @apply text-brand-blue font-semibold hover:text-brand-navy cursor-pointer;
   }
 
-  .icon-feature-large {
-    @apply flex gap-6 items-start;
+  /* Service Card - Modern enterprise */
+  .service-card {
+    @apply bg-white border border-gray-200 rounded p-6 hover:shadow-lg hover:border-brand-blue transition-all duration-300;
+  }
+
+  .service-category {
+    @apply text-sm font-semibold text-brand-blue uppercase tracking-wide mb-3;
   }
 }
 
