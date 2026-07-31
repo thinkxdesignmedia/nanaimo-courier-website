@@ -25,7 +25,7 @@ const testimonials = [
 ---
 
 <BaseLayout {title} {description}>
-  <section class="bg-gradient-to-br from-brand-dark via-brand-blue to-brand-dark text-white py-12 md:py-16">
+  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
     <div class="section-container">
       <h1 class="text-white mb-4">Customer Reviews & Testimonials</h1>
       <p class="text-lg md:text-xl opacity-95">
@@ -38,7 +38,7 @@ const testimonials = [
     <div class="max-w-4xl">
       <div class="mb-12">
         <div class="flex items-center gap-3 mb-6">
-          <div class="text-4xl font-bold text-brand-accent">4.8</div>
+          <div class="text-4xl font-bold text-brand-blue">4.8</div>
           <div>
             <div class="text-lg font-semibold text-gray-900">out of 5 stars</div>
             <div class="text-sm text-gray-600">[X] verified reviews</div>
@@ -46,17 +46,17 @@ const testimonials = [
         </div>
         <div class="flex gap-1">
           {[1, 2, 3, 4, 5].map(() => (
-            <span class="text-2xl text-brand-accent">★</span>
+            <span class="text-2xl text-brand-blue">★</span>
           ))}
         </div>
       </div>
 
       <div class="space-y-8">
         {testimonials.map((testimonial, i) => (
-          <div key={i} class="bg-gray-50 p-8 rounded border-l-4 border-brand-accent">
+          <div key={i} class="bg-gray-50 p-8 rounded border-l-4 border-brand-blue">
             <div class="flex gap-1 mb-4">
               {[1, 2, 3, 4, testimonial.rating >= 5 ? 5 : 0].filter(Boolean).map(() => (
-                <span class="text-lg text-brand-accent">★</span>
+                <span class="text-lg text-brand-blue">★</span>
               ))}
             </div>
 
@@ -73,7 +73,7 @@ const testimonials = [
         ))}
       </div>
 
-      <div class="mt-12 bg-blue-50 p-8 rounded border border-blue-200">
+      <div class="mt-12 bg-gray-50 p-8 rounded border border-blue-200">
         <h2 class="text-xl font-bold mb-4">Your review matters</h2>
         <p class="text-gray-700 mb-6">
           Had a great experience with Nanaimo Courier? Leave a review on Google or send us your testimonial.
@@ -93,32 +93,32 @@ const testimonials = [
 
     <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
       <div class="text-center">
-        <div class="text-4xl font-bold text-brand-accent mb-2">3–4 hrs</div>
+        <div class="text-4xl font-bold text-brand-blue mb-2">3–4 hrs</div>
         <p class="text-gray-700">Nanaimo to Victoria ferry delivery. Reliable timing, every time.</p>
       </div>
 
       <div class="text-center">
-        <div class="text-4xl font-bold text-brand-accent mb-2">45 min</div>
+        <div class="text-4xl font-bold text-brand-blue mb-2">45 min</div>
         <p class="text-gray-700">Parksville delivery. Fastest same-day on the island.</p>
       </div>
 
       <div class="text-center">
-        <div class="text-4xl font-bold text-brand-accent mb-2">$18+</div>
+        <div class="text-4xl font-bold text-brand-blue mb-2">$18+</div>
         <p class="text-gray-700">Base rate. Transparent pricing, no surprise fees.</p>
       </div>
 
       <div class="text-center">
-        <div class="text-4xl font-bold text-brand-accent mb-2">24/7</div>
+        <div class="text-4xl font-bold text-brand-blue mb-2">24/7</div>
         <p class="text-gray-700">Real-time tracking. See your delivery happen live.</p>
       </div>
 
       <div class="text-center">
-        <div class="text-4xl font-bold text-brand-accent mb-2">100%</div>
+        <div class="text-4xl font-bold text-brand-blue mb-2">100%</div>
         <p class="text-gray-700">Proof of delivery. Photo, signature, timestamp on every run.</p>
       </div>
 
       <div class="text-center">
-        <div class="text-4xl font-bold text-brand-accent mb-2">15 min</div>
+        <div class="text-4xl font-bold text-brand-blue mb-2">15 min</div>
         <p class="text-gray-700">Response time. Call, get a quote, we're on it.</p>
       </div>
     </div>
@@ -170,7 +170,7 @@ const testimonials = [
     </div>
   </section>
 
-  <section class="bg-blue-50 section-container">
+  <section class="bg-gray-50 section-container">
     <h2 class="text-center mb-8">Ready to experience fast, reliable delivery?</h2>
 
     <div class="text-center max-w-2xl mx-auto">
