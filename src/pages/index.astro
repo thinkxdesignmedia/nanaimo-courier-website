@@ -10,7 +10,7 @@ const title = 'Same-Day Courier Service in Nanaimo';
 const description = `Reliable same-day courier and delivery service in Nanaimo, BC. Rush delivery, legal documents, medical specimens, and local routes. Get an instant quote online.`;
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description} preloadImage="/images/hero-island.webp">
   <SchemaMarkup type="LocalBusiness" />
 
   <!-- Hero Section — Boxly giant-wordmark style -->
@@ -26,14 +26,17 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
 
       <!-- Full-bleed hero image, pulled up to slightly overlap the wordmark -->
       <div class="relative -mt-4 md:-mt-12">
-        <img
-          src="/images/hero-island.jpg"
-          alt="A BC Ferries vessel sailing between the Gulf Islands at sunset — a Vancouver Island courier route"
-          width="1760"
-          height="924"
-          fetchpriority="high"
-          class="w-full h-[42vh] md:h-[64vh] object-cover rounded-2xl"
-        />
+        <picture>
+          <source srcset="/images/hero-island.webp" type="image/webp" />
+          <img
+            src="/images/hero-island.jpg"
+            alt="A BC Ferries vessel sailing between the Gulf Islands at sunset — a Vancouver Island courier route"
+            width="1760"
+            height="924"
+            fetchpriority="high"
+            class="w-full h-[42vh] md:h-[64vh] object-cover rounded-2xl"
+          />
+        </picture>
       </div>
 
       <!-- Copy row under the image -->

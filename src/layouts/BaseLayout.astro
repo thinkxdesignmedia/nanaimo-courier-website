@@ -13,9 +13,10 @@ interface Props {
   description: string;
   canonical?: string;
   ogImage?: string;
+  preloadImage?: string;
 }
 
-const { title, description, canonical, ogImage } = Astro.props;
+const { title, description, canonical, ogImage, preloadImage } = Astro.props;
 const fullTitle = `${title} | ${config.businessName}`;
 const canonicalUrl = canonical || Astro.url.href;
 ---
@@ -27,6 +28,10 @@ const canonicalUrl = canonical || Astro.url.href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+
+    {preloadImage && (
+      <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />
+    )}
 
     <!-- Favicon & App Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
