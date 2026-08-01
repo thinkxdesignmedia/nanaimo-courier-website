@@ -91,7 +91,7 @@ Submitted: ${new Date().toISOString()}
     `.trim();
 
     // Send via Resend
-    const notifyEmail = context.env.NOTIFY_EMAIL || 'dispatch@nanaimocourier.com';
+    const notifyEmail = context.env.NOTIFY_EMAIL || 'creative@thinkxdesign.com';
     const resendKey = context.env.RESEND_API_KEY;
 
     let emailSent = false;
