@@ -4,14 +4,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Boxly-inspired palette: deep indigo accent + warm neutrals
+        // Boxly dark theme: charcoal canvas + vivid indigo accent + white panels
         brand: {
-          indigo: '#000099',   // signature deep indigo accent
-          navy: '#0a0a3d',     // darkest — hero/footer backgrounds
-          blue: '#000099',     // alias kept for existing markup
-          dark: '#212929',     // near-black heading/body ink
-          light: '#eef0ff',    // pale indigo tint (badges, hovers)
-          cream: '#fffcfa',    // warm off-white section background
+          indigo: '#2a1ad4',   // vivid accent — buttons, footer, links (pops on dark)
+          indigoDeep: '#000099', // confirmed deep brand blue
+          navy: '#0a0a3d',     // deep indigo-navy
+          blue: '#2a1ad4',     // alias kept for existing markup
+          ink: '#212929',      // heading ink on white panels
+          dark: '#141414',     // page canvas (charcoal)
+          darker: '#0d0d0d',   // header / darkest sections
+          panel: '#1c1c1c',    // slightly raised dark panel
+          light: '#eef0ff',    // pale indigo tint
+          cream: '#fffcfa',    // warm off-white (light panels)
         },
         // Warm gray ramp (Boxly body text is warm, not cool)
         gray: {
