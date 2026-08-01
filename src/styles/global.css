@@ -147,6 +147,24 @@
 .service-card h1, .service-card h2, .service-card h3, .service-card h4 { color: #ffffff; }
 .service-card p { color: #9ca3af; }
 
+/* ---- Interior pages: gray text reads light on the dark canvas ----
+   Global lighten (unlayered → beats Tailwind's layered utilities),
+   then light bands/cards re-assert dark text by higher specificity. */
+.text-gray-500 { color: #9ca3af; }
+.text-gray-600 { color: #9ca3af; }
+.text-gray-700 { color: #cbd5e1; }
+.text-gray-800 { color: #e5e7eb; }
+.text-gray-900 { color: #f3f4f6; }
+
+.bg-white .text-gray-500, .bg-gray-50 .text-gray-500, .bg-gray-100 .text-gray-500, .card .text-gray-500 { color: #6b7280; }
+.bg-white .text-gray-600, .bg-gray-50 .text-gray-600, .bg-gray-100 .text-gray-600, .card .text-gray-600 { color: #4b5563; }
+.bg-white .text-gray-700, .bg-gray-50 .text-gray-700, .bg-gray-100 .text-gray-700, .card .text-gray-700 { color: #374151; }
+.bg-white .text-gray-800, .bg-gray-50 .text-gray-800, .bg-gray-100 .text-gray-800, .card .text-gray-800 { color: #2c2f31; }
+.bg-white .text-gray-900, .bg-gray-50 .text-gray-900, .bg-gray-100 .text-gray-900, .card .text-gray-900 { color: #212929; }
+
+/* White/light inner cards on interior pages: subtle border so they read as panels */
+.bg-white.border-gray-300, .bg-white.border-gray-200 { border-color: #e5e7eb; }
+
 main {
   min-height: calc(100vh - 200px);
 }
