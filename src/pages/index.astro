@@ -219,77 +219,75 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
     </div>
   </section>
 
-  <!-- Industry Solutions - Enterprise B2B -->
+  <!-- Industry Solutions -->
   <section class="bg-black section-container">
-    <div class="mb-12">
-      <h2>Industry Solutions</h2>
-      <p class="text-lg text-gray-600 max-w-2xl">Specialized courier services built for the industries that depend on reliability and speed.</p>
+    <div class="mb-14 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-widest text-brand-indigo mb-4">Who we serve</p>
+      <h2>Built for the industries that can't wait.</h2>
+      <p class="text-lg text-gray-400 mt-5">Specialized courier service for the sectors that depend on reliability and speed.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
-      <div class="p-8 border border-white/10 rounded hover:border-brand-indigo transition-colors">
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Law Firms & Courts</h3>
-        <p class="text-gray-600 mb-4">
-          Same-day courthouse delivery. Our drivers know filing windows, security procedures, Nanaimo court deadlines, and courthouse-specific handling. Proof of delivery with signatures.
-        </p>
-        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore legal solutions →</a>
-      </div>
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl">
+      <a href="/industries" class="service-card group">
+        <span class="service-category">Legal</span>
+        <h3 class="text-2xl mb-3 group-hover:text-brand-indigo transition-colors">Law Firms & Courts</h3>
+        <p class="mb-5">Same-day courthouse delivery. Our drivers know filing windows, security procedures, Nanaimo court deadlines, and courthouse-specific handling — with signed proof of delivery.</p>
+        <span class="value-prop-cta">Explore legal solutions →</span>
+      </a>
 
-      <div class="p-8 border border-white/10 rounded hover:border-brand-indigo transition-colors">
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Medical & Laboratory</h3>
-        <p class="text-gray-600 mb-4">
-          Specimen transport with temperature control, chain-of-custody documentation, and HIPAA-compliant handling. Certified for sensitive medical shipments.
-        </p>
-        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore medical solutions →</a>
-      </div>
+      <a href="/industries" class="service-card group">
+        <span class="service-category">Medical</span>
+        <h3 class="text-2xl mb-3 group-hover:text-brand-indigo transition-colors">Medical & Laboratory</h3>
+        <p class="mb-5">Specimen transport with temperature control, chain-of-custody documentation, and HIPAA-conscious handling. Certified for sensitive medical shipments.</p>
+        <span class="value-prop-cta">Explore medical solutions →</span>
+      </a>
 
-      <div class="p-8 border border-white/10 rounded hover:border-brand-indigo transition-colors">
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Manufacturing & Auto Parts</h3>
-        <p class="text-gray-600 mb-4">
-          Same-day parts delivery with volume rates. Recurring route options for auto suppliers, equipment manufacturers, and industrial facilities.
-        </p>
-        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore B2B logistics →</a>
-      </div>
+      <a href="/industries" class="service-card group">
+        <span class="service-category">Industrial</span>
+        <h3 class="text-2xl mb-3 group-hover:text-brand-indigo transition-colors">Manufacturing & Auto Parts</h3>
+        <p class="mb-5">Same-day parts delivery with volume rates. Recurring route options for auto suppliers, equipment manufacturers, and industrial facilities.</p>
+        <span class="value-prop-cta">Explore B2B logistics →</span>
+      </a>
 
-      <div class="p-8 border border-white/10 rounded hover:border-brand-indigo transition-colors">
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Print, Design & Retail</h3>
-        <p class="text-gray-600 mb-4">
-          Rush proofs, final files, marketing collateral, and retail pickups. Same-day delivery for fast turnarounds and inventory management.
-        </p>
-        <a href="/industries" class="text-brand-blue font-semibold hover:text-brand-navy">Explore retail solutions →</a>
-      </div>
+      <a href="/industries" class="service-card group">
+        <span class="service-category">Retail</span>
+        <h3 class="text-2xl mb-3 group-hover:text-brand-indigo transition-colors">Print, Design & Retail</h3>
+        <p class="mb-5">Rush proofs, final files, marketing collateral, and retail pickups. Same-day delivery for fast turnarounds and inventory management.</p>
+        <span class="value-prop-cta">Explore retail solutions →</span>
+      </a>
     </div>
   </section>
 
   <!-- Quote Form -->
   <QuoteForm />
 
-  <!-- Why Choose Nanaimo Courier - Differentiators -->
-  <section class="bg-gray-50 section-container">
-    <div class="mb-12">
-      <h2>Why Choose {config.businessName}</h2>
-      <p class="text-lg text-gray-600 max-w-2xl">Reliable, transparent, and built for the way Nanaimo businesses operate.</p>
+  <!-- Why Choose Nanaimo Courier -->
+  <section class="section-container">
+    <div class="mb-14 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-widest text-brand-indigo mb-4">Why us</p>
+      <h2>Why choose {config.businessName}</h2>
+      <p class="text-lg text-gray-400 mt-5">Reliable, transparent, and built for the way Nanaimo businesses operate.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
-      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
-        <h3 class="text-lg font-bold text-gray-900 mb-3">Island-Wide Expertise</h3>
-        <p class="text-gray-600">Every driver knows the Malahat, ferry schedules, courthouse procedures, and hospital access points. Speed comes from knowing every road and route.</p>
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl">
+      <div class="service-card">
+        <h3 class="text-xl mb-3">Island-Wide Expertise</h3>
+        <p>Every driver knows the Malahat, ferry schedules, courthouse procedures, and hospital access points. Speed comes from knowing every road and route.</p>
       </div>
 
-      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
-        <h3 class="text-lg font-bold text-gray-900 mb-3">Real-Time Visibility</h3>
-        <p class="text-gray-600">Live GPS tracking on every delivery. Proof of delivery with photos and signatures. Transparency from dispatch to doorstep.</p>
+      <div class="service-card">
+        <h3 class="text-xl mb-3">Real-Time Visibility</h3>
+        <p>Live GPS tracking on every delivery. Proof of delivery with photos and signatures. Transparency from dispatch to doorstep.</p>
       </div>
 
-      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
-        <h3 class="text-lg font-bold text-gray-900 mb-3">Fixed, Predictable Pricing</h3>
-        <p class="text-gray-600">No surprise fees. Flat rates for one-off shipments. Volume discounts for recurring routes. Monthly invoicing and credit terms for established clients.</p>
+      <div class="service-card">
+        <h3 class="text-xl mb-3">Fixed, Predictable Pricing</h3>
+        <p>No surprise fees. Flat rates for one-off shipments. Volume discounts for recurring routes. Monthly invoicing and credit terms for established clients.</p>
       </div>
 
-      <div class="p-6 border-l-4 border-brand-blue bg-white rounded">
-        <h3 class="text-lg font-bold text-gray-900 mb-3">Direct Dispatch Access</h3>
-        <p class="text-gray-600">24/7 support. After-hours emergency? Weekend rush? You reach dispatch directly—not an answering service. We talk to you, not a voicemail.</p>
+      <div class="service-card">
+        <h3 class="text-xl mb-3">Direct Dispatch Access</h3>
+        <p>24/7 support. After-hours emergency? Weekend rush? You reach dispatch directly — not an answering service, not a voicemail.</p>
       </div>
     </div>
   </section>
@@ -298,77 +296,76 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
   <B2BCTA />
 
   <!-- Service Coverage -->
-  <section class="bg-gray-50 section-container">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-center mb-4">Service Coverage: Central Vancouver Island</h2>
-      <p class="text-center text-gray-600 mb-8 text-lg">Nanaimo-based with same-day delivery across Vancouver Island and quick-response service to all surrounding communities.</p>
+  <section class="bg-black section-container">
+    <div class="mb-14 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-widest text-brand-indigo mb-4">Coverage</p>
+      <h2>Same-day across central Vancouver Island.</h2>
+      <p class="text-lg text-gray-400 mt-5">Nanaimo-based, with same-day delivery and quick-response service to every surrounding community.</p>
+    </div>
 
-      <div class="bg-white border border-gray-200 rounded-lg p-8">
-        <div class="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h4 class="font-bold text-gray-900 mb-3">Local Nanaimo</h4>
-            <ul class="text-gray-600 space-y-2 text-sm">
-              <li>• 30-minute pickup</li>
-              <li>• 3-hour delivery guarantee</li>
-              <li>• All neighborhoods</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold text-gray-900 mb-3">Southern VI</h4>
-            <ul class="text-gray-600 space-y-2 text-sm">
-              <li>• Victoria (ferry + route)</li>
-              <li>• Duncan</li>
-              <li>• Lake Cowichan</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold text-gray-900 mb-3">Northern VI</h4>
-            <ul class="text-gray-600 space-y-2 text-sm">
-              <li>• Parksville & Qualicum</li>
-              <li>• Port Alberni</li>
-              <li>• Comox Valley</li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-t border-gray-200 pt-6">
-          <a href="/routes/nanaimo-victoria" class="inline-flex items-center px-6 py-3 bg-brand-blue text-white font-semibold rounded hover:bg-brand-navy transition-colors">
-            View All Routes & Transit Times →
-          </a>
-        </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mb-10">
+      <div class="service-card">
+        <h4 class="text-lg mb-4">Local Nanaimo</h4>
+        <ul class="text-gray-400 space-y-2 text-sm">
+          <li>30-minute pickup</li>
+          <li>3-hour delivery guarantee</li>
+          <li>All neighbourhoods</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h4 class="text-lg mb-4">Southern VI</h4>
+        <ul class="text-gray-400 space-y-2 text-sm">
+          <li>Victoria (ferry + route)</li>
+          <li>Duncan</li>
+          <li>Lake Cowichan</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h4 class="text-lg mb-4">Northern VI</h4>
+        <ul class="text-gray-400 space-y-2 text-sm">
+          <li>Parksville & Qualicum</li>
+          <li>Port Alberni</li>
+          <li>Comox Valley</li>
+        </ul>
       </div>
     </div>
+
+    <a href="/routes/nanaimo-victoria" class="cta-button">View all routes &amp; transit times →</a>
   </section>
 
-  <!-- Hours / Contact Section - Enterprise Footer CTA -->
-  <section class="bg-brand-navy text-white section-container" id="contact">
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-      <div>
-        <h3 class="text-xl font-bold mb-6">Business Hours</h3>
-        <div class="space-y-4">
-          <div>
-            <p class="font-semibold mb-1">Monday–Friday</p>
-            <p class="text-white/80">{config.hours.weekday}</p>
-          </div>
-          <div>
-            <p class="font-semibold mb-1">Saturday–Sunday</p>
-            <p class="text-white/80">{config.hours.weekend}</p>
-          </div>
-          <p class="text-sm text-white/70 mt-4">24/7 emergency dispatch available. Contact us after hours for urgent requests.</p>
-        </div>
+  <!-- Hours / Contact Section -->
+  <section class="section-container" id="contact">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-14 max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-widest text-brand-indigo mb-4">Get in touch</p>
+        <h2>Ready when you are.</h2>
       </div>
 
-      <div>
-        <h3 class="text-xl font-bold mb-6">Get Started</h3>
-        <p class="text-white/80 mb-6">Ready to streamline your delivery needs?</p>
-        <div class="flex flex-col gap-3">
-          <a href="#quote" class="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white font-semibold rounded hover:bg-white hover:text-brand-navy transition-colors">
-            Request a Quote
-          </a>
-          <a href={`mailto:${config.email}`} class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded hover:bg-white hover:text-brand-navy transition-colors">
-            {config.email}
-          </a>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-xl mb-6">Business hours</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-white font-semibold mb-1">Monday–Friday</p>
+              <p class="text-gray-400">{config.hours.weekday}</p>
+            </div>
+            <div>
+              <p class="text-white font-semibold mb-1">Saturday–Sunday</p>
+              <p class="text-gray-400">{config.hours.weekend}</p>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">24/7 emergency dispatch available. Contact us after hours for urgent requests.</p>
+          </div>
         </div>
-        <p class="text-xs text-white/60 mt-6">Send us a message for quotes, emergency dispatch, account setup, or special requests.</p>
+
+        <div>
+          <h3 class="text-xl mb-6">Get started</h3>
+          <p class="text-gray-400 mb-8">Ready to streamline your delivery needs?</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#quote" class="cta-button">Request a quote</a>
+            <a href={`mailto:${config.email}`} class="cta-button-outline break-all">{config.email}</a>
+          </div>
+          <p class="text-xs text-gray-500 mt-6">Send a message for quotes, emergency dispatch, account setup, or special requests.</p>
+        </div>
       </div>
     </div>
   </section>
