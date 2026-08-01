@@ -34,7 +34,7 @@ module.exports = {
       fontFamily: {
         // Work Sans for body, Space Grotesk for display headings
         sans: ['"Work Sans"', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        display: ['"Manrope"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
