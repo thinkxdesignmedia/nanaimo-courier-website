@@ -24,15 +24,24 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
         Courier
       </h1>
 
-      <!-- Meta row -->
-      <div class="grid md:grid-cols-3 gap-10 mt-8 md:mt-12">
-        <!-- Location + thumbnail -->
+      <!-- Full-bleed hero image directly under the wordmark -->
+      <div class="mt-6 md:mt-8">
+        <img
+          src="/images/hero-island.jpg"
+          alt="A BC Ferries vessel sailing between the Gulf Islands at sunset — a Vancouver Island courier route"
+          width="1760"
+          height="924"
+          fetchpriority="high"
+          class="w-full h-[42vh] md:h-[64vh] object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- Copy row under the image -->
+      <div class="grid md:grid-cols-3 gap-10 mt-10 md:mt-14">
+        <!-- Location -->
         <div>
           <div class="flex items-center gap-3 text-sm font-medium uppercase tracking-wide text-white">
             <span class="w-2.5 h-2.5 rounded-full bg-white"></span> Nanaimo, BC
-          </div>
-          <div class="mt-6 w-36 h-24 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-500">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
           </div>
         </div>
 
@@ -57,18 +66,6 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
           </ul>
           <PhoneCTA text="Get an instant quote" />
         </div>
-      </div>
-
-      <!-- Full-bleed hero image -->
-      <div class="mt-10 md:mt-14">
-        <img
-          src="/images/hero-island.jpg"
-          alt="A BC Ferries vessel sailing between the Gulf Islands at sunset — a Vancouver Island courier route"
-          width="1760"
-          height="924"
-          fetchpriority="high"
-          class="w-full h-[42vh] md:h-[68vh] object-cover rounded-2xl"
-        />
       </div>
     </div>
   </section>
@@ -223,7 +220,7 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
   </section>
 
   <!-- Industry Solutions - Enterprise B2B -->
-  <section class="section-container">
+  <section class="bg-gray-50 section-container">
     <div class="mb-12">
       <h2>Industry Solutions</h2>
       <p class="text-lg text-gray-600 max-w-2xl">Specialized courier services built for the industries that depend on reliability and speed.</p>

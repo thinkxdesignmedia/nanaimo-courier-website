@@ -2,7 +2,7 @@
 import { config } from '../config';
 ---
 
-<section id="quote" class="bg-gray-50 py-12 md:py-16">
+<section id="quote" class="py-16 md:py-24">
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <div class="max-w-2xl mx-auto px-4">
@@ -64,7 +64,7 @@ import { config } from '../config';
       <input type="hidden" name="website_check" value="" />
 
       <!-- Cloudflare Turnstile -->
-      <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="light"></div>
+      <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="dark"></div>
 
       <button
         type="submit"
@@ -76,7 +76,7 @@ import { config } from '../config';
 
       <div id="quote-status" class="text-center text-sm"></div>
 
-      <p class="text-center text-sm text-gray-600">
+      <p class="text-center text-sm text-gray-400">
         We'll respond within 15 minutes during business hours.
       </p>
     </form>
