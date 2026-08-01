@@ -13,51 +13,42 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
 <BaseLayout {title} {description}>
   <SchemaMarkup type="LocalBusiness" />
 
-  <!-- Hero Section — Boxly editorial style, image-rich -->
-  <section class="bg-brand-navy text-white overflow-hidden relative">
-    <!-- Soft indigo glow -->
-    <div class="absolute -top-40 -right-40 w-[36rem] h-[36rem] bg-brand-indigo/30 rounded-full blur-3xl"></div>
-    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 relative">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Left: copy -->
-        <div>
-          <span class="badge bg-white/10 text-white mb-8">
-            <span class="w-2 h-2 rounded-full bg-brand-indigo"></span>
-            Courier &amp; same-day delivery
-          </span>
-          <h1 class="text-white mb-8">
-            Same-day courier across Vancouver Island.
-          </h1>
-          <p class="text-lg md:text-xl text-white/70 mb-10 max-w-xl leading-relaxed">
-            Legal documents, medical specimens, retail pickup, and rush parcels — picked up in 30 minutes and tracked door to door.
-          </p>
+  <!-- Hero Section — full-bleed Vancouver Island ferry banner -->
+  <section class="relative text-white overflow-hidden">
+    <!-- Full-bleed background photo -->
+    <img
+      src="/images/hero-island.jpg"
+      alt="A BC Ferries vessel sailing between the Gulf Islands at sunset — a Vancouver Island courier route"
+      width="1760"
+      height="924"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <!-- Legibility overlays: dark on the left where the copy sits, sunset kept on the right -->
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/75 to-brand-navy/25"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent"></div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <PhoneCTA text="Get an instant quote" />
-            <a href="/contact" class="cta-button-light">See the details</a>
-          </div>
-        </div>
+    <div class="max-w-6xl mx-auto px-5 py-24 md:py-36 relative">
+      <div class="max-w-2xl">
+        <span class="badge bg-white/10 text-white mb-8">
+          <span class="w-2 h-2 rounded-full bg-brand-indigo"></span>
+          Courier &amp; same-day delivery
+        </span>
+        <h1 class="text-white mb-8">
+          Same-day courier across Vancouver Island.
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed">
+          Legal documents, medical specimens, retail pickup, and rush parcels — picked up in 30 minutes and tracked door to door, ferry routes included.
+        </p>
 
-        <!-- Right: courier photo -->
-        <div class="relative">
-          <img
-            src="/images/courier-package.jpg"
-            alt="Courier parcels loaded in a delivery van, ready for same-day dispatch across Nanaimo"
-            width="1200"
-            height="800"
-            loading="eager"
-            class="rounded-3xl w-full h-[22rem] lg:h-[28rem] object-cover shadow-2xl shadow-black/40"
-          />
-          <!-- Floating stat card -->
-          <div class="absolute -bottom-6 -left-6 bg-white text-brand-navy rounded-2xl px-6 py-4 shadow-xl hidden sm:block">
-            <div class="font-display text-3xl font-medium leading-none">30 min</div>
-            <div class="text-sm text-gray-500 mt-1">Average pickup time</div>
-          </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <PhoneCTA text="Get an instant quote" />
+          <a href="/contact" class="cta-button-light">See the details</a>
         </div>
       </div>
 
       <!-- Trust stats strip -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/15">
         <div>
           <div class="font-display text-4xl font-medium text-white mb-1">30 min</div>
           <div class="text-sm text-white/50">Average pickup</div>
