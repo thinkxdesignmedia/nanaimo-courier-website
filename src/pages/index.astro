@@ -131,95 +131,94 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
     </div>
   </section>
 
-  <!-- Services Grid — dark cards on the charcoal canvas -->
-  <section class="section-container">
-    <div class="mb-12">
-      <h2>Our services</h2>
-      <p class="text-lg text-gray-400 max-w-2xl">Comprehensive delivery solutions built for Nanaimo businesses, retailers, and professionals.</p>
-    </div>
+  <!-- Services — Boxly: intro column + image-top cards with dividers -->
+  <section class="relative overflow-hidden">
+    <!-- Faded background wordmark -->
+    <span class="pointer-events-none select-none absolute -top-4 left-0 right-0 text-center font-display font-bold uppercase text-white/[0.03] leading-none tracking-tight text-[16vw]" aria-hidden="true">Services</span>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Delivery Services -->
-      <a href="/services/same-day-delivery" class="service-card group cursor-pointer">
-        <span class="service-category">Delivery</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Same-Day Delivery</h3>
-        <p class="text-gray-600 mb-4">
-          Local Nanaimo within 3 hours. 3 PM cutoff weekdays, 10 AM weekends. Pickup guaranteed within 30 minutes.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+    <div class="relative max-w-6xl mx-auto px-5 py-20 md:py-28">
+      <div class="grid lg:grid-cols-4 gap-x-8 gap-y-14">
+        <!-- Intro column -->
+        <div class="lg:pr-6 flex flex-col">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-indigo mb-4">Island logistics</p>
+          <h2 class="!text-3xl md:!text-4xl !mb-5">Moving your island with care</h2>
+          <p class="text-gray-400 mb-8">We handle every shipment with care and deliver fast, reliable courier and pickup across Vancouver Island.</p>
+          <a href="#quote" class="cta-button self-start mt-auto">Get a quote</a>
+        </div>
 
-      <a href="/services/rush-delivery" class="service-card group cursor-pointer">
-        <span class="service-category">Delivery</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Rush & Emergency</h3>
-        <p class="text-gray-600 mb-4">
-          Priority dispatch for urgent shipments. Dedicated driver available. 24/7 emergency service for time-critical deliveries.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <!-- Cards -->
+        <a href="/services/same-day-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Same-Day Delivery</h3>
+          <p class="text-gray-400 text-sm">Local Nanaimo within 3 hours. Pickup guaranteed in 30 minutes.</p>
+        </a>
 
-      <a href="/services/medical-courier" class="service-card group cursor-pointer">
-        <span class="service-category">Specialized</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Medical & Lab</h3>
-        <p class="text-gray-600 mb-4">
-          Temperature-controlled specimen transport. Chain-of-custody handling. HIPAA-compliant documentation.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <a href="/services/rush-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Rush & Emergency</h3>
+          <p class="text-gray-400 text-sm">Priority dispatch for urgent shipments. 24/7 emergency service.</p>
+        </a>
 
-      <a href="/services/legal-courier" class="service-card group cursor-pointer">
-        <span class="service-category">Specialized</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Legal Courier</h3>
-        <p class="text-gray-600 mb-4">
-          Court filings and legal document delivery. Certified drivers know courthouse procedures. Proof of delivery included.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <a href="/services/medical-courier" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Medical & Lab</h3>
+          <p class="text-gray-400 text-sm">Temperature-controlled specimens. Chain-of-custody handling.</p>
+        </a>
 
-      <a href="/services/scheduled-delivery" class="service-card group cursor-pointer">
-        <span class="service-category">B2B</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Scheduled Routes</h3>
-        <p class="text-gray-600 mb-4">
-          Daily or weekly recurring routes. Flat rates with volume discounts. Dedicated dispatch contact.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <a href="/services/legal-courier" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Legal Courier</h3>
+          <p class="text-gray-400 text-sm">Court filings and legal documents. Proof of delivery included.</p>
+        </a>
 
-      <a href="/services/walmart-pickup" class="service-card group cursor-pointer">
-        <span class="service-category">Retail</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Walmart Pickup</h3>
-        <p class="text-gray-600 mb-4">
-          Order online, we collect and deliver. Same-day service to your home or office. No checkout lines.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <a href="/services/scheduled-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Scheduled Routes</h3>
+          <p class="text-gray-400 text-sm">Daily or weekly recurring routes. Flat rates, volume discounts.</p>
+        </a>
 
-      <a href="/services/grocery-pickup" class="service-card group cursor-pointer">
-        <span class="service-category">Retail</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Grocery Delivery</h3>
-        <p class="text-gray-600 mb-4">
-          Fresh groceries from Save-On Foods and Thrifty Foods. Temperature-controlled delivery. Bulk orders welcome.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <a href="/services/walmart-pickup" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Walmart Pickup</h3>
+          <p class="text-gray-400 text-sm">Order online, we collect and deliver. Same-day to your door.</p>
+        </a>
 
-      <a href="/services/ikea-delivery" class="service-card group cursor-pointer">
-        <span class="service-category">Retail</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">IKEA Delivery & Assembly</h3>
-        <p class="text-gray-600 mb-4">
-          Furniture delivery from IKEA. Professional assembly included. Same-day pickup and installation available.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">Learn More →</span>
-      </a>
+        <a href="/services/grocery-pickup" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Grocery Delivery</h3>
+          <p class="text-gray-400 text-sm">Fresh groceries from Save-On and Thrifty Foods. Bulk orders welcome.</p>
+        </a>
 
-      <a href="/routes/nanaimo-victoria" class="service-card group cursor-pointer">
-        <span class="service-category">Routes</span>
-        <h3 class="group-hover:text-brand-blue transition-colors mb-3">Island Routes</h3>
-        <p class="text-gray-600 mb-4">
-          Nanaimo to Victoria, Duncan, Parksville, Comox, and Port Alberni. Ferry routing included. Multi-stop service.
-        </p>
-        <span class="text-brand-blue font-semibold group-hover:underline">View Routes →</span>
-      </a>
+        <a href="/services/ikea-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">IKEA Delivery</h3>
+          <p class="text-gray-400 text-sm">Furniture delivery and professional assembly. Same-day pickup.</p>
+        </a>
+
+        <a href="/routes/nanaimo-victoria" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
+          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
+            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          </div>
+          <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Island Routes</h3>
+          <p class="text-gray-400 text-sm">Victoria, Duncan, Parksville, Comox, Port Alberni. Ferry routing.</p>
+        </a>
+      </div>
     </div>
   </section>
 
