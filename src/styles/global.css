@@ -111,7 +111,7 @@
   }
 
   .service-category {
-    @apply inline-block text-xs font-semibold text-brand-indigo uppercase tracking-widest mb-3;
+    @apply inline-block text-xs font-semibold text-brand-iris uppercase tracking-widest mb-3;
   }
 
   /* Light full-width band on the dark canvas */
@@ -156,6 +156,8 @@
 .text-gray-800 { color: #e5e7eb; }
 .text-gray-900 { color: #f3f4f6; }
 
+.bg-white .text-gray-400, .bg-gray-50 .text-gray-400, .bg-gray-100 .text-gray-400, .card .text-gray-400,
+.bg-white.text-gray-400, .bg-gray-50.text-gray-400, .bg-gray-100.text-gray-400 { color: #4b5563; }
 .bg-white .text-gray-500, .bg-gray-50 .text-gray-500, .bg-gray-100 .text-gray-500, .card .text-gray-500 { color: #6b7280; }
 .bg-white .text-gray-600, .bg-gray-50 .text-gray-600, .bg-gray-100 .text-gray-600, .card .text-gray-600 { color: #4b5563; }
 .bg-white .text-gray-700, .bg-gray-50 .text-gray-700, .bg-gray-100 .text-gray-700, .card .text-gray-700 { color: #374151; }

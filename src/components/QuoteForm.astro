@@ -27,7 +27,7 @@ import { config } from '../config';
       </div>
 
       <div class="grid md:grid-cols-2 gap-4">
-        <select name="package_size" class="form-input" required>
+        <select name="package_size" class="form-input" required aria-label="Package size">
           <option value="">Select Package Size</option>
           <option value="letter">Letter/Small</option>
           <option value="medium">Medium Box</option>
@@ -35,7 +35,7 @@ import { config } from '../config';
           <option value="oversized">Oversized Item</option>
         </select>
 
-        <input type="datetime-local" name="needed_by" class="form-input" required />
+        <input type="datetime-local" name="needed_by" class="form-input" required aria-label="Needed by (date and time)" />
       </div>
 
       <input

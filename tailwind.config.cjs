@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         // Boxly dark theme: charcoal canvas + vivid indigo accent + white panels
         brand: {
-          indigo: '#2a1ad4',   // vivid accent — buttons, footer, links (pops on dark)
+          indigo: '#2a1ad4',   // vivid accent — button/footer FILLS (white text on it)
+          iris: '#9d8dff',     // lighter indigo for accent TEXT on dark backgrounds (WCAG contrast)
           indigoDeep: '#000099', // confirmed deep brand blue
           navy: '#0a0a3d',     // deep indigo-navy
           blue: '#2a1ad4',     // alias kept for existing markup
