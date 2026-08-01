@@ -18,14 +18,14 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
     <div class="max-w-[1700px] mx-auto px-5 pt-10 md:pt-14">
       <!-- Giant wordmark -->
       <h1
-        class="font-display font-bold text-gray-200 uppercase leading-[0.82] tracking-tight whitespace-nowrap"
+        class="relative z-10 font-display font-bold text-gray-200 uppercase leading-[0.82] tracking-tight whitespace-nowrap"
         style="font-size: clamp(3.5rem, 22.5vw, 21rem)"
       >
         Courier
       </h1>
 
-      <!-- Full-bleed hero image directly under the wordmark -->
-      <div class="mt-6 md:mt-8">
+      <!-- Full-bleed hero image, pulled up to slightly overlap the wordmark -->
+      <div class="relative -mt-4 md:-mt-12">
         <img
           src="/images/hero-island.jpg"
           alt="A BC Ferries vessel sailing between the Gulf Islands at sunset — a Vancouver Island courier route"
@@ -145,72 +145,72 @@ const description = `Reliable same-day courier and delivery service in Nanaimo, 
 
         <!-- Cards -->
         <a href="/services/same-day-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/same-day.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Same-Day Delivery</h3>
           <p class="text-gray-400 text-sm">Local Nanaimo within 3 hours. Pickup guaranteed in 30 minutes.</p>
         </a>
 
         <a href="/services/rush-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/rush.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Rush & Emergency</h3>
           <p class="text-gray-400 text-sm">Priority dispatch for urgent shipments. 24/7 emergency service.</p>
         </a>
 
         <a href="/services/medical-courier" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/medical.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Medical & Lab</h3>
           <p class="text-gray-400 text-sm">Temperature-controlled specimens. Chain-of-custody handling.</p>
         </a>
 
         <a href="/services/legal-courier" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/legal.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Legal Courier</h3>
           <p class="text-gray-400 text-sm">Court filings and legal documents. Proof of delivery included.</p>
         </a>
 
         <a href="/services/scheduled-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/scheduled.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Scheduled Routes</h3>
           <p class="text-gray-400 text-sm">Daily or weekly recurring routes. Flat rates, volume discounts.</p>
         </a>
 
         <a href="/services/walmart-pickup" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/walmart.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Walmart Pickup</h3>
           <p class="text-gray-400 text-sm">Order online, we collect and deliver. Same-day to your door.</p>
         </a>
 
         <a href="/services/grocery-pickup" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/grocery.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Grocery Delivery</h3>
           <p class="text-gray-400 text-sm">Fresh groceries from Save-On and Thrifty Foods. Bulk orders welcome.</p>
         </a>
 
         <a href="/services/ikea-delivery" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/ikea.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">IKEA Delivery</h3>
           <p class="text-gray-400 text-sm">Furniture delivery and professional assembly. Same-day pickup.</p>
         </a>
 
         <a href="/routes/nanaimo-victoria" class="group lg:border-l lg:border-white/10 lg:pl-8 [&:nth-child(4n+1)]:lg:border-l-0 [&:nth-child(4n+1)]:lg:pl-0">
-          <div class="aspect-[4/3] rounded-xl bg-brand-panel border border-white/10 flex items-center justify-center text-gray-500 mb-5 group-hover:border-brand-indigo transition-colors">
-            <svg class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2.25" y="4.5" width="19.5" height="15" rx="2" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159M18 9.75h.008v.008H18V9.75z" /></svg>
+          <div class="aspect-[4/3] rounded-xl bg-white flex items-center justify-center mb-5 overflow-hidden ring-1 ring-white/10 group-hover:ring-brand-indigo transition-all">
+            <img src="/images/services/routes.svg" alt="" width="200" height="200" loading="lazy" class="w-2/5" />
           </div>
           <h3 class="text-xl mb-2 group-hover:text-brand-indigo transition-colors">Island Routes</h3>
           <p class="text-gray-400 text-sm">Victoria, Duncan, Parksville, Comox, Port Alberni. Ferry routing.</p>
