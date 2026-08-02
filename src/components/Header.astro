@@ -5,8 +5,14 @@ import { config } from '../config';
 <header class="sticky top-0 z-50 bg-brand-darker border-b border-white/10">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="text-2xl font-display font-medium text-white tracking-tight">
-      {config.businessName}
+    <a href="/" class="flex items-center gap-2.5 text-white" aria-label={`${config.businessName} home`}>
+      <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M16 3.2 L27.5 9.6 L16 16 L4.5 9.6 Z" />
+        <path d="M4.5 9.6 L16 16 L16 28.8 L4.5 22.4 Z" />
+        <path d="M27.5 9.6 L16 16 L16 28.8 L27.5 22.4 Z" />
+        <path d="M10.25 6.4 L21.75 12.8" />
+      </svg>
+      <span class="text-2xl font-display font-medium tracking-tight lowercase">{config.businessName}</span>
     </a>
 
     <!-- Desktop Navigation -->
