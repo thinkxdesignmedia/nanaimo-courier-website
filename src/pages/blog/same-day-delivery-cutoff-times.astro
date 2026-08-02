@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogHero from '../../components/BlogHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import { config } from '../../config';
 
@@ -9,12 +10,9 @@ const date = '2026-01-15';
 ---
 
 <BaseLayout {title} {description}>
-  <article class="section-container prose prose-lg max-w-3xl">
-    <h1>{title}</h1>
+  <BlogHero title={title} date={date} category="Guide" />
 
-    <p class="text-gray-500 text-sm mb-8">
-      Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
-    </p>
+  <article class="section-container prose prose-invert prose-lg max-w-3xl">
 
     <p>
       "Can you deliver to Victoria same-day?" If you've ever asked a courier that question at 2 PM on a weekday, you've hit the timing wall. The answer isn't just "maybe"—it's determined by geography, ferry schedules, and whether you understand how Vancouver Island logistics actually works.

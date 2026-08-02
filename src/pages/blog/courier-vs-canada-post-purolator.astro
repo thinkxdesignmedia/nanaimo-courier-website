@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogHero from '../../components/BlogHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 
 const title = 'Courier vs Canada Post vs Purolator';
@@ -8,12 +9,9 @@ const date = '2026-01-10';
 ---
 
 <BaseLayout {title} {description}>
-  <article class="section-container prose prose-lg max-w-3xl">
-    <h1>{title}</h1>
+  <BlogHero title={title} date={date} category="Comparison" />
 
-    <p class="text-gray-500 text-sm mb-8">
-      Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
-    </p>
+  <article class="section-container prose prose-invert prose-lg max-w-3xl">
 
     <p>
       You have a package that needs to leave Nanaimo. Courier? Canada Post? Purolator? The answer depends on what you're shipping, when it needs to arrive, and how much you're willing to spend.

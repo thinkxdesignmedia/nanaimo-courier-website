@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  date?: string;
+  category?: string;
+}
+const { title, date, category = 'Insights' } = Astro.props;
+---
+
+<!-- Blog article header — dark band with a faded wordmark; keeps the post title as the H1 -->
+<section class="relative bg-brand-dark overflow-hidden border-b border-white/5">
+  <span
+    class="pointer-events-none select-none absolute inset-x-0 -top-2 text-center font-display font-bold uppercase text-white/[0.03] leading-none tracking-tight text-[18vw]"
+    aria-hidden="true"
+  >Blog</span>
+  <div class="relative max-w-3xl mx-auto px-5 pt-16 md:pt-24 pb-10">
+    <p class="text-sm font-semibold uppercase tracking-widest text-brand-iris mb-4">{category}</p>
+    <h1 class="font-display font-bold text-white text-4xl md:text-5xl mb-4" style="letter-spacing: -0.02em">{title}</h1>
+    {date && (
+      <p class="text-sm text-gray-400">
+        Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </p>
+    )}
+  </div>
+</section>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogHero from '../../components/BlogHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 
 const title = 'Legal Document Delivery in BC';
@@ -8,12 +9,9 @@ const date = '2026-01-05';
 ---
 
 <BaseLayout {title} {description}>
-  <article class="section-container prose prose-lg max-w-3xl">
-    <h1>{title}</h1>
+  <BlogHero title={title} date={date} category="Legal" />
 
-    <p class="text-gray-500 text-sm mb-8">
-      Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
-    </p>
+  <article class="section-container prose prose-invert prose-lg max-w-3xl">
 
     <p>
       A deadline isn't a suggestion in court. Miss it by one hour, and you've triggered sanctions, default judgment, or worse. A legal courier who understands courthouse procedures, filing windows, and BC court rules isn't a luxury—it's liability insurance.

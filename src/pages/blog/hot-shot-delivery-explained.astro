@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogHero from '../../components/BlogHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 
 const title = 'What Is Hot-Shot Delivery?';
@@ -8,12 +9,9 @@ const date = '2025-12-28';
 ---
 
 <BaseLayout {title} {description}>
-  <article class="section-container prose prose-lg max-w-3xl">
-    <h1>{title}</h1>
+  <BlogHero title={title} date={date} category="Guide" />
 
-    <p class="text-gray-500 text-sm mb-8">
-      Published {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
-    </p>
+  <article class="section-container prose prose-invert prose-lg max-w-3xl">
 
     <p>
       "Hot-shot." The term conjures images of a driver racing across the country in a big rig, sirens blaring. Reality is more subtle, but the principle is the same: your shipment is <em>the only priority</em>.
