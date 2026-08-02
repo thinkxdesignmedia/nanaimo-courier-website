@@ -43,9 +43,8 @@ const canonicalUrl = canonical || Astro.url.href;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#000099" />
 
-    <!-- Self-hosted fonts (@font-face in fonts.css). Preload the above-the-fold weights. -->
+    <!-- Self-hosted fonts (@font-face in fonts.css). Preload only the LCP-critical hero weight. -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-700.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/work-sans-400.woff2" crossorigin />
 
     <!-- Google Analytics 4 (Privacy-conscious: IP anonymization enabled) -->
     {hasGA4 && (
