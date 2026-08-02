@@ -4,7 +4,7 @@
   <rect x="18" y="114" width="38" height="10" rx="5"/>
   <rect x="70" y="66" width="72" height="66" rx="7"/>
   <path d="M142 84 h22 l16 22 v20 a6 6 0 0 1-6 6 h-32 v-42 a6 6 0 0 1 6-6 z"/>
-  <path d="M150 92 h12 l10 14 h-22 z" fill="#fff"/>
-  <circle cx="98" cy="140" r="15"/><circle cx="98" cy="140" r="6.5" fill="#fff"/>
-  <circle cx="162" cy="140" r="15"/><circle cx="162" cy="140" r="6.5" fill="#fff"/>
+  <path d="M150 92 h12 l10 14 h-22 z" fill="#141414"/>
+  <circle cx="98" cy="140" r="15"/><circle cx="98" cy="140" r="6.5" fill="#141414"/>
+  <circle cx="162" cy="140" r="15"/><circle cx="162" cy="140" r="6.5" fill="#141414"/>
 </svg>
