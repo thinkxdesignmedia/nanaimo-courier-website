@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
@@ -14,29 +15,13 @@ const description = 'Fast grocery delivery from Nanaimo stores. Order online, we
   <SchemaMarkup type="Service" data={{ serviceName: 'Grocery Pickup Delivery', description }} />
 
   <!-- Hero -->
-  <section class="bg-brand-navy text-white overflow-hidden">
-    <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 class="text-white mb-6">Grocery Pickup & Delivery Service</h1>
-          <p class="text-lg md:text-xl text-white/70 mb-8 max-w-xl leading-relaxed">
-            Order from your favorite Nanaimo grocery store online. We pick it up and deliver it fresh to your home. Same-day service, every day.
-          </p>
-          <PhoneCTA text="Get an instant quote" />
-        </div>
-        <div>
-          <img
-            src="/images/grocery.jpg"
-            alt="Fresh produce at a Nanaimo grocery store, ready for same-day delivery"
-            width="1200"
-            height="800"
-            loading="eager"
-            class="rounded-3xl w-full h-[20rem] lg:h-[24rem] object-cover shadow-2xl shadow-black/40"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageHero
+    word="Grocery"
+    eyebrow="Grocery delivery"
+    description="Order from your favourite Nanaimo grocery store online. We pick it up and deliver it fresh to your home — same-day service, every day."
+    image="/images/grocery.jpg"
+    imageAlt="Fresh produce at a Nanaimo grocery store, ready for same-day delivery"
+  />
 
   <!-- How It Works -->
   <section class="section-container">

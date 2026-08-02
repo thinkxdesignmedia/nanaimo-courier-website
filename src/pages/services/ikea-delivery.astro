@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
@@ -14,15 +15,11 @@ const description = 'Fast IKEA pickup and delivery to Nanaimo. Same-day or next-
   <SchemaMarkup type="Service" data={{ serviceName: 'IKEA Delivery', description }} />
 
   <!-- Hero -->
-  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
-    <div class="section-container">
-      <h1 class="text-white mb-4">IKEA Furniture Delivery & Assembly</h1>
-      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
-        Order from IKEA online. We pick up, deliver to your home, and assemble your furniture. Same-day or next-day service across Vancouver Island.
-      </p>
-      <PhoneCTA text="Get Instant Quote" />
-    </div>
-  </section>
+  <PageHero
+    word="IKEA"
+    eyebrow="IKEA delivery & assembly"
+    description="Order from IKEA online. We pick up, deliver to your home, and assemble your furniture — same-day or next-day across Vancouver Island."
+  />
 
   <!-- How It Works -->
   <section class="section-container">

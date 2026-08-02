@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
@@ -12,15 +13,11 @@ const description = 'Specialized medical courier for lab specimens, pharmacy del
 <BaseLayout {title} {description}>
   <SchemaMarkup type="Service" data={{ serviceName: 'Medical & Lab Courier', description }} />
 
-  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
-    <div class="section-container">
-      <h1 class="text-white mb-4">Medical & Lab Courier Service</h1>
-      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
-        Specialized transport for lab specimens, pathology samples, pharmacy delivery. Temperature control, chain-of-custody, and healthcare-trained drivers.
-      </p>
-      <PhoneCTA text="Get Instant Quote" />
-    </div>
-  </section>
+  <PageHero
+    word="Medical"
+    eyebrow="Medical & lab courier"
+    description="Specialized transport for lab specimens, pathology samples, and pharmacy delivery. Temperature control, chain-of-custody, and healthcare-trained drivers."
+  />
 
   <section class="section-container">
     <h2>Medical & Lab Courier Services</h2>
