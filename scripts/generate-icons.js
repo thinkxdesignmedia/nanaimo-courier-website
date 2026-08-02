@@ -48,8 +48,8 @@ async function generateIcons() {
       description: 'Same-day courier service in Nanaimo, BC',
       start_url: '/',
       display: 'standalone',
-      theme_color: '#1e40af',
-      background_color: '#ffffff',
+      theme_color: '#2a1ad4',
+      background_color: '#141414',
       icons: [
         {
           src: '/android-chrome-192.png',
