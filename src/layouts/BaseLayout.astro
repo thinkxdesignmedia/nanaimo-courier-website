@@ -3,6 +3,7 @@ import { config, siteConfig } from '../config';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MobilePhoneCTA from '../components/MobilePhoneCTA.astro';
+import '../styles/fonts.css';
 import '../styles/global.css';
 
 // Only load GA4 if measurement ID is configured (not placeholder)
@@ -42,21 +43,9 @@ const canonicalUrl = canonical || Astro.url.href;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#000099" />
 
-    <!-- Fonts: Manrope (display headings) + Work Sans (body) — loaded async so they don't block render -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap"
-      />
-    </noscript>
+    <!-- Self-hosted fonts (@font-face in fonts.css). Preload the above-the-fold weights. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-700.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/work-sans-400.woff2" crossorigin />
 
     <!-- Google Analytics 4 (Privacy-conscious: IP anonymization enabled) -->
     {hasGA4 && (
