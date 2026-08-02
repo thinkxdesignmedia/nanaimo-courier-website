@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import { config } from '../config';
 
 const title = 'Customer Reviews & Testimonials';
@@ -25,14 +26,11 @@ const testimonials = [
 ---
 
 <BaseLayout {title} {description}>
-  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
-    <div class="section-container">
-      <h1 class="text-white mb-4">Customer Reviews & Testimonials</h1>
-      <p class="text-lg md:text-xl opacity-95">
-        Hear from law firms, medical clinics, and businesses across Vancouver Island who trust us for same-day delivery.
-      </p>
-    </div>
-  </section>
+  <PageHero
+    word="Reviews"
+    eyebrow="Testimonials"
+    description="Hear from law firms, medical clinics, and businesses across Vancouver Island who trust us for same-day delivery."
+  />
 
   <section class="section-container">
     <div class="max-w-4xl">

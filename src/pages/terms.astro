@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import { config } from '../config';
 
 const title = 'Terms of Service';
@@ -7,9 +8,9 @@ const description = 'Terms and conditions for using Nanaimo Courier services and
 ---
 
 <BaseLayout {title} {description}>
-  <section class="section-container max-w-3xl prose prose-lg">
-    <h1>Terms of Service</h1>
+  <PageHero word="Terms" eyebrow="Legal" description="The terms that govern use of our courier services and this site." />
 
+  <section class="section-container max-w-3xl prose prose-invert prose-lg">
     <p class="text-gray-500 text-sm">Last updated: July 2026</p>
 
     <h2>1. Agreement to Terms</h2>

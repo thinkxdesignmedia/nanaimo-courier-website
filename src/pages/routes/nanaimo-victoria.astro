@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
@@ -12,15 +13,11 @@ const description = 'Same-day courier from Nanaimo to Victoria. Ferry or highway
 <BaseLayout {title} {description}>
   <SchemaMarkup type="Service" data={{ serviceName: 'Nanaimo to Victoria Courier Route', description }} />
 
-  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
-    <div class="section-container">
-      <h1 class="text-white mb-4">Nanaimo to Victoria Courier</h1>
-      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
-        Same-day delivery from Nanaimo to Victoria. Ferry routing optimized for schedule and time sensitivity. Legal documents, medical specimens, rush parcels.
-      </p>
-      <PhoneCTA text="Get Quote" />
-    </div>
-  </section>
+  <PageHero
+    word="Victoria"
+    eyebrow="Nanaimo → Victoria"
+    description="Same-day delivery from Nanaimo to Victoria, with ferry routing optimized for schedule and time sensitivity — legal documents, medical specimens, rush parcels."
+  />
 
   <section class="section-container">
     <h2>Nanaimo ↔ Victoria: Route Details</h2>

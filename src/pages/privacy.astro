@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import { config } from '../config';
 
 const title = 'Privacy Policy';
@@ -7,9 +8,9 @@ const description = 'How we collect, use, and protect your personal information.
 ---
 
 <BaseLayout {title} {description}>
-  <section class="section-container max-w-3xl prose prose-lg">
-    <h1>Privacy Policy</h1>
+  <PageHero word="Privacy" eyebrow="Legal" description="How we collect, use, and protect your information." />
 
+  <section class="section-container max-w-3xl prose prose-invert prose-lg">
     <p class="text-gray-500 text-sm">Last updated: July 2026</p>
 
     <h2>1. Introduction</h2>

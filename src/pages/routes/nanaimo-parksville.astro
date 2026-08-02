@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
@@ -12,15 +13,11 @@ const description = 'Same-day courier from Nanaimo to Parksville, Qualicum Beach
 <BaseLayout {title} {description}>
   <SchemaMarkup type="Service" data={{ serviceName: 'Nanaimo to Parksville Route', description }} />
 
-  <section class="bg-gradient-to-r from-brand-navy to-brand-blue text-white py-12 md:py-16">
-    <div class="section-container">
-      <h1 class="text-white mb-4">Nanaimo to Parksville & Qualicum Beach</h1>
-      <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl">
-        Quick same-day courier to Parksville and Qualicum Beach. 30–45 minutes delivery. Retail, tourism, seasonal events.
-      </p>
-      <PhoneCTA text="Get Quote" />
-    </div>
-  </section>
+  <PageHero
+    word="Parksville"
+    eyebrow="Nanaimo → Parksville"
+    description="Quick same-day courier to Parksville and Qualicum Beach — 30–45 minute delivery for retail, tourism, and seasonal events."
+  />
 
   <section class="section-container">
     <h2>Nanaimo ↔ Parksville/Qualicum Route Details</h2>
