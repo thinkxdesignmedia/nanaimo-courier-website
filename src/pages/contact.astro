@@ -6,6 +6,7 @@ import { config } from '../config';
 
 const title = 'Contact Us';
 const description = 'Contact us via email or request a callback. Questions about same-day delivery, rates, or services.';
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 ---
 
 <BaseLayout {title} {description}>
@@ -51,7 +52,7 @@ const description = 'Contact us via email or request a callback. Questions about
       <div>
         <h2>Request a Callback</h2>
 
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        {turnstileSiteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
 
         <form id="contact-form" class="space-y-4">
           <input
@@ -100,7 +101,7 @@ const description = 'Contact us via email or request a callback. Questions about
           <input type="hidden" name="form_ts" id="contact-form-ts" value="" />
 
           <!-- Cloudflare Turnstile -->
-          <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="light"></div>
+          {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>}
 
           <button type="submit" class="cta-button w-full" id="contact-submit">
             Request Callback
@@ -205,12 +206,15 @@ const description = 'Contact us via email or request a callback. Questions about
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Get Turnstile response
-      const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
-      if (!turnstileResponse || !turnstileResponse.value) {
-        statusDiv.textContent = '❌ Please complete the verification';
-        statusDiv.className = 'text-center text-sm text-red-600 mt-2';
-        return;
+      // Only require Turnstile if the widget is present (it's configured)
+      const turnstileEl = document.querySelector('.cf-turnstile');
+      if (turnstileEl) {
+        const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+        if (!turnstileResponse || !turnstileResponse.value) {
+          statusDiv.textContent = '❌ Please complete the verification';
+          statusDiv.className = 'text-center text-sm text-red-600 mt-2';
+          return;
+        }
       }
 
       submitBtn.disabled = true;

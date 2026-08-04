@@ -1,9 +1,10 @@
 ---
 import { config } from '../config';
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 ---
 
 <section id="quote" class="py-16 md:py-24">
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  {turnstileSiteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
 
   <div class="max-w-2xl mx-auto px-4">
     <h2 class="text-center mb-8">Get an Instant Quote</h2>
@@ -66,7 +67,7 @@ import { config } from '../config';
       <input type="hidden" name="form_ts" id="quote-form-ts" value="" />
 
       <!-- Cloudflare Turnstile -->
-      <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="dark"></div>
+      {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>}
 
       <button
         type="submit"
@@ -98,12 +99,15 @@ import { config } from '../config';
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Get Turnstile response
-      const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
-      if (!turnstileResponse || !turnstileResponse.value) {
-        statusDiv.textContent = '❌ Please complete the verification';
-        statusDiv.className = 'text-center text-sm text-red-600 mt-2';
-        return;
+      // Only require Turnstile if the widget is present (it's configured)
+      const turnstileEl = document.querySelector('.cf-turnstile');
+      if (turnstileEl) {
+        const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+        if (!turnstileResponse || !turnstileResponse.value) {
+          statusDiv.textContent = '❌ Please complete the verification';
+          statusDiv.className = 'text-center text-sm text-red-600 mt-2';
+          return;
+        }
       }
 
       submitBtn.disabled = true;
