@@ -62,6 +62,8 @@ import { config } from '../config';
 
       <!-- Honeypot field (hidden from users) -->
       <input type="hidden" name="website_check" value="" />
+      <!-- Submit-timing trap: set to page-load time via JS -->
+      <input type="hidden" name="form_ts" id="quote-form-ts" value="" />
 
       <!-- Cloudflare Turnstile -->
       <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="dark"></div>
@@ -87,6 +89,10 @@ import { config } from '../config';
   const form = document.getElementById('quote-form');
   const statusDiv = document.getElementById('quote-status');
   const submitBtn = document.getElementById('quote-submit');
+
+  // Stamp the form load time for the submit-timing trap
+  const tsField = document.getElementById('quote-form-ts');
+  if (tsField) tsField.value = String(Date.now());
 
   if (form) {
     form.addEventListener('submit', async (e) => {

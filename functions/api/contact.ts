@@ -32,6 +32,35 @@ export async function onRequest(context: {
       );
     }
 
+    // Submit-timing trap: humans take a few seconds; reject sub-3s or stale (>2h) posts silently
+    const formTs = Number(formData.form_ts);
+    const elapsed = Date.now() - formTs;
+    if (!formTs || elapsed < 3000 || elapsed > 7200000) {
+      console.warn('Timing trap triggered on contact form', { elapsed });
+      return new Response(
+        JSON.stringify({ success: true, message: 'Submitted' }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Per-IP rate limiting (5 submissions / minute) when KV is available
+    const clientIp = context.request.headers.get('CF-Connecting-IP') || 'unknown';
+    if (context.data?.kv) {
+      try {
+        const rlKey = `rl-contact-${clientIp}`;
+        const count = Number((await context.data.kv.get(rlKey)) || 0);
+        if (count >= 5) {
+          return new Response(
+            JSON.stringify({ success: false, error: 'Too many requests. Please try again in a minute.' }),
+            { status: 429, headers: { 'Content-Type': 'application/json' } }
+          );
+        }
+        await context.data.kv.put(rlKey, String(count + 1), { expirationTtl: 60 });
+      } catch (rlErr) {
+        console.error('Rate limit error:', rlErr);
+      }
+    }
+
     // Turnstile verification
     const turnstileToken = formData['cf-turnstile-response'];
     if (!turnstileToken) {

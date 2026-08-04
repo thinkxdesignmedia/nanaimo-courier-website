@@ -18,9 +18,10 @@ if (type === 'LocalBusiness') {
     '@type': 'LocalBusiness',
     name: config.businessName,
     url: siteConfig.siteUrl,
-    telephone: config.phone,
     email: config.email,
-    areaServed: 'CA-BC',
+    image: `${siteConfig.siteUrl}/og-default.png`,
+    priceRange: '$$',
+    areaServed: ['Nanaimo', 'Victoria', 'Duncan', 'Parksville', 'Qualicum Beach', 'Comox Valley', 'Port Alberni', 'Vancouver Island'],
     serviceType: 'Courier Service',
     address: {
       '@type': 'PostalAddress',
@@ -48,18 +49,28 @@ if (type === 'LocalBusiness') {
 
 if (type === 'Service') {
   schema = {
-    ...schema,
-    '@type': 'Service',
-    name: data.serviceName || 'Courier Service',
-    description: data.description || '',
-    provider: {
-      '@type': 'LocalBusiness',
-      name: config.businessName,
-      url: siteConfig.siteUrl,
-      telephone: config.phone,
-    },
-    areaServed: 'CA-BC',
-    ...(data.price && { price: data.price }),
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: data.serviceName || 'Courier Service',
+        description: data.description || '',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: config.businessName,
+          url: siteConfig.siteUrl,
+        },
+        areaServed: 'CA-BC',
+        ...(data.price && { price: data.price }),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.siteUrl },
+          { '@type': 'ListItem', position: 2, name: data.serviceName || 'Service', item: `${siteConfig.siteUrl}${Astro.url.pathname}` },
+        ],
+      },
+    ],
   };
 }
 

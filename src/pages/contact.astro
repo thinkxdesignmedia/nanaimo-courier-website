@@ -96,6 +96,8 @@ const description = 'Contact us via email or request a callback. Questions about
 
           <!-- Honeypot field -->
           <input type="hidden" name="website_check" value="" />
+          <!-- Submit-timing trap: set to page-load time via JS -->
+          <input type="hidden" name="form_ts" id="contact-form-ts" value="" />
 
           <!-- Cloudflare Turnstile -->
           <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="light"></div>
@@ -194,6 +196,10 @@ const description = 'Contact us via email or request a callback. Questions about
   const form = document.getElementById('contact-form');
   const statusDiv = document.getElementById('contact-status');
   const submitBtn = document.getElementById('contact-submit');
+
+  // Stamp the form load time for the submit-timing trap
+  const tsField = document.getElementById('contact-form-ts');
+  if (tsField) tsField.value = String(Date.now());
 
   if (form) {
     form.addEventListener('submit', async (e) => {
