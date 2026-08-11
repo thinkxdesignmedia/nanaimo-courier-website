@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhoneCTA from '../components/PhoneCTA.astro';
+import { config } from '../config';
+
+const title = 'Page Not Found';
+const description = 'That page has moved or no longer exists. Jump back to same-day courier service, routes, rates, or contact Nanaimo dispatch.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="bg-brand-dark overflow-hidden border-b border-white/5">
+    <div class="max-w-[1700px] mx-auto px-5 pt-12 md:pt-16 pb-14 md:pb-20">
+      <h1
+        class="font-display font-bold text-gray-200 uppercase leading-[0.82] tracking-tight whitespace-nowrap"
+        style="font-size: clamp(3rem, 21vw, 19rem)"
+      >
+        404
+      </h1>
+      <div class="grid md:grid-cols-2 gap-8 mt-8 md:mt-10">
+        <div>
+          <p class="text-brand-iris text-sm uppercase tracking-widest mb-3">Wrong turn</p>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            That page has moved or no longer exists. No problem — the roads still run.
+            Pick a service below, or call dispatch and we'll sort it out on the phone.
+          </p>
+        </div>
+        <div class="flex flex-col justify-end">
+          <PhoneCTA />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <h2 class="mb-8">Where were you headed?</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <a href="/services/same-day-delivery/" class="card hover:border-brand-iris transition">
+        <h3 class="font-bold text-gray-100 mb-1">Same-Day Delivery</h3>
+        <p class="text-sm text-gray-400">Pickup within 30 minutes across Nanaimo.</p>
+      </a>
+      <a href="/services/rush-delivery/" class="card hover:border-brand-iris transition">
+        <h3 class="font-bold text-gray-100 mb-1">Rush Delivery</h3>
+        <p class="text-sm text-gray-400">Direct, non-stop, priority runs.</p>
+      </a>
+      <a href="/pricing/" class="card hover:border-brand-iris transition">
+        <h3 class="font-bold text-gray-100 mb-1">Rates</h3>
+        <p class="text-sm text-gray-400">Transparent pricing, no surprises.</p>
+      </a>
+      <a href="/routes/nanaimo-victoria/" class="card hover:border-brand-iris transition">
+        <h3 class="font-bold text-gray-100 mb-1">Routes</h3>
+        <p class="text-sm text-gray-400">Victoria, Comox, Parksville, Port Alberni.</p>
+      </a>
+      <a href="/industries/" class="card hover:border-brand-iris transition">
+        <h3 class="font-bold text-gray-100 mb-1">Business Accounts</h3>
+        <p class="text-sm text-gray-400">Volume rates for recurring delivery.</p>
+      </a>
+      <a href="/contact/" class="card hover:border-brand-iris transition">
+        <h3 class="font-bold text-gray-100 mb-1">Contact</h3>
+        <p class="text-sm text-gray-400">Reach dispatch — reply within 2 hours.</p>
+      </a>
+    </div>
+    <p class="mt-8">
+      <a href="/" class="text-brand-iris hover:underline">← Back to the homepage</a>
+    </p>
+  </section>
+</BaseLayout>

@@ -34,7 +34,7 @@ export const GET: APIRoute = () => {
     .map(
       (route) => `
   <url>
-    <loc>${siteConfig.siteUrl}${route}</loc>
+    <loc>${siteConfig.siteUrl}${route}/</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <priority>${route === '' ? '1.0' : '0.8'}</priority>
   </url>
