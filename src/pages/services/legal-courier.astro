@@ -4,10 +4,20 @@ import PageHero from '../../components/PageHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
-const title = 'Legal Courier & Court Filings | Nanaimo BC';
+const title = 'Legal Courier & Court Filings';
 const description = 'Same-day legal document delivery and court filing service. Nanaimo courthouse expertise. Certified proof of delivery, deadline-conscious dispatch.';
+
+const faqs = [
+  { q: "Can you file a motion that's due this morning?", a: "Call us immediately. If courthouse filing hasn't closed yet (4 PM), we can rush-pick from your office and file. Rush charges apply (+$50–$100), but if time allows, we get it done. No guarantees after 3 PM cutoff." },
+  { q: 'Do you serve documents on opposing counsel?', a: "We can hand-deliver to local law firms and businesses. For formal legal service of documents, you'll need a process server (different service). But for routine inter-counsel delivery, we handle it." },
+  { q: 'What if the courthouse has moved or hours changed?', a: "We stay current on BC court procedures. That said, courthouses sometimes change. Always confirm the filing address and hours with your legal team. We'll double-check with you before dispatch if you ask." },
+  { q: 'Can you handle multiple stops in one trip?', a: "Yes. Courthouse filing + law firm pickup + notary office = one efficient route. We'll optimize stops and provide a single invoice. Saves you coordination headache." },
+  { q: 'Do you do after-hours emergency filings?', a: 'Nanaimo Courthouse closes at 4 PM. After-hours filings are queued for next-day intake. True emergency? Call for after-hours rates (+$100–$200) and limited availability. We try, but no guarantee.' },
+  { q: "What's your proof of filing? Can I show it to the court?", a: 'Yes. We provide stamped copies (returned from court), timestamp photos, and filing receipt. Your attorney can reference in correspondence. Not a substitute for official court records, but proof you filed on time.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -261,51 +271,5 @@ const description = 'Same-day legal document delivery and court filing service. 
     </div>
   </section>
 
-  <section class="section-container">
-    <h2>Legal Courier FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Can you file a motion that's due this morning?</h3>
-        <p class="text-gray-700">
-          Call us immediately. If courthouse filing hasn't closed yet (4 PM), we can rush-pick from your office and file. Rush charges apply (+$50–$100), but if time allows, we get it done. No guarantees after 3 PM cutoff.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you serve documents on opposing counsel?</h3>
-        <p class="text-gray-700">
-          We can hand-deliver to local law firms and businesses. For formal legal service of documents, you'll need a process server (different service). But for routine inter-counsel delivery, we handle it.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if the courthouse has moved or hours changed?</h3>
-        <p class="text-gray-700">
-          We stay current on BC court procedures. That said, courthouses sometimes change. Always confirm the filing address and hours with your legal team. We'll double-check with you before dispatch if you ask.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can you handle multiple stops in one trip?</h3>
-        <p class="text-gray-700">
-          Yes. Courthouse filing + law firm pickup + notary office = one efficient route. We'll optimize stops and provide a single invoice. Saves you coordination headache.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you do after-hours emergency filings?</h3>
-        <p class="text-gray-700">
-          Nanaimo Courthouse closes at 4 PM. After-hours filings are queued for next-day intake. True emergency? Call for after-hours rates (+$100–$200) and limited availability. We try, but no guarantee.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What's your proof of filing? Can I show it to the court?</h3>
-        <p class="text-gray-700">
-          Yes. We provide stamped copies (returned from court), timestamp photos, and filing receipt. Your attorney can reference in correspondence. Not a substitute for official court records, but proof you filed on time.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Legal Courier FAQ" faqs={faqs} />
 </BaseLayout>

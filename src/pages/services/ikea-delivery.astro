@@ -5,10 +5,20 @@ import QuoteForm from '../../components/QuoteForm.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'IKEA Delivery & Assembly Nanaimo';
 const description = 'Fast IKEA pickup and delivery to Nanaimo. Same-day or next-day service for furniture, decor, and household items. Assembly available.';
+
+const faqs = [
+  { q: 'Do you deliver IKEA items ordered online or in-store?', a: 'Both. Online orders ready for pickup, or we can pick up in-store purchases on your behalf. Tell us what you need.' },
+  { q: 'How long does assembly take?', a: 'Depends on the item. A simple desk: 30 minutes. A PAX wardrobe: 1–2 hours. A full bedroom set: 3–4 hours. We provide time estimates upfront.' },
+  { q: 'Do you provide old furniture removal?', a: 'Yes. Removing old furniture costs extra ($20–$50 per item) depending on size and haul distance. Ask when you order.' },
+  { q: 'What if something arrives damaged?', a: 'We inspect items before delivery. Damage is rare, but if it happens, we document it and coordinate directly with IKEA for replacement or refund.' },
+  { q: 'Can you deliver to offices or retail spaces?', a: 'Absolutely. We deliver to homes, offices, retail stores, and warehouses. Commercial assembly and bulk orders welcome.' },
+  { q: 'How soon can you deliver?', a: 'Same-day delivery for orders placed before 2 PM. Next-day delivery otherwise. Island-wide orders may take 2–3 business days depending on distance.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -161,53 +171,7 @@ const description = 'Fast IKEA pickup and delivery to Nanaimo. Same-day or next-
   <QuoteForm />
 
   <!-- FAQ -->
-  <section class="section-container">
-    <h2>IKEA Delivery FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Do you deliver IKEA items ordered online or in-store?</h3>
-        <p class="text-gray-700">
-          Both. Online orders ready for pickup, or we can pick up in-store purchases on your behalf. Tell us what you need.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">How long does assembly take?</h3>
-        <p class="text-gray-700">
-          Depends on the item. A simple desk: 30 minutes. A PAX wardrobe: 1–2 hours. A full bedroom set: 3–4 hours. We provide time estimates upfront.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you provide old furniture removal?</h3>
-        <p class="text-gray-700">
-          Yes. Removing old furniture costs extra ($20–$50 per item) depending on size and haul distance. Ask when you order.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if something arrives damaged?</h3>
-        <p class="text-gray-700">
-          We inspect items before delivery. Damage is rare, but if it happens, we document it and coordinate directly with IKEA for replacement or refund.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can you deliver to offices or retail spaces?</h3>
-        <p class="text-gray-700">
-          Absolutely. We deliver to homes, offices, retail stores, and warehouses. Commercial assembly and bulk orders welcome.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">How soon can you deliver?</h3>
-        <p class="text-gray-700">
-          Same-day delivery for orders placed before 2 PM. Next-day delivery otherwise. Island-wide orders may take 2–3 business days depending on distance.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="IKEA Delivery FAQ" faqs={faqs} />
 
   <!-- B2B CTA -->
   <B2BCTA />

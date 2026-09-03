@@ -4,10 +4,18 @@ import PageHero from '../../components/PageHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Rush & Hot-Shot Delivery Nanaimo';
 const description = 'Emergency rush delivery for time-critical shipments. Hot-shot courier, priority dispatch, dedicated driver. Same-day or next-day across Vancouver Island.';
+
+const faqs = [
+  { q: 'How fast can you really pick up?', a: "If we have a driver available in your area, 15 minutes. If it's a slower period, 30 minutes is typical. Submit a quote for real-time pickup estimate." },
+  { q: 'Can I track my hot-shot in real time?', a: 'Yes. We send you a link—see driver location, ETA, and completion status live on your phone.' },
+  { q: 'What if I book a rush and change my mind?', a: "Cancellation within 5 minutes: no charge. After 5 minutes: 50% of quoted rush rate (because we're holding a driver). After pickup: full charge." },
+  { q: 'Do you do hot-shot across ferry routes?', a: 'Yes. We factor ferry wait times and sailing schedules. Nanaimo to Victoria hot-shot is common. Submit a quote for ferry-route rush details.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -140,37 +148,5 @@ const description = 'Emergency rush delivery for time-critical shipments. Hot-sh
 
   <QuoteForm />
 
-  <section class="section-container">
-    <h2>FAQ: Hot-Shot & Rush Delivery</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">How fast can you really pick up?</h3>
-        <p class="text-gray-700">
-          If we have a driver available in your area, 15 minutes. If it's a slower period, 30 minutes is typical. Submit a quote for real-time pickup estimate.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I track my hot-shot in real time?</h3>
-        <p class="text-gray-700">
-          Yes. We send you a link—see driver location, ETA, and completion status live on your phone.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if I book a rush and change my mind?</h3>
-        <p class="text-gray-700">
-          Cancellation within 5 minutes: no charge. After 5 minutes: 50% of quoted rush rate (because we're holding a driver). After pickup: full charge.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you do hot-shot across ferry routes?</h3>
-        <p class="text-gray-700">
-          Yes. We factor ferry wait times and sailing schedules. Nanaimo to Victoria hot-shot is common. Submit a quote for ferry-route rush details.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="FAQ: Hot-Shot & Rush Delivery" faqs={faqs} />
 </BaseLayout>

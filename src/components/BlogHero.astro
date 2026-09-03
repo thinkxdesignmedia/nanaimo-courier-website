@@ -1,11 +1,32 @@
 ---
+import { config, siteConfig } from '../config';
+
 interface Props {
   title: string;
   date?: string;
   category?: string;
+  description?: string;
 }
-const { title, date, category = 'Insights' } = Astro.props;
+const { title, date, category = 'Insights', description } = Astro.props;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  ...(description && { description }),
+  ...(date && { datePublished: date, dateModified: date }),
+  articleSection: category,
+  mainEntityOfPage: `${siteConfig.siteUrl}${Astro.url.pathname}`,
+  author: { '@type': 'Organization', name: config.businessName, url: siteConfig.siteUrl },
+  publisher: {
+    '@type': 'Organization',
+    name: config.businessName,
+    logo: { '@type': 'ImageObject', url: `${siteConfig.siteUrl}/og-default.png` },
+  },
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
 <!-- Blog article header — dark band with a faded wordmark; keeps the post title as the H1 -->
 <section class="relative bg-brand-dark overflow-hidden border-b border-white/5">

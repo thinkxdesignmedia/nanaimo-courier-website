@@ -4,10 +4,19 @@ import PageHero from '../../components/PageHero.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Nanaimo to Comox Valley Courier';
 const description = 'Same-day courier from Nanaimo to Comox Valley and Campbell River. 1.5–2 hour delivery. Rush delivery, medical samples, legal documents.';
+
+const faqs = [
+  { q: 'Is Highway 19 North reliable in winter?', a: 'Generally yes. North Island Highway 19 is well-maintained year-round. Snow is rare; rain is typical. We monitor conditions and notify you if delays expected. Winter cutoff may shift earlier (11 AM instead of noon) in heavy snow.' },
+  { q: 'Can I split one order to Courtenay AND Campbell River?', a: 'Yes. Courtenay stop + Campbell River stop = combined route. We quote based on total distance/stops (~$295–$350 for both). Single driver, single invoice, both delivered same-day.' },
+  { q: "What's faster: Comox Valley or Campbell River for urgent medical?", a: 'Comox Valley is 30 minutes faster (1.5 hrs vs. 2.5 hrs). If speed is critical, Comox is more reliably same-day. Campbell River often requires earlier order (11 AM vs. noon) for same-day guarantee.' },
+  { q: 'Do RGN Hospital and Comox clinics use you regularly?', a: 'Yes. We handle specimen runs for regional labs. Daily standing orders available: 3 PM pickup from Nanaimo clinics, same-day delivery to Comox Valley labs. Monthly rates available.' },
+  { q: 'Can you handle manufacturing equipment to Campbell River mills?', a: 'Yes. Industrial parts delivery is common on this route. Oversized available. Earlier cutoff (10 AM) for same-day guarantee due to distance.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -182,44 +191,5 @@ const description = 'Same-day courier from Nanaimo to Comox Valley and Campbell 
 
   <QuoteForm />
 
-  <section class="section-container">
-    <h2>Comox Valley Route FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Is Highway 19 North reliable in winter?</h3>
-        <p class="text-gray-700">
-          Generally yes. North Island Highway 19 is well-maintained year-round. Snow is rare; rain is typical. We monitor conditions and notify you if delays expected. Winter cutoff may shift earlier (11 AM instead of noon) in heavy snow.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I split one order to Courtenay AND Campbell River?</h3>
-        <p class="text-gray-700">
-          Yes. Courtenay stop + Campbell River stop = combined route. We quote based on total distance/stops (~$295–$350 for both). Single driver, single invoice, both delivered same-day.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What's faster: Comox Valley or Campbell River for urgent medical?</h3>
-        <p class="text-gray-700">
-          Comox Valley is 30 minutes faster (1.5 hrs vs. 2.5 hrs). If speed is critical, Comox is more reliably same-day. Campbell River often requires earlier order (11 AM vs. noon) for same-day guarantee.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do RGN Hospital and Comox clinics use you regularly?</h3>
-        <p class="text-gray-700">
-          Yes. We handle specimen runs for regional labs. Daily standing orders available: 3 PM pickup from Nanaimo clinics, same-day delivery to Comox Valley labs. Monthly rates available.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can you handle manufacturing equipment to Campbell River mills?</h3>
-        <p class="text-gray-700">
-          Yes. Industrial parts delivery is common on this route. Oversized available. Earlier cutoff (10 AM) for same-day guarantee due to distance.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Comox Valley Route FAQ" faqs={faqs} />
 </BaseLayout>

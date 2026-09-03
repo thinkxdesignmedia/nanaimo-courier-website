@@ -5,10 +5,19 @@ import QuoteForm from '../../components/QuoteForm.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Same-Day Delivery Nanaimo';
 const description = 'Same-day courier delivery across Nanaimo. 3-hour delivery guarantee, low cost, no hidden fees. Get an instant quote online.';
+
+const faqs = [
+  { q: "What's included in same-day delivery?", a: 'Pickup from your location, real-time tracking, safe transport, and proof of delivery. Signature required at dropoff.' },
+  { q: 'Can I modify my delivery address after I book?', a: "Yes—contact us immediately if you need to change the dropoff. We'll divert the driver if possible. Changes within 15 minutes are usually free." },
+  { q: 'Do you do after-hours deliveries?', a: 'Yes. After-hours emergency delivery is available—contact us to arrange. Rush surcharge applies.' },
+  { q: 'Is there a size limit?', a: 'No hard limit. We handle everything from letters to oversized items. Oversized items may have different rates—get a quote online.' },
+  { q: "What if my package doesn't fit in a car?", a: 'We can handle oversized parcels and bulky items that need a larger vehicle. Get an oversized-item quote online.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -159,46 +168,7 @@ const description = 'Same-day courier delivery across Nanaimo. 3-hour delivery g
   <QuoteForm />
 
   <!-- FAQ -->
-  <section class="section-container">
-    <h2>Same-Day Delivery FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">What's included in same-day delivery?</h3>
-        <p class="text-gray-700">
-          Pickup from your location, real-time tracking, safe transport, and proof of delivery. Signature required at dropoff.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I modify my delivery address after I book?</h3>
-        <p class="text-gray-700">
-          Yes—contact us immediately if you need to change the dropoff. We'll divert the driver if possible. Changes within 15 minutes are usually free.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you do after-hours deliveries?</h3>
-        <p class="text-gray-700">
-          Yes. After-hours emergency delivery is available—contact us to arrange. Rush surcharge applies.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Is there a size limit?</h3>
-        <p class="text-gray-700">
-          No hard limit. We handle everything from letters to oversized items. Oversized items may have different rates—get a quote online.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if my package doesn't fit in a car?</h3>
-        <p class="text-gray-700">
-          We can handle oversized parcels and bulky items that need a larger vehicle. Get an oversized-item quote online.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Same-Day Delivery FAQ" faqs={faqs} />
 
   <!-- B2B CTA -->
   <B2BCTA />

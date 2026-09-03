@@ -4,10 +4,18 @@ import PageHero from '../../components/PageHero.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Scheduled Delivery Routes Nanaimo';
 const description = 'Daily or weekly scheduled delivery routes. Flat rates, dedicated driver, recurring revenue for businesses. Print shops, auto parts, manufacturing.';
+
+const faqs = [
+  { q: 'What if my route needs to change one week?', a: 'One-time adjustments are fine. Tell us 24 hours ahead if possible. If the change is permanent, we adjust your rate accordingly and reset for the next month.' },
+  { q: "Do I pay if the driver can't run one day?", a: "Not if it's our issue (vehicle down, driver sick). If it's your request (you have no shipments), you pay a 25% cancellation fee if cancelled less than 4 hours ahead." },
+  { q: 'Can I do extra one-off runs on top of my route?', a: "Yes. Standard same-day rates apply for anything outside your scheduled route. Your dedicated driver might even do them, but if they're unavailable, we dispatch someone else." },
+  { q: "What's the contract length?", a: "Month-to-month. 30-day notice to cancel. We want your business to stick around because it works, not because you're locked in." },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -174,37 +182,5 @@ const description = 'Daily or weekly scheduled delivery routes. Flat rates, dedi
     </div>
   </section>
 
-  <section class="section-container">
-    <h2>Scheduled Route FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">What if my route needs to change one week?</h3>
-        <p class="text-gray-700">
-          One-time adjustments are fine. Tell us 24 hours ahead if possible. If the change is permanent, we adjust your rate accordingly and reset for the next month.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do I pay if the driver can't run one day?</h3>
-        <p class="text-gray-700">
-          Not if it's our issue (vehicle down, driver sick). If it's your request (you have no shipments), you pay a 25% cancellation fee if cancelled less than 4 hours ahead.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I do extra one-off runs on top of my route?</h3>
-        <p class="text-gray-700">
-          Yes. Standard same-day rates apply for anything outside your scheduled route. Your dedicated driver might even do them, but if they're unavailable, we dispatch someone else.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What's the contract length?</h3>
-        <p class="text-gray-700">
-          Month-to-month. 30-day notice to cancel. We want your business to stick around because it works, not because you're locked in.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Scheduled Route FAQ" faqs={faqs} />
 </BaseLayout>

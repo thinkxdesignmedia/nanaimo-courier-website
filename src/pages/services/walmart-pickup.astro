@@ -5,10 +5,19 @@ import QuoteForm from '../../components/QuoteForm.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Walmart Pickup & Delivery Nanaimo';
 const description = 'Fast Walmart online order pickup and delivery in Nanaimo. Same-day service to your home or office. Get your order delivered within 2 hours.';
+
+const faqs = [
+  { q: 'Do you handle cold/frozen items?', a: 'Yes. We use insulated bags and temperature-controlled vehicles. Frozen items stay frozen. Perishables arrive fresh.' },
+  { q: 'What if Walmart is out of stock on my items?', a: "You'll be notified before we pick up. We only deliver what Walmart has in stock. Substitutions available if requested." },
+  { q: 'How much notice do I need to give?', a: "Same-day service available with 2 hours' notice. Place your order online, contact us with your Walmart order number, and we'll handle the rest." },
+  { q: 'What about damaged or missing items?', a: 'Our drivers inspect all items before delivery. If anything is damaged or missing, we document it and coordinate replacement directly with Walmart.' },
+  { q: 'Do you take cash on delivery?', a: 'The Walmart order is prepaid online by you. Our delivery fee can be paid by card or cash at delivery. No surprises.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -155,46 +164,7 @@ const description = 'Fast Walmart online order pickup and delivery in Nanaimo. S
   <QuoteForm />
 
   <!-- FAQ -->
-  <section class="section-container">
-    <h2>Walmart Pickup FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Do you handle cold/frozen items?</h3>
-        <p class="text-gray-700">
-          Yes. We use insulated bags and temperature-controlled vehicles. Frozen items stay frozen. Perishables arrive fresh.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if Walmart is out of stock on my items?</h3>
-        <p class="text-gray-700">
-          You'll be notified before we pick up. We only deliver what Walmart has in stock. Substitutions available if requested.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">How much notice do I need to give?</h3>
-        <p class="text-gray-700">
-          Same-day service available with 2 hours' notice. Place your order online, contact us with your Walmart order number, and we'll handle the rest.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What about damaged or missing items?</h3>
-        <p class="text-gray-700">
-          Our drivers inspect all items before delivery. If anything is damaged or missing, we document it and coordinate replacement directly with Walmart.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you take cash on delivery?</h3>
-        <p class="text-gray-700">
-          The Walmart order is prepaid online by you. Our delivery fee can be paid by card or cash at delivery. No surprises.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Walmart Pickup FAQ" faqs={faqs} />
 
   <!-- B2B CTA -->
   <B2BCTA />

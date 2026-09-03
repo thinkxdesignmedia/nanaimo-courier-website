@@ -4,10 +4,19 @@ import PageHero from '../../components/PageHero.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Nanaimo to Port Alberni Courier';
 const description = 'Same-day courier from Nanaimo to Port Alberni. 1.5 hour delivery. Lumber, forestry, industrial parts.';
+
+const faqs = [
+  { q: 'Do you handle oversized parcels?', a: 'Yes. We carry larger parcels and bulky items that need a full van—urgent mill parts, manufacturing supplies, and equipment components. Quote based on size and dimensions.' },
+  { q: "What's your experience with forestry/lumber products?", a: "Extensive. Port Alberni's main industry. We've handled equipment parts, finished lumber, forestry supplies, mill components. Safe handling of heavy/bulky items guaranteed." },
+  { q: 'Winter cutoff: Do I need to order earlier?', a: "Yes. Summer (May–Oct): 1 PM cutoff. Winter (Nov–Mar): 11 AM cutoff for same-day guarantee. Mountain passes add time. We monitor roads; if bad, we'll call you with revised timing." },
+  { q: 'Can you handle return shipments (defects back to Nanaimo)?', a: 'Yes. Pickup in Port Alberni, delivery to Nanaimo supplier. Same pricing structure. Useful for logistics loops: new parts out, defects back.' },
+  { q: 'Do you offer standing weekly/monthly courier contracts?', a: 'Yes. Mills and manufacturers often need predictable weekly routes. We can optimize cost with fixed monthly rates. Call to discuss your volume.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -179,46 +188,7 @@ const description = 'Same-day courier from Nanaimo to Port Alberni. 1.5 hour del
     </div>
   </section>
 
-  <section class="section-container">
-    <h2>Port Alberni Route FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Do you handle oversized parcels?</h3>
-        <p class="text-gray-700">
-          Yes. We carry larger parcels and bulky items that need a full van—urgent mill parts, manufacturing supplies, and equipment components. Quote based on size and dimensions.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What's your experience with forestry/lumber products?</h3>
-        <p class="text-gray-700">
-          Extensive. Port Alberni's main industry. We've handled equipment parts, finished lumber, forestry supplies, mill components. Safe handling of heavy/bulky items guaranteed.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Winter cutoff: Do I need to order earlier?</h3>
-        <p class="text-gray-700">
-          Yes. Summer (May–Oct): 1 PM cutoff. Winter (Nov–Mar): 11 AM cutoff for same-day guarantee. Mountain passes add time. We monitor roads; if bad, we'll call you with revised timing.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can you handle return shipments (defects back to Nanaimo)?</h3>
-        <p class="text-gray-700">
-          Yes. Pickup in Port Alberni, delivery to Nanaimo supplier. Same pricing structure. Useful for logistics loops: new parts out, defects back.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you offer standing weekly/monthly courier contracts?</h3>
-        <p class="text-gray-700">
-          Yes. Mills and manufacturers often need predictable weekly routes. We can optimize cost with fixed monthly rates. Call to discuss your volume.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Port Alberni Route FAQ" faqs={faqs} />
 
   <QuoteForm />
 </BaseLayout>

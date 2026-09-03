@@ -5,10 +5,19 @@ import QuoteForm from '../../components/QuoteForm.astro';
 import B2BCTA from '../../components/B2BCTA.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Grocery Pickup & Delivery Nanaimo';
 const description = 'Fast grocery delivery from Nanaimo stores. Order online, we pick up from Save-On Foods, Thrifty Foods, and deliver same-day to your door.';
+
+const faqs = [
+  { q: 'How long do groceries stay fresh in transit?', a: 'Our insulated delivery bags and temperature control keep groceries at the right temperature for up to 2 hours. Most Nanaimo deliveries take 45 minutes—well within the safe window.' },
+  { q: 'What if an item is out of stock?', a: "The grocery store will substitute a similar item or refund you. You'll be notified before we deliver. Your order cost never changes—you only pay our delivery fee." },
+  { q: 'Can I request specific produce quality or cuts?', a: 'Yes. Add special instructions to your store order (ripe avocados, deli meat thickness, etc.). Our drivers communicate with customer service to ensure your preferences.' },
+  { q: 'How fast can you deliver?', a: "Same-day delivery with 2 hours' notice for most orders. Off-peak times (9 AM–11 AM weekdays) often see 45-minute delivery. Check with us for fastest times." },
+  { q: 'Do you deliver alcohol or age-restricted items?', a: 'Yes, with valid ID required at delivery. All liquor/restricted items are delivered by ID-verified drivers only.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -157,46 +166,7 @@ const description = 'Fast grocery delivery from Nanaimo stores. Order online, we
   <QuoteForm />
 
   <!-- FAQ -->
-  <section class="section-container">
-    <h2>Grocery Delivery FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">How long do groceries stay fresh in transit?</h3>
-        <p class="text-gray-700">
-          Our insulated delivery bags and temperature control keep groceries at the right temperature for up to 2 hours. Most Nanaimo deliveries take 45 minutes—well within the safe window.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if an item is out of stock?</h3>
-        <p class="text-gray-700">
-          The grocery store will substitute a similar item or refund you. You'll be notified before we deliver. Your order cost never changes—you only pay our delivery fee.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I request specific produce quality or cuts?</h3>
-        <p class="text-gray-700">
-          Yes. Add special instructions to your store order (ripe avocados, deli meat thickness, etc.). Our drivers communicate with customer service to ensure your preferences.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">How fast can you deliver?</h3>
-        <p class="text-gray-700">
-          Same-day delivery with 2 hours' notice for most orders. Off-peak times (9 AM–11 AM weekdays) often see 45-minute delivery. Check with us for fastest times.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you deliver alcohol or age-restricted items?</h3>
-        <p class="text-gray-700">
-          Yes, with valid ID required at delivery. All liquor/restricted items are delivered by ID-verified drivers only.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Grocery Delivery FAQ" faqs={faqs} />
 
   <!-- B2B CTA -->
   <B2BCTA />

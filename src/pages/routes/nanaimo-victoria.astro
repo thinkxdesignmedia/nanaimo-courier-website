@@ -4,10 +4,19 @@ import PageHero from '../../components/PageHero.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Nanaimo to Victoria Courier';
 const description = 'Same-day courier from Nanaimo to Victoria. Ferry or highway routing. 3–4 hour delivery. Legal documents, medical samples, rush parcels.';
+
+const faqs = [
+  { q: 'Does the ferry delay push my delivery to next day?', a: "Not usually. We monitor ferry schedules and may switch to highway routing if ferry is significantly delayed. We'll update you if timeline changes. Always order by 10 AM to stay same-day." },
+  { q: 'What if the Malahat closes (snow/weather)?', a: "Ferry route is safer in winter. We'll re-route to ferry if highway is closed. Ferry surcharge applies, but your shipment still gets to Victoria same-day when possible." },
+  { q: 'Can I request the ferry route specifically?', a: "Yes. Tell us \"ferry preferred\" and we'll route that way. Best for time-sensitive or weather-dependent shipments. Highway is cost-effective but less predictable in winter." },
+  { q: 'Do you track in real time across the ferry?', a: "Yes. You'll see the driver progress to Departure Bay, then pick up again after ferry crossing at Swartz Bay. Full delivery tracking to Victoria destination." },
+  { q: 'Can you handle a return pickup from Victoria?', a: "Yes. Tell us if you need pickup in Victoria too (e.g., pick up files, deliver to Nanaimo). We'll dispatch accordingly and quote a round-trip." },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -184,44 +193,5 @@ const description = 'Same-day courier from Nanaimo to Victoria. Ferry or highway
 
   <QuoteForm />
 
-  <section class="section-container">
-    <h2>Nanaimo ↔ Victoria FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Does the ferry delay push my delivery to next day?</h3>
-        <p class="text-gray-700">
-          Not usually. We monitor ferry schedules and may switch to highway routing if ferry is significantly delayed. We'll update you if timeline changes. Always order by 10 AM to stay same-day.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if the Malahat closes (snow/weather)?</h3>
-        <p class="text-gray-700">
-          Ferry route is safer in winter. We'll re-route to ferry if highway is closed. Ferry surcharge applies, but your shipment still gets to Victoria same-day when possible.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I request the ferry route specifically?</h3>
-        <p class="text-gray-700">
-          Yes. Tell us "ferry preferred" and we'll route that way. Best for time-sensitive or weather-dependent shipments. Highway is cost-effective but less predictable in winter.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you track in real time across the ferry?</h3>
-        <p class="text-gray-700">
-          Yes. You'll see the driver progress to Departure Bay, then pick up again after ferry crossing at Swartz Bay. Full delivery tracking to Victoria destination.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can you handle a return pickup from Victoria?</h3>
-        <p class="text-gray-700">
-          Yes. Tell us if you need pickup in Victoria too (e.g., pick up files, deliver to Nanaimo). We'll dispatch accordingly and quote a round-trip.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Nanaimo ↔ Victoria FAQ" faqs={faqs} />
 </BaseLayout>

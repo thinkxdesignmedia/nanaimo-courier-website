@@ -4,10 +4,20 @@ import PageHero from '../../components/PageHero.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
 const title = 'Medical & Lab Courier Nanaimo';
 const description = 'Specialized medical courier for lab specimens, pharmacy delivery, temperature-controlled transport. Chain-of-custody available. HIPAA-conscious service.';
+
+const faqs = [
+  { q: 'Are your drivers trained in medical handling?', a: 'Yes. Our team is trained in specimen handling, chain-of-custody protocols, and confidentiality. We understand healthcare operations and regulatory requirements (PIPEDA, biohazard containment).' },
+  { q: 'Can you do routine daily pickups?', a: 'Absolutely. Many clinics use us for daily 3 PM specimen runs. Standing orders, flat monthly rates ($80–$120/run), and volume discounts available. Fixed pickup time, no surprises.' },
+  { q: "What's your turnaround for specimen delivery?", a: 'Local Nanaimo: 30 min–1 hour. Parksville/Comox: 2 hours. Victoria: 3.5–4 hours (ferry). Same-day guarantee on all routes if ordered by cutoff time.' },
+  { q: 'Do you handle hazardous/biohazard specimens?', a: 'Yes, with proper containment and training. We follow all Transport Canada and BC health regulations for biohazard transport. Specialized leak-proof containers included.' },
+  { q: 'Is delivery confidential?', a: 'Yes. All medical cargo is treated as confidential. No peeking, sealed containers, and driver discretion guaranteed. Your patient data stays secure with us.' },
+  { q: 'What if a specimen arrives damaged?', a: 'Our chain-of-custody documentation captures condition at handoff. If damage occurs in transit, we photograph and notify you immediately. Temperature logs prove we maintained proper conditions. Work with your lab and clinic on next steps.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -231,51 +241,5 @@ const description = 'Specialized medical courier for lab specimens, pharmacy del
     </div>
   </section>
 
-  <section class="section-container">
-    <h2>Medical Courier FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Are your drivers trained in medical handling?</h3>
-        <p class="text-gray-700">
-          Yes. Our team is trained in specimen handling, chain-of-custody protocols, and confidentiality. We understand healthcare operations and regulatory requirements (PIPEDA, biohazard containment).
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can you do routine daily pickups?</h3>
-        <p class="text-gray-700">
-          Absolutely. Many clinics use us for daily 3 PM specimen runs. Standing orders, flat monthly rates ($80–$120/run), and volume discounts available. Fixed pickup time, no surprises.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What's your turnaround for specimen delivery?</h3>
-        <p class="text-gray-700">
-          Local Nanaimo: 30 min–1 hour. Parksville/Comox: 2 hours. Victoria: 3.5–4 hours (ferry). Same-day guarantee on all routes if ordered by cutoff time.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Do you handle hazardous/biohazard specimens?</h3>
-        <p class="text-gray-700">
-          Yes, with proper containment and training. We follow all Transport Canada and BC health regulations for biohazard transport. Specialized leak-proof containers included.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Is delivery confidential?</h3>
-        <p class="text-gray-700">
-          Yes. All medical cargo is treated as confidential. No peeking, sealed containers, and driver discretion guaranteed. Your patient data stays secure with us.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if a specimen arrives damaged?</h3>
-        <p class="text-gray-700">
-          Our chain-of-custody documentation captures condition at handoff. If damage occurs in transit, we photograph and notify you immediately. Temperature logs prove we maintained proper conditions. Work with your lab and clinic on next steps.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Medical Courier FAQ" faqs={faqs} />
 </BaseLayout>

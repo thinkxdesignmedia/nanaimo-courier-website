@@ -4,10 +4,18 @@ import PageHero from '../../components/PageHero.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import FAQ from '../../components/FAQ.astro';
 import { config } from '../../config';
 
-const title = 'Nanaimo to Parksville & Qualicum Courier';
+const title = 'Nanaimo to Parksville & Qualicum';
 const description = 'Same-day courier from Nanaimo to Parksville, Qualicum Beach. 45 minutes delivery. Tourism, retail, seasonal services.';
+
+const faqs = [
+  { q: 'Summer tourism season: Is service available?', a: 'Yes. May–September sees higher demand. We run multiple daily loops. Order by 2 PM weekdays for same-day. Weekend demand is high; confirm availability for Sat/Sun.' },
+  { q: 'Can I deliver to multiple Parksville locations in one pickup?', a: 'Yes. Parksville mall + downtown + resort area = one route. Multi-stop pricing: $5 per additional stop after first delivery. Saves you time.' },
+  { q: 'What if Highway 19 is backed up due to traffic?', a: "Parksville traffic (especially summer) can add 10–15 minutes. We monitor traffic and may adjust timing slightly. You're notified if delay expected. Rush orders get priority lane-switching." },
+  { q: 'Can I use you for daily retail delivery service?', a: 'Yes. Daily 3 PM Parksville run available at monthly rate (~$150–$200/run, 30–50% cheaper than ad-hoc). Ideal for retail chains, hotel chains, or tourism operators.' },
+];
 ---
 
 <BaseLayout {title} {description}>
@@ -127,39 +135,7 @@ const description = 'Same-day courier from Nanaimo to Parksville, Qualicum Beach
     </div>
   </section>
 
-  <section class="section-container">
-    <h2>Parksville Route FAQ</h2>
-
-    <div class="space-y-6 max-w-3xl">
-      <div>
-        <h3 class="font-bold mb-2">Summer tourism season: Is service available?</h3>
-        <p class="text-gray-700">
-          Yes. May–September sees higher demand. We run multiple daily loops. Order by 2 PM weekdays for same-day. Weekend demand is high; confirm availability for Sat/Sun.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I deliver to multiple Parksville locations in one pickup?</h3>
-        <p class="text-gray-700">
-          Yes. Parksville mall + downtown + resort area = one route. Multi-stop pricing: $5 per additional stop after first delivery. Saves you time.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">What if Highway 19 is backed up due to traffic?</h3>
-        <p class="text-gray-700">
-          Parksville traffic (especially summer) can add 10–15 minutes. We monitor traffic and may adjust timing slightly. You're notified if delay expected. Rush orders get priority lane-switching.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold mb-2">Can I use you for daily retail delivery service?</h3>
-        <p class="text-gray-700">
-          Yes. Daily 3 PM Parksville run available at monthly rate (~$150–$200/run, 30–50% cheaper than ad-hoc). Ideal for retail chains, hotel chains, or tourism operators.
-        </p>
-      </div>
-    </div>
-  </section>
+  <FAQ title="Parksville Route FAQ" faqs={faqs} />
 
   <QuoteForm />
 </BaseLayout>
