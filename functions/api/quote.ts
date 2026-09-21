@@ -61,19 +61,22 @@ export async function onRequest(context: {
       }
     }
 
-    // Turnstile verification
-    const turnstileToken = formData['cf-turnstile-response'];
-    if (!turnstileToken) {
-      return new Response(
-        JSON.stringify({ success: false, error: 'Verification required' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
+    // Turnstile verification — only enforced when Turnstile is configured.
+    // The widget only renders when PUBLIC_TURNSTILE_SITE_KEY is set on the frontend,
+    // so if there's no secret here there's no widget to complete: don't demand a token,
+    // rely on the honeypot + timing trap + rate limiting above.
     const turnstileSecret = context.env.TURNSTILE_SECRET_KEY;
     if (turnstileSecret) {
+      const turnstileToken = formData['cf-turnstile-response'];
+      if (!turnstileToken) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Verification required' }),
+          { status: 400, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+
       const turnstileResponse = await fetch(
-        'https://challenges.cloudflare.com/turnstile/validate',
+        'https://challenges.cloudflare.com/turnstile/v0/siteverify',
         {
           method: 'POST',
           body: JSON.stringify({
