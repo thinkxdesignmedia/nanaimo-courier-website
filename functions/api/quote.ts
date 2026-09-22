@@ -12,6 +12,7 @@ export async function onRequest(context: {
   env: {
     RESEND_API_KEY?: string;
     NOTIFY_EMAIL?: string;
+    PUBLIC_TURNSTILE_SITE_KEY?: string;
     TURNSTILE_SECRET_KEY?: string;
   };
   data?: { kv?: any };
@@ -61,12 +62,15 @@ export async function onRequest(context: {
       }
     }
 
-    // Turnstile verification — only enforced when Turnstile is configured.
-    // The widget only renders when PUBLIC_TURNSTILE_SITE_KEY is set on the frontend,
-    // so if there's no secret here there's no widget to complete: don't demand a token,
-    // rely on the honeypot + timing trap + rate limiting above.
+    // Turnstile verification — only enforced when Turnstile is FULLY configured.
+    // The widget renders only when PUBLIC_TURNSTILE_SITE_KEY is set, so gate on that
+    // same signal (plus the secret, needed to verify). A half-config — e.g. secret set
+    // but no site key — would otherwise demand a token with no widget to produce it,
+    // dead-ending real submitters. When not enforced, the honeypot + timing trap +
+    // rate limiting above still apply.
+    const turnstileSiteKey = context.env.PUBLIC_TURNSTILE_SITE_KEY;
     const turnstileSecret = context.env.TURNSTILE_SECRET_KEY;
-    if (turnstileSecret) {
+    if (turnstileSiteKey && turnstileSecret) {
       const turnstileToken = formData['cf-turnstile-response'];
       if (!turnstileToken) {
         return new Response(
